@@ -106,9 +106,9 @@ export interface HomeTypeConfig {
 }
 
 /**
- * Home type configurations for Utah market.
+ * Home type configurations for Idaho market.
  * 
- * HOA fees based on Utah Wasatch Front averages:
+ * HOA fees based on Treasure Valley averages:
  * - Single family: Most don't have HOAs ($0 default)
  * - Townhome: $100-150/mo typical ($125 default)
  * - Condo: $200-300/mo typical ($250 default)
@@ -148,21 +148,26 @@ export const HOME_TYPE_OPTIONS = [
 ];
 
 // ========================================
-// UTAH-SPECIFIC DEFAULTS
+// IDAHO-SPECIFIC DEFAULTS
 // ========================================
 
 /**
- * Utah effective property tax rate for primary residences (single family baseline).
- * Utah offers a 45% primary residence exemption, so the effective
- * rate on market value is approximately 0.58%.
+ * Idaho effective property tax rate for primary residences (single family baseline).
+ * Idaho's average effective rate is approximately 0.62% of market value.
  */
-export const UTAH_PROPERTY_TAX_RATE = 0.0058;
+export const IDAHO_PROPERTY_TAX_RATE = 0.0062;
 
 /**
- * Utah homeowners insurance rate as a percentage of home value.
+ * Idaho homeowners insurance rate as a percentage of home value.
  * ~0.35% annually, which works out to ~$1,400/yr on a $400k home.
  */
-export const UTAH_INSURANCE_RATE = 0.0035;
+export const IDAHO_INSURANCE_RATE = 0.0035;
+
+/** @deprecated Use IDAHO_PROPERTY_TAX_RATE */
+export const UTAH_PROPERTY_TAX_RATE = IDAHO_PROPERTY_TAX_RATE;
+
+/** @deprecated Use IDAHO_INSURANCE_RATE */
+export const UTAH_INSURANCE_RATE = IDAHO_INSURANCE_RATE;
 
 // ========================================
 // DTI RATIO LIMITS

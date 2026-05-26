@@ -8,7 +8,7 @@ export function getProgramCounty(
   geographyValues: string[]
 ): string {
   if (geographyType === "statewide") {
-    return "Salt Lake"; // Default to most common county
+    return "Ada"; // Default to Treasure Valley / Boise metro
   }
   if (geographyType === "county") {
     return geographyValues[0]; // First county in list
@@ -16,9 +16,9 @@ export function getProgramCounty(
   if (geographyType === "city") {
     // Look up county from city
     const city = geographyValues[0];
-    return CITY_TO_COUNTY[city] || "Salt Lake";
+    return CITY_TO_COUNTY[city] || "Ada";
   }
-  return "Salt Lake";
+  return "Ada";
 }
 
 /**

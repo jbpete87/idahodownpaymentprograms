@@ -487,10 +487,10 @@ export function CalculatorResults() {
             {" "}Rates reflect average locked rates including approximately 1 discount point, which sellers are commonly covering via concessions in the current market. Conventional rates adjust by credit score using OBMMI FICO/LTV breakdowns.
           </p>
           <p>
-            Property taxes use Utah&apos;s average effective rate of 0.58% for single family homes
+            Property taxes use Idaho&apos;s average effective rate of 0.62% for single family homes
             {homeType !== "single_family" && ` (adjusted ${Math.round((1 - HOME_TYPES[homeType].propertyTaxMultiplier) * 100)}% lower for ${HOME_TYPES[homeType].label.toLowerCase()}s)`}.
             Homeowners insurance estimated at 0.35% of home value annually (~$1,400/yr on a $400k home).
-            {homeType !== "single_family" && ` HOA fees estimated at $${HOME_TYPES[homeType].defaultHOA}/mo based on Utah ${HOME_TYPES[homeType].label.toLowerCase()} averages.`}
+            {homeType !== "single_family" && ` HOA fees estimated at $${HOME_TYPES[homeType].defaultHOA}/mo based on Idaho ${HOME_TYPES[homeType].label.toLowerCase()} averages.`}
           </p>
           <p>
             <strong>Disclaimer:</strong> This calculator provides estimates for educational purposes

@@ -10,8 +10,8 @@ import {
   type HomeType,
   LOAN_TYPES,
   HOME_TYPES,
-  UTAH_PROPERTY_TAX_RATE,
-  UTAH_INSURANCE_RATE,
+  IDAHO_PROPERTY_TAX_RATE,
+  IDAHO_INSURANCE_RATE,
   MAX_FRONT_END_DTI,
   MAX_BACK_END_DTI,
   CONVENTIONAL_PMI_RATES,
@@ -230,9 +230,9 @@ function calculateMaxPurchasePrice(
     ? 0
     : getMIRate(loanType, creditScore) / 12;
 
-  const insuranceRateMonthly = UTAH_INSURANCE_RATE / 12;
+  const insuranceRateMonthly = IDAHO_INSURANCE_RATE / 12;
   // Apply property tax multiplier based on home type
-  const taxRateMonthly = (UTAH_PROPERTY_TAX_RATE * homeConfig.propertyTaxMultiplier) / 12;
+  const taxRateMonthly = (IDAHO_PROPERTY_TAX_RATE * homeConfig.propertyTaxMultiplier) / 12;
 
   // Loan multiplier: how loan amount relates to purchase price
   const loanMultiplier = ltv * (1 + upfrontFeePct);
@@ -290,8 +290,8 @@ export function calculateMonthlyBreakdown(
 
   const principalAndInterest = totalLoan * monthlyPIFactor;
   // Apply property tax multiplier based on home type
-  const propertyTax = purchasePrice * UTAH_PROPERTY_TAX_RATE * homeConfig.propertyTaxMultiplier / 12;
-  const homeInsurance = purchasePrice * UTAH_INSURANCE_RATE / 12;
+  const propertyTax = purchasePrice * IDAHO_PROPERTY_TAX_RATE * homeConfig.propertyTaxMultiplier / 12;
+  const homeInsurance = purchasePrice * IDAHO_INSURANCE_RATE / 12;
   const mortgageInsurance = totalLoan * miRateAnnual / 12;
   const hoaFees = homeConfig.defaultHOA;
 

@@ -131,9 +131,10 @@ export function getLocalBusinessSchema() {
       "@type": "State",
       name: "Idaho",
       containsPlace: [
-        { "@type": "AdministrativeArea", name: "Davis County" },
-        { "@type": "AdministrativeArea", name: "Weber County" },
-        { "@type": "AdministrativeArea", name: "Salt Lake County" },
+        { "@type": "AdministrativeArea", name: "Ada County" },
+        { "@type": "AdministrativeArea", name: "Canyon County" },
+        { "@type": "AdministrativeArea", name: "Bonneville County" },
+        { "@type": "AdministrativeArea", name: "Kootenai County" },
       ],
     },
     aggregateRating: {

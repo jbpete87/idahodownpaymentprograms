@@ -36,12 +36,12 @@ export const metadata: Metadata = {
     canonical: "/guide",
   },
   keywords: [
-    "utah down payment assistance 2026",
-    "utah dpa programs",
-    "utah first time home buyer assistance",
-    "utah housing grants 2026",
-    "down payment help utah",
-    "utah homebuyer programs",
+    "idaho down payment assistance 2026",
+    "idaho dpa programs",
+    "idaho first time home buyer assistance",
+    "ihfa down payment assistance",
+    "down payment help idaho",
+    "idaho homebuyer programs",
   ],
   openGraph: {
     title: "Idaho Down Payment Assistance Programs 2026 - Complete Guide",
@@ -184,7 +184,7 @@ export default function GuidePage() {
             <div className="prose prose-lg max-w-none text-gray-600">
               <p>
                 Down payment assistance (DPA) programs help homebuyers cover their down payment and closing costs.
-                In Utah, these programs are offered by the state (<strong>Idaho Housing and Finance Association (IHFA)</strong>), 
+                In Idaho, these programs are offered by the state (<strong>Idaho Housing and Finance Association (IHFA)</strong>), 
                 counties, cities, and nonprofit organizations.
               </p>
               <p>
@@ -205,8 +205,8 @@ export default function GuidePage() {
                 <div className="text-gray-600">Maximum Available</div>
               </Card>
               <Card padding="lg" className="text-center">
-                <div className="text-4xl font-bold text-[#10B981] mb-2">29</div>
-                <div className="text-gray-600">Utah Counties Covered</div>
+                <div className="text-4xl font-bold text-[#10B981] mb-2">44</div>
+                <div className="text-gray-600">Idaho Counties Covered</div>
               </Card>
             </div>
           </div>
@@ -228,16 +228,16 @@ export default function GuidePage() {
                   icon: DollarSign,
                   title: "Grants",
                   subtitle: "Free money — no repayment required",
-                  description: "Grants are the best form of DPA because you never pay them back. In Utah, grants range from $2,500 (UHC Veteran Grant) to $10,000 (At Home in Layton). These are highly competitive and often have limited funding.",
-                  examples: "At Home in Layton ($10,000), UHC HomeAgain Grant ($2,500)",
+                  description: "Grants require no repayment. IHFA no longer offers forgivable grants as of 2026, but some local programs may still include grant-style assistance when funding is available.",
+                  examples: "IHFA Good Credit Rewards (up to $8,000 second mortgage)",
                   color: "green",
                 },
                 {
                   icon: Clock,
                   title: "Forgivable Loans",
                   subtitle: "Forgiven after 5 years of occupancy",
-                  description: "These are loans that become grants if you stay in your home for a set period (usually 5 years). If you sell or refinance early, you repay a prorated amount. This is the most common type of DPA in Idaho.",
-                  examples: "Murray City DPA ($30,000), Midvale City DPA ($30,000), NeighborWorks programs",
+                  description: "These are loans that become grants if you stay in your home for a set period (usually 5 years). If you sell or refinance early, you repay a prorated amount. Less common in Idaho since IHFA shifted to repayable second mortgages in 2026.",
+                  examples: "Boise HOP (deferred — repaid on sale or refinance)",
                   color: "blue",
                 },
                 {
@@ -245,15 +245,15 @@ export default function GuidePage() {
                   title: "Deferred Loans",
                   subtitle: "Repaid when you sell, refinance, or pay off mortgage",
                   description: "These loans have no monthly payments but must be repaid when you sell the home, refinance, or pay off your first mortgage. Interest rates are typically 0-3%. Good option if you plan to stay long-term.",
-                  examples: "Davis County DPA ($50,000), Idaho County Loan to Own ($40,000), Provo Home Purchase Plus ($60,000)",
+                  examples: "Boise HOP ($45,000–$65,000 deferred loan in city limits)",
                   color: "purple",
                 },
                 {
                   icon: Building,
                   title: "Second Mortgages",
                   subtitle: "Monthly payments at below-market rates",
-                  description: "These are traditional loans with monthly payments, but at favorable rates. UHC offers 30-year second mortgages at the same rate as your first mortgage. Good for buyers who want maximum assistance and can handle the payment.",
-                  examples: "UHC Second Mortgage ($10,000-$27,500)",
+                  description: "These are traditional loans with monthly payments alongside your first mortgage. IHFA's primary DPA is a repayable second mortgage — up to 8% of the sales price with as little as $500 out of pocket.",
+                  examples: "IHFA DPA (up to 8% of sales price), IHFA Good Credit Rewards (up to $8,000)",
                   color: "orange",
                 },
               ].map((type) => {
@@ -305,9 +305,9 @@ export default function GuidePage() {
                   <div className="bg-gray-50 rounded-lg p-4">
                     <p className="font-medium text-gray-900 mb-2">2026 Typical Limits (Family of 4):</p>
                     <ul className="space-y-1 text-sm">
-                      <li>• <strong>80% AMI:</strong> ~$70,000-8% of sales price/year</li>
-                      <li>• <strong>100% AMI:</strong> ~$88,000-$106,000/year</li>
-                      <li>• <strong>120% AMI:</strong> ~$105,000-$130,000/year</li>
+                      <li>• <strong>80% AMI (Ada Co., family of 4):</strong> ~$85,600/year</li>
+                      <li>• <strong>100% AMI:</strong> ~$107,000/year</li>
+                      <li>• <strong>IHFA household limit:</strong> up to $170,000/year</li>
                     </ul>
                   </div>
                   <p className="text-sm">
@@ -582,11 +582,11 @@ export default function GuidePage() {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
-              <a href="https://www.thetimhawkesteam.com/blog/best-dpa-lenders-utah" target="_blank" rel="noopener noreferrer">
+              <Link href="/contact">
                 <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
-                  See Which Lenders Offer DPA
+                  Talk to an IHFA Lender
                 </Button>
-              </a>
+              </Link>
             </div>
           </div>
         </section>
@@ -599,7 +599,7 @@ export default function GuidePage() {
               <Link href="/methodology" className="text-[#10B981] hover:underline ml-1">How we track programs</Link>
             </p>
             <p className="mt-2">
-              Maintained by licensed Utah mortgage professionals. 
+              Maintained by licensed Idaho mortgage professionals. 
               <Link href="/about" className="text-[#10B981] hover:underline ml-1">Learn about our team</Link>
             </p>
           </div>

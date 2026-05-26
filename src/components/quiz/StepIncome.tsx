@@ -108,7 +108,7 @@ export function StepIncome() {
       <div className="p-4 rounded-xl bg-emerald-50 border border-emerald-200">
         <p className="text-sm text-emerald-800">
           <strong>💡 Tip:</strong> Most programs require income at or below 80% AMI. 
-          For a family of 4 in Salt Lake County, that&apos;s about <strong>$98,150/year</strong>.{" "}
+          For a family of 4 in Ada County, that&apos;s about <strong>$85,600/year</strong>.{" "}
           <Link 
             href="/income-limits" 
             target="_blank"

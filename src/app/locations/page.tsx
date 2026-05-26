@@ -9,7 +9,7 @@ import { LOCATIONS, getLocationsByType } from "@/lib/locations-data";
 export const metadata: Metadata = {
   title: "Idaho DPA by Location | Down Payment Assistance Finder",
   description:
-    "Find down payment assistance programs by city or county in Idaho. Local guides for Davis County, Weber County, Layton, Clearfield, Ogden, and more.",
+    "Find down payment assistance programs by city in Idaho. Local guides for Boise, Meridian, Nampa, Idaho Falls, Coeur d'Alene, and more.",
   alternates: {
     canonical: "/locations",
   },

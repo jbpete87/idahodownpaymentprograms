@@ -220,16 +220,16 @@ export default async function LocationPage({
                   {location.heroSubtitle}
                 </p>
 
-                {slug === "ogden" && (
+                {slug === "boise" && (
                   <p className="text-base text-gray-600 mb-6 -mt-4">
                     Learn more about the{" "}
                     <Link
-                      href="/programs/own-in-ogden"
+                      href="/programs/boise-city"
                       className="text-[#10B981] font-medium hover:underline"
                     >
-                      Own in Ogden down payment assistance program
+                      Boise Homeownership Opportunity Program (HOP)
                     </Link>{" "}
-                    — $10k–$20k for Ogden city purchases.
+                    — up to $45,000–$65,000 for eligible Boise city buyers.
                   </p>
                 )}
 
@@ -366,7 +366,7 @@ export default async function LocationPage({
                     Need Local Help?
                   </h3>
                   <p className="text-sm text-gray-600 mb-4">
-                    Our team specializes in {location.county} County DPA programs. We're located in Clearfield and serve all of {location.name}.
+                    Our team specializes in {location.county} County DPA programs and serves homebuyers across Idaho.
                   </p>
                   <div className="space-y-3 text-sm">
                     <a
@@ -378,7 +378,7 @@ export default async function LocationPage({
                     </a>
                     <div className="flex items-center gap-2 text-gray-600">
                       <MapPin className="w-4 h-4" />
-                      <span>Clearfield, UT 84015</span>
+                      <span>Serving Idaho statewide</span>
                     </div>
                     <div className="flex items-center gap-2 text-gray-600">
                       <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />

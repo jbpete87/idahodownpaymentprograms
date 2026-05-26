@@ -47,25 +47,23 @@ Down payment assistance (DPA) programs help homebuyers cover their down payment 
 
 ### 1. Grants
 - **Free money** - no repayment required
-- Most competitive, limited funding
-- Examples: At Home in Layton ($10,000), UHC Veteran Grant ($2,500)
+- IHFA no longer offers forgivable grants as of 2026
+- Examples: IHFA Good Credit Rewards (up to $8,000 second mortgage)
 
 ### 2. Forgivable Loans
-- **Forgiven after 5 years** of occupancy
-- Repaid pro-rata if sold/refinanced early
-- Most common type in Idaho
-- Examples: Murray City DPA ($30,000), Midvale City DPA ($30,000)
+- **Forgiven after a set occupancy period** in some local programs
+- Less common in Idaho since IHFA shifted to repayable second mortgages
+- Examples: Boise HOP (deferred — repaid on sale or refinance)
 
 ### 3. Deferred Loans
 - **No monthly payments**
 - Repaid when you sell, refinance, or pay off mortgage
-- 0-3% interest typically
-- Examples: Davis County ($50,000), Provo Home Purchase Plus ($60,000)
+- Examples: Boise HOP ($45,000–$65,000 in city limits)
 
 ### 4. Second Mortgages
-- **Monthly payments** at favorable rates
-- Best for maximum assistance amount
-- Example: UHC Second Mortgage ($10,000-$27,500)
+- **Monthly payments** alongside your first mortgage
+- IHFA's primary DPA — up to 8% of sales price
+- Example: IHFA DPA (up to 8% of sales price), Good Credit Rewards (up to $8,000)
 
 ---
 
@@ -81,7 +79,7 @@ Most programs use Area Median Income (AMI) limits:
 | 100% AMI  | $88,000 - $106,000/year   |
 | 120% AMI  | $105,000 - $130,000/year  |
 
-*Limits vary by county. Salt Lake County has higher limits than rural areas.*
+*Limits vary by county. Ada and Canyon counties (Treasure Valley) share Boise metro limits.*
 
 ### Credit Requirements
 - Minimum credit score: **620-680** (varies by program)
@@ -97,10 +95,10 @@ Most programs use Area Median Income (AMI) limits:
 ### First-Time Buyer Status
 - Many programs require first-time buyer status
 - Definition: Have not owned a home in **past 3 years**
-- Some programs available to repeat buyers (UHC Score Loan, Community Lending)
+- Some programs available to repeat buyers (IHFA DPA, IHFA First Loan)
 
 ### Education Requirements
-- Most programs require **homebuyer education course**
+- Most programs require **Finally Home! homebuyer education** (finallyhome.org)
 - Online courses available (2-8 hours)
 - Cost: $50-100 (sometimes reimbursed)
 
@@ -181,7 +179,7 @@ Eligibility varies by program but typically includes:
 
 ### How much down payment assistance can I get in Idaho?
 
-Idaho homebuyers can access up to 8% of sales price in combined assistance by stacking multiple programs. Individual programs range from $2,500 (UHC Veteran Grant) to $60,000 (Provo Home Purchase Plus). The exact amount depends on your location, income, occupation, and which programs you qualify for.
+Idaho homebuyers can access up to 8% of the sales price through IHFA statewide, plus Boise HOP up to $65,000 in city limits. The exact amount depends on your location, income, and which programs you qualify for.
 
 ### Do I have to pay back down payment assistance?
 
@@ -193,7 +191,7 @@ It depends on the program type:
 
 ### Can I combine multiple DPA programs?
 
-Yes! Many Idaho programs can be stacked. For example, you could combine a city program (like Murray's $30,000) with a UHC second mortgage ($10,000-$27,500). Some buyers access $50,000+ in combined assistance.
+Yes! IHFA DPA can often stack with Boise HOP when lender guidelines allow. Some Treasure Valley buyers combine statewide and city programs for $50,000+ in assistance.
 
 ### What credit score do I need?
 
@@ -201,7 +199,7 @@ Most programs require a minimum credit score of 620-680. FHA loans (popular with
 
 ### Do I need to be a first-time homebuyer?
 
-Not always. While many programs target first-time buyers, several Idaho programs are available to repeat buyers who meet income requirements. UHC Score Loan, Community Lending Program, and some city programs welcome all buyers.
+Not for IHFA! Idaho Housing down payment assistance is available to first-time AND repeat buyers with household income up to $170,000. Some local programs may have additional requirements.
 
 ---
 

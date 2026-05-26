@@ -115,14 +115,9 @@ export function StepVeteranOccupation() {
           ) && (
             <div className="mt-4 p-4 rounded-xl bg-green-50 border border-green-100">
               <p className="text-sm text-green-800">
-                Great news! Some Utah cities offer{" "}
-                <strong>bonus assistance</strong> for{" "}
-                {answers.occupation === "teacher"
-                  ? "teachers"
-                  : answers.occupation === "first_responder"
-                  ? "first responders"
-                  : "government employees"}
-                . For example, Ogden offers up to $20,000 for police and firefighters.
+                Great news! IHFA programs are available statewide regardless of occupation.{" "}
+                <strong>Boise HOP</strong> and other local programs may offer additional help
+                for income-eligible buyers — your quiz results will show what you may qualify for.
               </p>
             </div>
           )}

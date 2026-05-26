@@ -169,7 +169,7 @@ async function fetchOBMMIRates(): Promise<MortgageRates | null> {
     const response = await fetch(OBMMI_API_URL, {
       headers: {
         "Accept": "application/json",
-        "User-Agent": "UtahDPA/1.0",
+        "User-Agent": "IdahoDPA/1.0",
       },
       cache: "no-store",
     });

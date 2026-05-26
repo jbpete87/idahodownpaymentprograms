@@ -7,14 +7,14 @@ import { Calculator, Info } from "lucide-react";
 
 export const metadata: Metadata = {
   title:
-    "Utah Mortgage Affordability Calculator | How Much Home Can I Afford?",
+    "Idaho Mortgage Affordability Calculator | How Much Home Can I Afford?",
   description:
-    "Free mortgage affordability calculator for Idaho homebuyers. See max purchase price and monthly payments for Conventional, FHA, and VA loans with Utah-specific tax and insurance rates.",
+    "Free mortgage affordability calculator for Idaho homebuyers. See max purchase price and monthly payments for Conventional, FHA, and VA loans with Idaho-specific tax and insurance rates.",
   alternates: {
     canonical: "/calculator",
   },
   openGraph: {
-    title: "Utah Mortgage Affordability Calculator",
+    title: "Idaho Mortgage Affordability Calculator",
     description:
       "Find out how much home you can afford in Idaho. Compare Conventional, FHA, and VA loan options with real-time rate estimates.",
     type: "website",
@@ -43,7 +43,7 @@ export default function CalculatorPage() {
             </h1>
             <p className="text-lg text-gray-600 mb-4">
               Get a quick estimate of your maximum purchase price and monthly
-              payment for Conventional, FHA, and VA loans — using current Utah
+              payment for Conventional, FHA, and VA loans — using current Idaho
               rates, taxes, and insurance.
             </p>
             <div className="flex items-start gap-2 p-3 rounded-xl bg-amber-50 border border-amber-200 text-sm text-amber-800">

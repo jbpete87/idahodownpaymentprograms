@@ -4,8 +4,8 @@
  * Filters down payment assistance programs for use in the affordability
  * calculator and computes the impact on cash-to-close.
  *
- * Uses Davis County AMI limits as the baseline for income eligibility
- * (Tim Hawkes Team is based in Davis County).
+ * Uses Ada County AMI limits as the baseline for income eligibility
+ * (Treasure Valley / Boise metro — Idaho's largest market).
  */
 
 import { PROGRAMS, AMI_LIMITS } from "./programs-data";
@@ -45,7 +45,7 @@ export interface CashToCloseBreakdown {
 // ========================================
 
 /** Default county for AMI income-limit checks */
-const DEFAULT_COUNTY = "Davis";
+const DEFAULT_COUNTY = "Ada";
 
 // ========================================
 // HELPERS
@@ -89,7 +89,7 @@ function fundingBadge(status: string): string {
 
 /**
  * Get the AMI income limit for a given program based on household size.
- * Uses Davis County AMI data.
+ * Uses Ada County AMI data.
  *
  * Programs specify an amiPercent (80, 100, or 120). We look up the
  * corresponding threshold for the user's household size.
@@ -117,7 +117,7 @@ function getIncomeLimit(
 
 /**
  * Get DPA programs that the user likely qualifies for based on
- * income and household size, using Davis County AMI limits.
+ * income and household size, using Ada County AMI limits.
  *
  * Filters:
  *  - Excludes first_mortgage programs (DPA only)
@@ -137,7 +137,7 @@ export function getDPAPrograms(
       // Must not be closed
       if (p.fundingStatus === "closed") return false;
 
-      // Income check against Davis County AMI
+      // Income check against Ada County AMI
       const incomeLimit = getIncomeLimit(p, householdSize);
       if (incomeLimit !== null && grossAnnualIncome > incomeLimit) {
         return false; // Income exceeds program limit

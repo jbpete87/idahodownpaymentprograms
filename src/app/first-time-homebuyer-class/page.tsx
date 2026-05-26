@@ -22,7 +22,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "First-Time Homebuyer Class Resource Guide | Utah 2026",
+  title: "First-Time Homebuyer Class Resource Guide | Idaho 2026",
   description:
     "Everything you need to know about buying your first home in Idaho. Covers the homebuying process, credit requirements, down payment assistance, loan types, and affordability.",
   alternates: {
@@ -111,34 +111,34 @@ const creditTips = [
 
 const topPrograms = [
   {
-    name: "UHC Second Mortgage",
-    amount: "Up to $27,500",
+    name: "IHFA Down Payment Assistance",
+    amount: "Up to 8%",
     type: "Statewide",
-    note: "Available with FHA, VA, or Conventional through Idaho Housing Corp",
+    note: "Repayable second mortgage with as little as $500 out of pocket",
   },
   {
-    name: "Provo Home Purchase Plus",
-    amount: "Up to $60,000",
-    type: "Provo only",
-    note: "Deferred loan — no monthly payments",
+    name: "Boise HOP",
+    amount: "Up to $65,000",
+    type: "Boise city limits",
+    note: "Deferred loan — repaid on sale or refinance",
   },
   {
-    name: "Davis County Homebuyer Assistance",
-    amount: "Up to $50,000",
-    type: "Davis County",
-    note: "Deferred loan for income-qualifying buyers",
+    name: "IHFA Good Credit Rewards",
+    amount: "Up to $8,000",
+    type: "Statewide",
+    note: "For buyers with 640–680+ credit depending on loan type",
   },
   {
-    name: "Own in Ogden",
-    amount: "Up to $10,000",
-    type: "Ogden",
-    note: "Forgivable after 5 years of occupancy",
+    name: "IHFA First Loan + DPA",
+    amount: "Up to 8%",
+    type: "Statewide",
+    note: "Competitive first mortgage paired with down payment help",
   },
   {
-    name: "Murray City DPA",
-    amount: "Up to $30,000",
-    type: "Murray",
-    note: "Forgivable after 5 years of occupancy",
+    name: "Treasure Valley Programs",
+    amount: "Up to 8%",
+    type: "Ada & Canyon Counties",
+    note: "IHFA statewide DPA for Boise metro buyers",
   },
 ];
 
@@ -362,8 +362,8 @@ export default function FirstTimeHomebuyerClassPage() {
 
           <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm mb-6">
             <p className="text-gray-700 mb-4">
-              Utah has <strong>20+ active programs</strong> offering grants, forgivable loans, and
-              deferred loans to help with your down payment and closing costs. Here are some
+              Idaho has <strong>10+ active programs</strong> offering repayable second mortgages, deferred loans, and
+              local city assistance to help with your down payment and closing costs. Here are some
               highlights:
             </p>
 
@@ -544,7 +544,7 @@ export default function FirstTimeHomebuyerClassPage() {
         {/* Website URL for printing */}
         <div className="text-center text-sm text-gray-400 pb-4">
           <p>
-            <strong>idahodownpaymentprograms.com</strong> &mdash; Utah&apos;s most comprehensive
+            <strong>idahodownpaymentprograms.com</strong> &mdash; Idaho&apos;s most comprehensive
             resource for down payment assistance
           </p>
         </div>

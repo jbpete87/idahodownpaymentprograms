@@ -186,7 +186,7 @@ export default function TermsPage() {
           <h2>Governing Law</h2>
           <p>
             These Terms of Use are governed by the laws of the State of Idaho. Any 
-            disputes shall be resolved in the courts of Davis County, Idaho.
+            disputes shall be resolved in the courts of the State of Idaho.
           </p>
 
           <h2>Mortgage Lending Disclosures</h2>

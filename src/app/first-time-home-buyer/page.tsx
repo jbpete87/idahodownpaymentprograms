@@ -85,7 +85,7 @@ const guideFAQs = [
   {
     question: "Can I combine multiple first-time buyer programs in Idaho?",
     answer:
-      "Yes! Many programs can be stacked for maximum assistance. For example, you could combine a city program (like Own in Ogden) with a UHC second mortgage. Some buyers access $50,000-8% of sales price+ by combining 2-3 programs.",
+      "Yes! Many programs can be stacked for maximum assistance. For example, you could combine IHFA statewide DPA (up to 8% of sales price) with Boise HOP ($45,000–$65,000 in city limits). Some buyers access $50,000+ by combining 2–3 programs.",
   },
 ];
 
@@ -137,38 +137,38 @@ const steps = [
 const topPrograms = [
   {
     name: "Boise HOP",
-    amount: "$60,000",
-    type: "Forgivable Loan",
-    location: "Provo",
-    highlight: "Highest Amount",
-  },
-  {
-    name: "Davis County Homeownership",
-    amount: "$50,000",
+    amount: "$65,000",
     type: "Deferred Loan",
-    location: "Davis County",
-    highlight: "1% Interest",
+    location: "Boise city limits",
+    highlight: "Highest Local Amount",
   },
   {
-    name: "Own in Ogden",
-    amount: "$20,000",
-    type: "Deferred Loan",
-    location: "Ogden",
-    highlight: "Teachers/First Responders",
-  },
-  {
-    name: "NeighborWorks Salt Lake",
-    amount: "$40,000",
-    type: "Forgivable Loan",
-    location: "Salt Lake City",
-    highlight: "5-Year Forgiveness",
-  },
-  {
-    name: "UHC DPA Second Mortgage",
-    amount: "$27,500",
+    name: "IHFA Down Payment Assistance",
+    amount: "Up to 8%",
     type: "Second Mortgage",
     location: "Statewide",
-    highlight: "All 29 Counties",
+    highlight: "$500 Min Out-of-Pocket",
+  },
+  {
+    name: "IHFA Good Credit Rewards",
+    amount: "$8,000",
+    type: "Second Mortgage",
+    location: "Statewide",
+    highlight: "680+ Credit Score",
+  },
+  {
+    name: "IHFA First Loan + DPA",
+    amount: "Up to 8%",
+    type: "Combo Program",
+    location: "Statewide",
+    highlight: "First + Repeat Buyers",
+  },
+  {
+    name: "Treasure Valley DPA",
+    amount: "Up to 8%",
+    type: "IHFA + Local",
+    location: "Ada & Canyon Counties",
+    highlight: "Boise Metro Area",
   },
 ];
 
@@ -420,10 +420,10 @@ export default function FirstTimeHomeBuyerGuidePage() {
 
                 <div className="space-y-4">
                   {[
-                    { county: "Salt Lake County", limit80: "$80,000", limit120: "$120,000" },
-                    { county: "Ada County", limit80: "$94,950", limit120: "$142,425" },
-                    { county: "Davis County", limit80: "$96,400", limit120: "$144,600" },
-                    { county: "Weber County", limit80: "$96,400", limit120: "$144,600" },
+                    { county: "Ada County", limit80: "$85,600", limit120: "$128,400" },
+                    { county: "Canyon County", limit80: "$85,600", limit120: "$128,400" },
+                    { county: "Bonneville County", limit80: "$67,600", limit120: "$101,400" },
+                    { county: "Kootenai County", limit80: "$75,300", limit120: "$112,950" },
                   ].map((row) => (
                     <div
                       key={row.county}
@@ -492,14 +492,14 @@ export default function FirstTimeHomeBuyerGuidePage() {
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
-                { name: "Salt Lake County", slug: "salt-lake-county", programs: "6+" },
-                { name: "Ada County", slug: "boise", programs: "4+" },
-                { name: "Davis County", slug: "davis-county", programs: "3+" },
-                { name: "Weber County", slug: "weber-county", programs: "3+" },
-                { name: "Salt Lake City", slug: "salt-lake-city", programs: "3+" },
-                { name: "Provo", slug: "provo", programs: "3+" },
-                { name: "Ogden", slug: "ogden", programs: "3+" },
-                { name: "West Jordan", slug: "west-jordan", programs: "3+" },
+                { name: "Boise", slug: "boise", programs: "5+" },
+                { name: "Meridian", slug: "meridian", programs: "4+" },
+                { name: "Nampa", slug: "nampa", programs: "4+" },
+                { name: "Idaho Falls", slug: "idaho-falls", programs: "4+" },
+                { name: "Coeur d'Alene", slug: "coeur-d-alene", programs: "4+" },
+                { name: "Caldwell", slug: "nampa", programs: "4+" },
+                { name: "Treasure Valley", slug: "boise", programs: "5+" },
+                { name: "Ada County", slug: "boise", programs: "5+" },
               ].map((loc) => (
                 <Link key={loc.slug} href={`/locations/${loc.slug}`}>
                   <Card padding="md" hover className="border border-gray-200 text-center h-full">
@@ -560,14 +560,14 @@ export default function FirstTimeHomeBuyerGuidePage() {
                   may qualify for. No SSN required.
                 </p>
                 <p className="text-green-100 text-sm mb-6 max-w-lg mx-auto">
-                  Looking for a lender who can stack these programs? Read our guide to the{" "}
-                  <a href="https://www.thetimhawkesteam.com/blog/best-dpa-lenders-utah" target="_blank" rel="noopener noreferrer" className="text-white underline hover:text-green-200">
-                    best lenders for down payment assistance in Idaho
-                  </a>{" "}
-                  or learn{" "}
-                  <a href="https://www.thetimhawkesteam.com/blog/how-to-buy-house-utah-no-money-down" target="_blank" rel="noopener noreferrer" className="text-white underline hover:text-green-200">
-                    how to buy a house in Idaho with no money down
-                  </a>.
+                  Looking for a lender who can stack these programs?{" "}
+                  <Link href="/contact" className="text-white underline hover:text-green-200">
+                    Talk to an IHFA-approved lender
+                  </Link>{" "}
+                  or read our{" "}
+                  <Link href="/guide" className="text-white underline hover:text-green-200">
+                    complete Idaho DPA guide
+                  </Link>.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link href="/quiz">

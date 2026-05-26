@@ -7,7 +7,7 @@ import { getCountyAMILimits, getAMIValue } from "@/lib/ami-utils";
 type AMIPercent = 80 | 100 | 120;
 
 interface IncomeLimitsTableProps {
-  /** The county name (e.g., "Salt Lake", "Davis") */
+  /** The county name (e.g., "Ada", "Canyon") */
   county: string;
   /** Which AMI percentage to highlight (80, 100, or 120) */
   amiPercent: AMIPercent;
