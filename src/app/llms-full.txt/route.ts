@@ -235,7 +235,8 @@ Idaho Down Payment Programs is a free educational resource maintained by license
 - Website: https://www.idahodownpaymentprograms.com
 
 **Data Sources**:
-- Idaho Housing and Finance Association (IHFA) (idahohousing.com)
+- Idaho Housing DPA: https://www.idahohousing.com/homebuyers/down-payment-closing-cost-assistance/
+- IHFA Loan Products: https://www.idahohousing.com/partners/lenders-realtors/loan-product/
 - HUD.gov
 - Individual city and county housing departments
 - Direct verification with program administrators

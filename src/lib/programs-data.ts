@@ -5,6 +5,13 @@ import type { Program, AMILimit } from "@/types";
  * Primary source: Idaho Housing and Finance Association (IHFA)
  * Last verified: May 2026
  */
+export const IHFA_DPA_URL =
+  "https://www.idahohousing.com/homebuyers/down-payment-closing-cost-assistance/";
+export const IHFA_LOAN_PRODUCTS_URL =
+  "https://www.idahohousing.com/partners/lenders-realtors/loan-product/";
+export const IHFA_FIND_LENDER_URL =
+  "https://www.idahohousing.com/homebuyers/find-a-lender/";
+
 export const PROGRAMS: Program[] = [
   // ========================================
   // IHFA STATEWIDE PROGRAMS
@@ -14,8 +21,8 @@ export const PROGRAMS: Program[] = [
     name: "IHFA Down Payment & Closing Cost Assistance",
     slug: "ihfa-dpa",
     agency: "Idaho Housing and Finance Association (IHFA)",
-    websiteUrl: "https://www.idahohousing.com/homebuyers/down-payment-closing-cost-assistance/",
-    contactInfo: "Find an IHFA-approved lender at idahohousing.com",
+    websiteUrl: IHFA_LOAN_PRODUCTS_URL,
+    contactInfo: "Find an IHFA-approved lender at idahohousing.com/find-a-lender",
     geographyType: "statewide",
     geographyValues: [],
     buyerTypes: ["first_time", "repeat", "any"],
@@ -33,8 +40,8 @@ export const PROGRAMS: Program[] = [
     fundingStatus: "open",
     lastVerified: "2026-05-26",
     applicationSteps:
-      "1. Complete Finally Home! homebuyer education at finallyhome.org.\n2. Find an IHFA-approved lender (directory at idahohousing.com).\n3. Get pre-approved for an IHFA first mortgage (Conventional, FHA, VA, or USDA).\n4. Tell your lender you want IHFA down payment assistance.\n5. Contribute at least $500 of your own funds toward the transaction.\n6. Both loans close simultaneously — assistance applied at closing.",
-    applicationUrl: "https://www.idahohousing.com/homebuyers/find-a-lender/",
+      "1. Complete Finally Home! homebuyer education at finallyhome.org.\n2. Find an IHFA-approved lender (directory at idahohousing.com/homebuyers/find-a-lender/).\n3. Get pre-approved for an IHFA first mortgage (Conventional, FHA, VA, or USDA).\n4. Tell your lender you want IHFA down payment assistance.\n5. Contribute at least $500 of your own funds toward the transaction.\n6. Both loans close simultaneously — assistance applied at closing.",
+    applicationUrl: IHFA_DPA_URL,
     requiredDocs: [
       "Finally Home! homebuyer education certificate",
       "Income verification (household income ≤ $170,000)",
@@ -50,7 +57,7 @@ export const PROGRAMS: Program[] = [
     name: "IHFA First Loan + DPA Combo",
     slug: "ihfa-first-loan",
     agency: "Idaho Housing and Finance Association (IHFA)",
-    websiteUrl: "https://www.idahohousing.com/homebuyers/home-loans/",
+    websiteUrl: IHFA_LOAN_PRODUCTS_URL,
     contactInfo: "Work with an IHFA-approved lender",
     geographyType: "statewide",
     geographyValues: [],
@@ -70,7 +77,7 @@ export const PROGRAMS: Program[] = [
     lastVerified: "2026-05-26",
     applicationSteps:
       "1. Complete Finally Home! homebuyer education.\n2. Choose an IHFA-approved lender from the directory.\n3. Get pre-approved for an IHFA First Loan product.\n4. Apply for IHFA down payment assistance simultaneously.\n5. Your lender packages both loans together at closing.",
-    applicationUrl: "https://www.idahohousing.com/homebuyers/find-a-lender/",
+    applicationUrl: IHFA_DPA_URL,
     requiredDocs: [
       "Finally Home! education certificate",
       "Income verification",
@@ -86,7 +93,7 @@ export const PROGRAMS: Program[] = [
     name: "IHFA Good Credit Rewards",
     slug: "ihfa-good-credit",
     agency: "Idaho Housing and Finance Association (IHFA)",
-    websiteUrl: "https://www.idahohousing.com/homebuyers/down-payment-closing-cost-assistance/",
+    websiteUrl: IHFA_LOAN_PRODUCTS_URL,
     contactInfo: "Available through IHFA-approved lenders",
     geographyType: "statewide",
     geographyValues: [],
@@ -106,6 +113,7 @@ export const PROGRAMS: Program[] = [
     lastVerified: "2026-05-26",
     applicationSteps:
       "1. Verify credit score meets program minimum (640–680+ depending on loan type).\n2. Work with an IHFA-approved lender.\n3. Apply for IHFA primary mortgage and Good Credit Rewards simultaneously.\n4. Contribute at least 0.5% of purchase price from your own funds.\n5. Receive up to $8,000 assistance at closing.",
+    applicationUrl: IHFA_DPA_URL,
     requiredDocs: [
       "Credit report meeting program minimums",
       "Finally Home! education certificate (if first-time buyer)",
@@ -121,7 +129,7 @@ export const PROGRAMS: Program[] = [
     name: "IHFA Forgiving DPA (Discontinued)",
     slug: "ihfa-forgiving",
     agency: "Idaho Housing and Finance Association (IHFA)",
-    websiteUrl: "https://www.idahohousing.com/homebuyers/down-payment-closing-cost-assistance/",
+    websiteUrl: IHFA_LOAN_PRODUCTS_URL,
     contactInfo: "See IHFA repayable second mortgage program",
     geographyType: "statewide",
     geographyValues: [],
@@ -140,6 +148,7 @@ export const PROGRAMS: Program[] = [
     lastVerified: "2026-05-26",
     applicationSteps:
       "This program is no longer available. Apply for IHFA's repayable second mortgage DPA instead — up to 8% of sales price with as little as $500 out of pocket.",
+    applicationUrl: IHFA_DPA_URL,
     requiredDocs: [],
     requiresEducationCourse: false,
     createdAt: "2026-05-26",
@@ -190,7 +199,7 @@ export const PROGRAMS: Program[] = [
     name: "Treasure Valley Down Payment Assistance",
     slug: "treasure-valley",
     agency: "Multiple (IHFA + local partners)",
-    websiteUrl: "https://www.idahohousing.com/homebuyers/down-payment-closing-cost-assistance/",
+    websiteUrl: IHFA_LOAN_PRODUCTS_URL,
     contactInfo: "IHFA-approved lenders + City of Boise HOP partners",
     geographyType: "county",
     geographyValues: ["Ada", "Canyon"],
@@ -210,6 +219,7 @@ export const PROGRAMS: Program[] = [
     lastVerified: "2026-05-26",
     applicationSteps:
       "1. Take our quiz to see IHFA + local program matches.\n2. Start with an IHFA-approved lender for statewide DPA.\n3. If buying in Boise city limits, also contact NeighborWorks Boise or LEAP Housing for HOP.\n4. Stack programs where lender guidelines allow.",
+    applicationUrl: IHFA_DPA_URL,
     requiredDocs: [
       "Finally Home! education certificate",
       "Income verification",
@@ -244,7 +254,7 @@ export const PROGRAMS: Program[] = [
     lastVerified: "2026-05-26",
     applicationSteps:
       "1. Complete Finally Home! homebuyer education.\n2. Find an IHFA-approved lender.\n3. Get pre-approved for IHFA First Loan + DPA.\n4. Purchase in Nampa, Caldwell, or elsewhere in Canyon County.",
-    applicationUrl: "https://www.idahohousing.com/homebuyers/find-a-lender/",
+    applicationUrl: IHFA_DPA_URL,
     requiredDocs: [
       "Finally Home! education certificate",
       "Income verification (≤ $170,000 household)",
@@ -259,7 +269,7 @@ export const PROGRAMS: Program[] = [
     name: "Idaho Falls Area Homebuyer Assistance",
     slug: "idaho-falls-local",
     agency: "IHFA + Bonneville County partners",
-    websiteUrl: "https://www.idahohousing.com/homebuyers/down-payment-closing-cost-assistance/",
+    websiteUrl: IHFA_LOAN_PRODUCTS_URL,
     contactInfo: "IHFA-approved lenders in East Idaho",
     geographyType: "county",
     geographyValues: ["Bonneville"],
@@ -279,7 +289,7 @@ export const PROGRAMS: Program[] = [
     lastVerified: "2026-05-26",
     applicationSteps:
       "1. Complete Finally Home! homebuyer education.\n2. Connect with an IHFA-approved lender serving East Idaho.\n3. Get pre-approved for IHFA loan + DPA combo.\n4. Purchase in Idaho Falls or Bonneville County.",
-    applicationUrl: "https://www.idahohousing.com/homebuyers/find-a-lender/",
+    applicationUrl: IHFA_DPA_URL,
     requiredDocs: [
       "Finally Home! education certificate",
       "Income verification",
@@ -294,7 +304,7 @@ export const PROGRAMS: Program[] = [
     name: "Kootenai County / Coeur d'Alene Assistance",
     slug: "coeur-d-alene-local",
     agency: "IHFA + North Idaho partners",
-    websiteUrl: "https://www.idahohousing.com/homebuyers/down-payment-closing-cost-assistance/",
+    websiteUrl: IHFA_LOAN_PRODUCTS_URL,
     contactInfo: "IHFA-approved lenders in North Idaho",
     geographyType: "county",
     geographyValues: ["Kootenai"],
@@ -314,7 +324,7 @@ export const PROGRAMS: Program[] = [
     lastVerified: "2026-05-26",
     applicationSteps:
       "1. Complete Finally Home! homebuyer education.\n2. Find an IHFA-approved lender serving Kootenai County.\n3. Get pre-approved before house hunting in North Idaho's competitive market.\n4. Apply for IHFA DPA with your first mortgage.",
-    applicationUrl: "https://www.idahohousing.com/homebuyers/find-a-lender/",
+    applicationUrl: IHFA_DPA_URL,
     requiredDocs: [
       "Finally Home! education certificate",
       "Income verification",
@@ -329,7 +339,7 @@ export const PROGRAMS: Program[] = [
     name: "IHFA Conventional Advantage Loan",
     slug: "ihfa-conventional",
     agency: "Idaho Housing and Finance Association (IHFA)",
-    websiteUrl: "https://www.idahohousing.com/homebuyers/home-loans/",
+    websiteUrl: IHFA_LOAN_PRODUCTS_URL,
     contactInfo: "IHFA-approved lenders",
     geographyType: "statewide",
     geographyValues: [],
@@ -349,7 +359,7 @@ export const PROGRAMS: Program[] = [
     lastVerified: "2026-05-26",
     applicationSteps:
       "1. Verify credit score (680+ recommended for conventional).\n2. Complete Finally Home! education.\n3. Apply through an IHFA-approved lender.\n4. Combine with IHFA down payment assistance at closing.",
-    applicationUrl: "https://www.idahohousing.com/homebuyers/find-a-lender/",
+    applicationUrl: IHFA_DPA_URL,
     requiredDocs: [
       "Credit report (680+ recommended)",
       "Income verification",

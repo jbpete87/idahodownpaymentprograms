@@ -155,7 +155,17 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="text-gray-500 hover:text-[#10B981] transition-colors"
                 >
-                  Idaho Housing (IHFA)
+                  IHFA Down Payment Assistance
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.idahohousing.com/partners/lenders-realtors/loan-product/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-500 hover:text-[#10B981] transition-colors"
+                >
+                  IHFA Loan Products
                 </a>
               </li>
               <li>

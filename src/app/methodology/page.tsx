@@ -43,9 +43,14 @@ const methodologySchemas = combineSchemas(
 
 const dataSources = [
   {
-    name: "Idaho Housing and Finance Association (IHFA)",
-    url: "https://idahohousing.com",
-    description: "Statewide DPA programs, income limits, and loan matrices",
+    name: "Idaho Housing — Down Payment Assistance",
+    url: "https://www.idahohousing.com/homebuyers/down-payment-closing-cost-assistance/",
+    description: "Official IHFA DPA overview, eligibility, and how to apply",
+  },
+  {
+    name: "Idaho Housing — Loan Product Overview",
+    url: "https://www.idahohousing.com/partners/lenders-realtors/loan-product/",
+    description: "IHFA first mortgage and DPA product details for lenders and buyers",
   },
   {
     name: "City & County Websites",

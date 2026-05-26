@@ -135,7 +135,26 @@ export default function TermsPage() {
             This Website contains links to third-party websites, including:
           </p>
           <ul>
-            <li>Idaho Housing and Finance Association (IHFA) (idahohousing.com)</li>
+            <li>
+              <a
+                href="https://www.idahohousing.com/homebuyers/down-payment-closing-cost-assistance/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#10B981] hover:underline"
+              >
+                Idaho Housing — Down Payment Assistance
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.idahohousing.com/partners/lenders-realtors/loan-product/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#10B981] hover:underline"
+              >
+                Idaho Housing — Loan Product Overview
+              </a>
+            </li>
             <li>City and county government websites</li>
             <li>HUD (hud.gov)</li>
             <li>Program administrator websites</li>

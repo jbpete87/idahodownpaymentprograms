@@ -20,7 +20,6 @@ import {
   FileText,
   CheckCircle2,
   AlertCircle,
-  Download,
 } from "lucide-react";
 import type { Metadata } from "next";
 
@@ -300,7 +299,7 @@ export default async function ProgramDetailPage({ params }: Props) {
             })}
           </ol>
 
-          {/* Application Download Button */}
+          {/* Official application link */}
           {program.applicationUrl && (
             <a
               href={program.applicationUrl}
@@ -308,9 +307,10 @@ export default async function ProgramDetailPage({ params }: Props) {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#10B981] text-white rounded-lg font-medium hover:bg-[#059669] transition-colors mb-6"
             >
-              <Download className="w-4 h-4" />
-              Download Application Form
-              <ExternalLink className="w-3.5 h-3.5 opacity-70" />
+              <ExternalLink className="w-4 h-4" />
+              {program.applicationUrl.includes("idahohousing.com")
+                ? "Apply on Idaho Housing"
+                : "Apply on Official Site"}
             </a>
           )}
 
@@ -354,7 +354,9 @@ export default async function ProgramDetailPage({ params }: Props) {
                 className="flex items-center gap-2 text-[#10B981] hover:underline"
               >
                 <ExternalLink className="w-4 h-4" />
-                Official Website
+                {program.websiteUrl.includes("idahohousing.com")
+                  ? "IHFA Program Details"
+                  : "Official Website"}
               </a>
             )}
           </div>
