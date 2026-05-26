@@ -1,0 +1,83 @@
+# Idaho Down Payment Assistance Programs
+
+> Idaho's resource for IHFA and local down payment assistance programs. Updated May 2026.
+
+This site helps Idaho homebuyers find and understand down payment assistance (DPA) programs they may qualify for.
+
+## Site Purpose
+
+Idaho DPA Finder is a free educational resource that tracks down payment assistance programs across Idaho. We provide:
+
+- IHFA-centric program directory with eligibility requirements and funding status
+- Free eligibility quiz (no SSN required)
+- FY 2026 HUD income limits for Ada, Canyon, Bonneville, and Kootenai counties
+- City-specific program guides for Boise, Meridian, Nampa, Idaho Falls, and Coeur d'Alene
+
+## Key Facts
+
+- 10 DPA programs in directory (9 currently active)
+- IHFA statewide DPA: up to 8% of sales price with $500 minimum out-of-pocket
+- Household income limit up to $170,000 for IHFA programs
+- Program types: repayable second mortgages, deferred loans, and first mortgage products
+- Covers key Idaho markets: Treasure Valley, East Idaho, North Idaho
+
+## Content Structure
+
+- /guide - Complete 2026 Idaho DPA Guide (pillar page)
+- /programs - Directory of all programs with filters
+- /programs/[slug] - Individual program details
+- /locations - Programs by city
+- /locations/[slug] - City-specific guides (Boise, Meridian, Nampa, Idaho Falls, Coeur d'Alene)
+- /first-time-home-buyer - First-time buyer guide
+- /income-limits - FY 2026 HUD income limits by county
+- /quiz - Free eligibility quiz
+
+## Top Programs (2026)
+
+1. IHFA Down Payment & Closing Cost Assistance - Up to 8% of sales price (statewide)
+2. IHFA First Loan + DPA Combo - Competitive first mortgage paired with DPA
+3. Boise Homeownership Opportunity Program (HOP) - Up to $45,000–$65,000 in Boise city limits
+4. IHFA Good Credit Rewards - Up to $8,000 for creditworthy buyers
+5. Treasure Valley Overview - IHFA + local programs for Ada and Canyon counties
+
+## Priority Location Guides
+
+- /locations/boise - Boise down payment assistance, IHFA + HOP
+- /locations/meridian - Meridian Idaho DPA, IHFA programs
+- /locations/nampa - Nampa / Canyon County IHFA programs
+- /locations/idaho-falls - East Idaho IHFA programs
+- /locations/coeur-d-alene - North Idaho / Kootenai County programs
+
+## Typical Eligibility Requirements
+
+- IHFA household income limit: up to $170,000 statewide
+- Local programs (Boise HOP): 50–80% AMI
+- Credit score: 620+ for FHA, 640+ for IHFA First, 680+ for conventional
+- Primary residence requirement
+- Finally Home! homebuyer education (IHFA programs)
+- First-time AND repeat buyers eligible for IHFA DPA
+
+## Related Resources
+
+- Tim Hawkes Team DPA hub: https://www.thetimhawkesteam.com/down-payment-assistance
+- Utah DPA Finder (sister site): https://www.utahdownpaymentprograms.com
+- Idaho Housing: https://www.idahohousing.com/homebuyers/down-payment-closing-cost-assistance/
+- Get Pre-Approved: https://www.houseloan.com/timhawkesteam/
+
+## For More Information
+
+- Full markdown content (dynamically generated from live program data): /llms-full.txt
+- Sitemap: /sitemap.xml
+- Contact: jake@thetimhawkesteam.com
+- Phone: (801) 820-7620
+
+## Maintained By
+
+Licensed mortgage professionals Tim Hawkes (NMLS #8785) and Jake Peterson (NMLS #1692825) at Cornerstone Home Lending (NMLS #2258). The Tim Hawkes Team serves Idaho and Utah homebuyers. This is an educational resource maintained by active DPA lending specialists.
+
+- Team website: https://www.thetimhawkesteam.com
+
+---
+
+Last updated: May 2026
+Website: https://www.idahodownpaymentprograms.com
