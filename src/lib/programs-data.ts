@@ -12,6 +12,10 @@ export const IHFA_LOAN_PRODUCTS_URL =
 export const IHFA_FIND_LENDER_URL =
   "https://www.idahohousing.com/homebuyers/find-a-lender/";
 
+/** Shared IHFA 15-year DPA second mortgage terms (2026 rate sheet) */
+export const IHFA_DPA_SECOND_MORTGAGE_SUMMARY =
+  "15-year fixed-rate second mortgage up to 8% of the lesser of sales price or appraised value (within MI LTV/CLTV limits). Interest rate = first mortgage rate plus 2.00%. Toward down payment and/or closing costs. Finally Home!® homebuyer education required. Purchase transactions for the standard 15-year product.";
+
 export const PROGRAMS: Program[] = [
   // ========================================
   // IHFA STATEWIDE PROGRAMS
@@ -28,19 +32,20 @@ export const PROGRAMS: Program[] = [
     buyerTypes: ["first_time", "repeat", "any"],
     occupations: ["any"],
     amiPercent: 120,
+    maxHouseholdIncome: 170000,
     propertyRules: {
       primaryResidenceRequired: true,
-      propertyTypesAllowed: ["single_family", "condo", "townhome"],
+      propertyTypesAllowed: ["single_family", "condo", "townhome", "manufactured"],
       minBuyerContribution: 500,
     },
     assistanceType: "second_mortgage",
-    maxAmount: 50000,
+    maxAmount: 56000,
     termsSummary:
-      "Statewide repayable second mortgage for up to 8% of the sales price toward down payment and/or closing costs. Minimum $500 borrower contribution. Open to first-time AND repeat buyers. Household income limit up to $170,000. Requires Finally Home! homebuyer education. Fixed-rate second mortgage with monthly payments alongside your first mortgage.",
+      `${IHFA_DPA_SECOND_MORTGAGE_SUMMARY} Minimum $500 of the borrower's own funds required. Open to first-time and repeat buyers. Household income up to $170,000 (exceptions on specialized First Loan Tax Exempt products). Manufactured homes allowed per agency guidelines.`,
     fundingStatus: "open",
     lastVerified: "2026-05-26",
     applicationSteps:
-      "1. Complete Finally Home! homebuyer education at finallyhome.org.\n2. Find an IHFA-approved lender (directory at idahohousing.com/homebuyers/find-a-lender/).\n3. Get pre-approved for an IHFA first mortgage (Conventional, FHA, VA, or USDA).\n4. Tell your lender you want IHFA down payment assistance.\n5. Contribute at least $500 of your own funds toward the transaction.\n6. Both loans close simultaneously — assistance applied at closing.",
+      "1. Complete Finally Home!® homebuyer education at finallyhome.org (required for IHFA DPA).\n2. Find an IHFA-approved lender (directory at idahohousing.com/homebuyers/find-a-lender/).\n3. Get pre-approved for an IHFA first mortgage (Conventional, FHA, VA, USDA/RD, or HFA Preferred).\n4. Tell your lender you want IHFA down payment and closing cost assistance.\n5. Contribute at least $500 of your own funds into the transaction.\n6. Both loans close simultaneously — up to 8% assistance applied at closing.",
     applicationUrl: IHFA_DPA_URL,
     requiredDocs: [
       "Finally Home! homebuyer education certificate",
@@ -64,19 +69,20 @@ export const PROGRAMS: Program[] = [
     buyerTypes: ["first_time", "repeat", "any"],
     occupations: ["any"],
     amiPercent: 120,
+    maxHouseholdIncome: 170000,
     propertyRules: {
       primaryResidenceRequired: true,
-      propertyTypesAllowed: ["single_family", "condo", "townhome"],
+      propertyTypesAllowed: ["single_family", "condo", "townhome", "manufactured"],
       minBuyerContribution: 500,
     },
     assistanceType: "first_mortgage",
-    maxAmount: 50000,
+    maxAmount: 56000,
     termsSummary:
-      "IHFA First Loan is a competitive first mortgage paired with down payment assistance. Combine with IHFA DPA (up to 8% of sales price) for minimal out-of-pocket cash. Available for Conventional, FHA, VA, and USDA financing. Household income up to $170,000. Manufactured homes may qualify through select lenders.",
+      "IHFA first mortgage products (HFA Preferred, HFA Advantage, FHA/RD, VA, Conventional, and First Loan Tax Exempt on select purchases) paired with up to 8% DPCC second mortgage assistance. Household income up to $170,000 for standard programs. No first-time buyer requirement on FHA/RD, VA, and HFA Preferred/Advantage purchases. Manufactured homes allowed per agency guidelines on eligible products.",
     fundingStatus: "open",
     lastVerified: "2026-05-26",
     applicationSteps:
-      "1. Complete Finally Home! homebuyer education.\n2. Choose an IHFA-approved lender from the directory.\n3. Get pre-approved for an IHFA First Loan product.\n4. Apply for IHFA down payment assistance simultaneously.\n5. Your lender packages both loans together at closing.",
+      "1. Complete Finally Home!® education if using IHFA DPA or if required by AUS.\n2. Choose an IHFA-approved lender from the directory.\n3. Get pre-approved for the IHFA first loan product that fits your scenario.\n4. Apply for the 15-year DPCC second mortgage (up to 8%) simultaneously.\n5. Your lender packages both loans together at closing.",
     applicationUrl: IHFA_DPA_URL,
     requiredDocs: [
       "Finally Home! education certificate",
@@ -90,35 +96,36 @@ export const PROGRAMS: Program[] = [
   },
   {
     id: "3",
-    name: "IHFA Good Credit Rewards",
-    slug: "ihfa-good-credit",
+    name: "Idaho Heroes 15 Year Second Mortgage",
+    slug: "idaho-heroes",
     agency: "Idaho Housing and Finance Association (IHFA)",
     websiteUrl: IHFA_LOAN_PRODUCTS_URL,
     contactInfo: "Available through IHFA-approved lenders",
     geographyType: "statewide",
     geographyValues: [],
-    buyerTypes: ["first_time", "repeat"],
-    occupations: ["any"],
-    amiPercent: 100,
+    buyerTypes: ["first_time", "repeat", "any"],
+    occupations: ["teacher", "first_responder", "healthcare"],
+    amiPercent: 120,
+    maxHouseholdIncome: 170000,
     propertyRules: {
       primaryResidenceRequired: true,
-      propertyTypesAllowed: ["single_family", "condo", "townhome"],
-      minBuyerContribution: 500,
+      propertyTypesAllowed: ["single_family", "condo", "townhome", "manufactured"],
+      minBuyerContribution: 0,
     },
     assistanceType: "second_mortgage",
-    maxAmount: 8000,
+    maxAmount: 56000,
     termsSummary:
-      "Smaller DPA option for creditworthy buyers: up to 2.5% of purchase price or $8,000 (whichever is less) as a 10-year second mortgage at 2% above IHFA's standard rate. Requires 680+ credit score (Advantage/Preferred) or 640+ (First Loan products). Minimum 0.5% borrower contribution. Pairs with IHFA primary mortgage.",
+      "Purchase-only 15-year fixed second mortgage for nurses, teachers, and first responders (firefighters, police, paramedics, and EMTs). Up to 8% of the lesser of sales price or appraised value. Interest rate = first mortgage rate plus 2.00%. $500 borrower contribution waived. First mortgage DPA rate add-on waived. Finally Home!® education required. Household income up to $170,000.",
     fundingStatus: "open",
     lastVerified: "2026-05-26",
     applicationSteps:
-      "1. Verify credit score meets program minimum (640–680+ depending on loan type).\n2. Work with an IHFA-approved lender.\n3. Apply for IHFA primary mortgage and Good Credit Rewards simultaneously.\n4. Contribute at least 0.5% of purchase price from your own funds.\n5. Receive up to $8,000 assistance at closing.",
+      "1. Confirm you qualify as a nurse, teacher, or first responder.\n2. Complete Finally Home!® homebuyer education.\n3. Work with an IHFA-approved lender and request the Idaho Heroes second mortgage.\n4. No $500 minimum contribution required for eligible heroes.\n5. Receive up to 8% assistance at closing on eligible purchase transactions.",
     applicationUrl: IHFA_DPA_URL,
     requiredDocs: [
-      "Credit report meeting program minimums",
-      "Finally Home! education certificate (if first-time buyer)",
-      "Income verification",
-      "Proof of minimum borrower contribution",
+      "Employment verification (nurse, teacher, or first responder)",
+      "Finally Home!® education certificate",
+      "Income verification (household income ≤ $170,000)",
+      "IHFA first mortgage pre-approval",
     ],
     requiresEducationCourse: true,
     createdAt: "2026-05-26",
@@ -143,7 +150,7 @@ export const PROGRAMS: Program[] = [
     assistanceType: "forgivable_loan",
     maxAmount: 0,
     termsSummary:
-      "DISCONTINUED: IHFA no longer offers a forgivable down payment assistance product as of 2026. Assistance is now structured as a repayable second mortgage (up to 8% of sales price). See IHFA Down Payment & Closing Cost Assistance for current options.",
+      "DISCONTINUED: IHFA no longer offers a forgivable down payment assistance product as of 2026. Assistance is now a 15-year repayable second mortgage (up to 8% of sales price or appraised value). See IHFA Down Payment & Closing Cost Assistance for current options.",
     fundingStatus: "closed",
     lastVerified: "2026-05-26",
     applicationSteps:
@@ -206,15 +213,16 @@ export const PROGRAMS: Program[] = [
     buyerTypes: ["first_time", "repeat", "any"],
     occupations: ["any"],
     amiPercent: 120,
+    maxHouseholdIncome: 170000,
     propertyRules: {
       primaryResidenceRequired: true,
-      propertyTypesAllowed: ["single_family", "condo", "townhome"],
+      propertyTypesAllowed: ["single_family", "condo", "townhome", "manufactured"],
       minBuyerContribution: 500,
     },
     assistanceType: "second_mortgage",
     maxAmount: 65000,
     termsSummary:
-      "Treasure Valley (Ada + Canyon counties) buyers can combine IHFA statewide DPA (up to 8% of sales price) with local programs like Boise HOP ($45,000–$65,000 in Boise city limits). Most Treasure Valley buyers start with IHFA — the primary path for Boise, Meridian, Nampa, and Caldwell.",
+      "Treasure Valley (Ada + Canyon counties) buyers can combine IHFA 15-year DPCC assistance (up to 8% of sales price or appraised value) with local programs like Boise HOP ($45,000–$65,000 in Boise city limits). Most Treasure Valley buyers start with IHFA — the primary path for Boise, Meridian, Nampa, and Caldwell.",
     fundingStatus: "open",
     lastVerified: "2026-05-26",
     applicationSteps:
@@ -241,15 +249,16 @@ export const PROGRAMS: Program[] = [
     buyerTypes: ["first_time", "repeat", "any"],
     occupations: ["any"],
     amiPercent: 120,
+    maxHouseholdIncome: 170000,
     propertyRules: {
       primaryResidenceRequired: true,
-      propertyTypesAllowed: ["single_family", "condo", "townhome"],
+      propertyTypesAllowed: ["single_family", "condo", "townhome", "manufactured"],
       minBuyerContribution: 500,
     },
     assistanceType: "second_mortgage",
-    maxAmount: 50000,
+    maxAmount: 56000,
     termsSummary:
-      "Canyon County buyers (Nampa, Caldwell, Middleton) primarily use IHFA statewide down payment assistance — up to 8% of sales price with $500 minimum contribution. No active county-wide DPA program; IHFA is the main resource for Canyon County homebuyers.",
+      "Canyon County buyers (Nampa, Caldwell, Middleton) primarily use IHFA 15-year DPCC assistance — up to 8% of the lesser of sales price or appraised value with $500 minimum contribution. No active county-wide DPA program; IHFA is the main resource for Canyon County homebuyers.",
     fundingStatus: "open",
     lastVerified: "2026-05-26",
     applicationSteps:
@@ -276,15 +285,16 @@ export const PROGRAMS: Program[] = [
     buyerTypes: ["first_time", "repeat", "any"],
     occupations: ["any"],
     amiPercent: 120,
+    maxHouseholdIncome: 170000,
     propertyRules: {
       primaryResidenceRequired: true,
-      propertyTypesAllowed: ["single_family", "condo", "townhome"],
+      propertyTypesAllowed: ["single_family", "condo", "townhome", "manufactured"],
       minBuyerContribution: 500,
     },
     assistanceType: "second_mortgage",
-    maxAmount: 50000,
+    maxAmount: 56000,
     termsSummary:
-      "East Idaho buyers in Idaho Falls and Bonneville County use IHFA statewide DPA — up to 8% of sales price toward down payment and closing costs. $500 minimum contribution. Household income up to $170,000. Local city programs are limited; IHFA carries most of the value in this market.",
+      "East Idaho buyers in Idaho Falls and Bonneville County use IHFA 15-year DPCC assistance — up to 8% of sales price or appraised value toward down payment and closing costs. $500 minimum contribution. Household income up to $170,000. Local city programs are limited; IHFA carries most of the value in this market.",
     fundingStatus: "open",
     lastVerified: "2026-05-26",
     applicationSteps:
@@ -311,15 +321,16 @@ export const PROGRAMS: Program[] = [
     buyerTypes: ["first_time", "repeat", "any"],
     occupations: ["any"],
     amiPercent: 120,
+    maxHouseholdIncome: 170000,
     propertyRules: {
       primaryResidenceRequired: true,
-      propertyTypesAllowed: ["single_family", "condo", "townhome"],
+      propertyTypesAllowed: ["single_family", "condo", "townhome", "manufactured"],
       minBuyerContribution: 500,
     },
     assistanceType: "second_mortgage",
-    maxAmount: 50000,
+    maxAmount: 56000,
     termsSummary:
-      "North Idaho buyers in Coeur d'Alene and Kootenai County use IHFA statewide DPA — up to 8% of sales price. $500 minimum out-of-pocket. Open to first-time and repeat buyers. Income limit up to $170,000 household. Competitive market — get pre-approved early.",
+      "North Idaho buyers in Coeur d'Alene and Kootenai County use IHFA 15-year DPCC assistance — up to 8% of sales price or appraised value. $500 minimum out-of-pocket. Open to first-time and repeat buyers. Income limit up to $170,000 household. Competitive market — get pre-approved early.",
     fundingStatus: "open",
     lastVerified: "2026-05-26",
     applicationSteps:
@@ -336,29 +347,30 @@ export const PROGRAMS: Program[] = [
   },
   {
     id: "10",
-    name: "IHFA Conventional Advantage Loan",
+    name: "IHFA HFA Preferred / Conventional",
     slug: "ihfa-conventional",
     agency: "Idaho Housing and Finance Association (IHFA)",
     websiteUrl: IHFA_LOAN_PRODUCTS_URL,
-    contactInfo: "IHFA-approved lenders",
+    contactInfo: "IHFA-approved lenders · Program questions: resloan@ihfa.org",
     geographyType: "statewide",
     geographyValues: [],
-    buyerTypes: ["first_time", "repeat"],
+    buyerTypes: ["first_time", "repeat", "any"],
     occupations: ["any"],
     amiPercent: 120,
+    maxHouseholdIncome: 170000,
     propertyRules: {
       primaryResidenceRequired: true,
-      propertyTypesAllowed: ["single_family", "condo", "townhome"],
+      propertyTypesAllowed: ["single_family", "condo", "townhome", "manufactured"],
       minBuyerContribution: 500,
     },
     assistanceType: "first_mortgage",
-    maxAmount: 50000,
+    maxAmount: 56000,
     termsSummary:
-      "IHFA conventional loan with competitive rates for buyers with strong credit (typically 680+). Pair with IHFA DPA for up to 8% of sales price in assistance. Household income up to $170,000. Lower MI than FHA for qualified buyers.",
+      "Fannie Mae HFA Preferred and Freddie Mac HFA Advantage purchase programs through IHFA. Up to 97% LTV. No first-time buyer requirement. Standard MI required above 80% AMI. Pair with DPCC second mortgage up to 8%. Lower rates on loan amounts $350,000 or less. AUS approval required. Manufactured homes allowed per agency guidelines.",
     fundingStatus: "open",
     lastVerified: "2026-05-26",
     applicationSteps:
-      "1. Verify credit score (680+ recommended for conventional).\n2. Complete Finally Home! education.\n3. Apply through an IHFA-approved lender.\n4. Combine with IHFA down payment assistance at closing.",
+      "1. Complete Finally Home!® education if using IHFA DPA or if required by AUS.\n2. Work with an IHFA-approved lender on HFA Preferred or HFA Advantage.\n3. Get AUS approval (DU for Fannie, LPA for Freddie).\n4. Add the 15-year DPCC second mortgage (up to 8%) if desired.\n5. Close with both loans packaged together.",
     applicationUrl: IHFA_DPA_URL,
     requiredDocs: [
       "Credit report (680+ recommended)",

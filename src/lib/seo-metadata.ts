@@ -55,17 +55,17 @@ export const PROGRAM_SEO: Record<
   "ihfa-dpa": {
     title: "IHFA Down Payment Assistance 2026 | Idaho Housing DPA",
     description:
-      "IHFA down payment assistance 2026: up to 8% of sales price, $500 minimum out-of-pocket. First time and repeat buyers. Income limit $170,000. Updated May 2026.",
+      "IHFA down payment assistance 2026: up to 8% of sales price or appraised value, 15-year second mortgage, $500 minimum out-of-pocket. First time and repeat buyers. Income limit $170,000. Updated May 2026.",
   },
   "ihfa-first-loan": {
     title: "IHFA First Loan + Down Payment Assistance 2026",
     description:
       "IHFA First Loan paired with DPA 2026. Competitive rates + up to 8% assistance. FHA, VA, Conventional, USDA. Find an approved lender — updated May 2026.",
   },
-  "ihfa-good-credit": {
-    title: "IHFA Good Credit Rewards Program 2026",
+  "idaho-heroes": {
+    title: "Idaho Heroes DPA Program 2026 | IHFA Second Mortgage",
     description:
-      "IHFA Good Credit Rewards 2026: up to $8,000 DPA for creditworthy buyers. 640–680+ credit score required. Pairs with IHFA first mortgage — updated May 2026.",
+      "Idaho Heroes 2026: up to 8% DPA for nurses, teachers, and first responders. $500 contribution waived. 15-year second mortgage through IHFA — updated May 2026.",
   },
   "boise-city": {
     title: "Boise Homeownership Opportunity Program (HOP) 2026",

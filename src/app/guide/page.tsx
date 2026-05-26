@@ -59,7 +59,7 @@ const guideFAQs = [
   {
     question: "How much down payment assistance can I get in Idaho in 2026?",
     answer:
-      "IHFA provides up to 8% of the sales price statewide — on a $450,000 home, that's up to $36,000. Boise HOP adds up to $45,000–$65,000 in city limits. Good Credit Rewards offers up to $8,000 for creditworthy buyers.",
+      "IHFA provides up to 8% of the sales price or appraised value statewide — on a $450,000 home, that's up to $36,000. Boise HOP adds up to $45,000–$65,000 in city limits. Idaho Heroes offers the same 8% for nurses, teachers, and first responders with no $500 minimum.",
   },
   {
     question: "What are the income limits for Idaho DPA programs?",
@@ -229,7 +229,7 @@ export default function GuidePage() {
                   title: "Grants",
                   subtitle: "Free money — no repayment required",
                   description: "Grants require no repayment. IHFA no longer offers forgivable grants as of 2026, but some local programs may still include grant-style assistance when funding is available.",
-                  examples: "IHFA Good Credit Rewards (up to $8,000 second mortgage)",
+                  examples: "Idaho Heroes (8% DPA, $500 contribution waived for nurses, teachers, and first responders)",
                   color: "green",
                 },
                 {
@@ -252,8 +252,8 @@ export default function GuidePage() {
                   icon: Building,
                   title: "Second Mortgages",
                   subtitle: "Monthly payments at below-market rates",
-                  description: "These are traditional loans with monthly payments alongside your first mortgage. IHFA's primary DPA is a repayable second mortgage — up to 8% of the sales price with as little as $500 out of pocket.",
-                  examples: "IHFA DPA (up to 8% of sales price), IHFA Good Credit Rewards (up to $8,000)",
+                  description: "IHFA's primary DPA is a 15-year fixed second mortgage — up to 8% of the lesser of sales price or appraised value, interest rate = first mortgage + 2.00%, with as little as $500 out of pocket.",
+                  examples: "IHFA DPCC (up to 8%), Idaho Heroes (same 8% with $500 waived for eligible occupations)",
                   color: "orange",
                 },
               ].map((type) => {
@@ -410,7 +410,7 @@ export default function GuidePage() {
                 { name: "Boise Homeownership Opportunity Program (HOP)", amount: 65000, type: "Deferred Loan", location: "Boise", link: "/programs/boise-city" },
                 { name: "IHFA First Loan + DPA Combo", amount: 50000, type: "First Mortgage + DPA", location: "Statewide", link: "/programs/ihfa-first-loan" },
                 { name: "Treasure Valley DPA Overview", amount: 65000, type: "Combined", location: "Ada + Canyon", link: "/programs/treasure-valley" },
-                { name: "IHFA Good Credit Rewards", amount: 8000, type: "Second Mortgage", location: "Statewide", link: "/programs/ihfa-good-credit" },
+                { name: "Idaho Heroes DPA", amount: 56000, type: "15-Year Second Mortgage", location: "Statewide", link: "/programs/idaho-heroes" },
               ].map((program, index) => (
                 <Link key={program.name} href={program.link}>
                   <Card padding="md" hover className="flex items-center justify-between">

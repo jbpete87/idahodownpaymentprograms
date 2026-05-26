@@ -48,7 +48,7 @@ Down payment assistance (DPA) programs help homebuyers cover their down payment 
 ### 1. Grants
 - **Free money** - no repayment required
 - IHFA no longer offers forgivable grants as of 2026
-- Examples: IHFA Good Credit Rewards (up to $8,000 second mortgage)
+- Examples: Idaho Heroes (up to 8% DPA for nurses, teachers, and first responders)
 
 ### 2. Forgivable Loans
 - **Forgiven after a set occupancy period** in some local programs
@@ -63,7 +63,7 @@ Down payment assistance (DPA) programs help homebuyers cover their down payment 
 ### 4. Second Mortgages
 - **Monthly payments** alongside your first mortgage
 - IHFA's primary DPA — up to 8% of sales price
-- Example: IHFA DPA (up to 8% of sales price), Good Credit Rewards (up to $8,000)
+- Example: IHFA DPA (up to 8% of sales price or appraised value), Idaho Heroes (same 8% with $500 waived)
 
 ---
 

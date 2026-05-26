@@ -127,6 +127,22 @@ function checkIncome(
     };
   }
 
+  // IHFA and similar programs with a flat household income cap
+  if (program.maxHouseholdIncome) {
+    if (answers.annualIncome <= program.maxHouseholdIncome) {
+      result.matches = true;
+      result.reasons.push(
+        `Income within $${program.maxHouseholdIncome.toLocaleString()} household limit`
+      );
+    } else {
+      result.warnings.push(
+        `Income may exceed $${program.maxHouseholdIncome.toLocaleString()} household limit`
+      );
+      result.confidence = "needs_review";
+    }
+    return result;
+  }
+
   // Find the AMI limit for this county and household size
   const amiLimit = amiLimits.find(
     (ami) =>
@@ -242,10 +258,19 @@ function checkOccupation(
     return result;
   }
 
-  if (answers.occupation && answers.occupation !== "other" && program.occupations.includes(answers.occupation)) {
-    result.reasons.push(`Special benefits for ${answers.occupation}s`);
+  if (
+    answers.occupation &&
+    answers.occupation !== "other" &&
+    program.occupations.includes(answers.occupation)
+  ) {
+    result.reasons.push(`Special benefits for ${answers.occupation.replace("_", " ")}s`);
+    return result;
   }
 
+  result.matches = false;
+  result.warnings.push(
+    "Requires eligible occupation (nurse, teacher, or first responder)"
+  );
   return result;
 }
 
@@ -292,17 +317,28 @@ function estimateAmount(
   program: Program,
   answers: Partial<QuizAnswers>
 ): number {
-  // For percentage-based programs (like Chenoa), calculate based on estimated price
+  const priceEstimates: Record<string, number> = {
+    "<300k": 250000,
+    "300-450k": 375000,
+    "450-600k": 525000,
+    "600k+": 650000,
+  };
+  const estimatedPrice =
+    priceEstimates[answers.targetPriceRange || "300-450k"] || 400000;
+
+  // IHFA DPCC: up to 8% of lesser of sales price or appraised value
+  if (
+    program.termsSummary.includes("8%") ||
+    program.termsSummary.includes("8.0%")
+  ) {
+    const eightPercent = estimatedPrice * 0.08;
+    return program.maxAmount
+      ? Math.min(eightPercent, program.maxAmount)
+      : eightPercent;
+  }
+
+  // Legacy percentage-based estimate
   if (program.termsSummary.includes("% of")) {
-    const priceEstimates: Record<string, number> = {
-      "<300k": 250000,
-      "300-450k": 375000,
-      "450-600k": 525000,
-      "600k+": 650000,
-    };
-    const estimatedPrice =
-      priceEstimates[answers.targetPriceRange || "300-450k"] || 400000;
-    // Assume 3.5% for FHA-type assistance
     return Math.min(estimatedPrice * 0.035, program.maxAmount);
   }
 
@@ -335,6 +371,10 @@ export function matchPrograms(
     const buyerResult = checkBuyerType(program, answers);
     const occupationResult = checkOccupation(program, answers);
     const propertyResult = checkPropertyRules(program, answers);
+
+    if (!occupationResult.matches) {
+      continue;
+    }
 
     // Combine all results
     const allReasons = [

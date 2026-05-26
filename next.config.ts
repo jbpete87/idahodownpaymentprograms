@@ -22,6 +22,11 @@ const nextConfig: NextConfig = {
         destination: "https://www.idahodownpaymentprograms.com/:path*",
         permanent: true,
       },
+      {
+        source: "/programs/ihfa-good-credit",
+        destination: "/programs/idaho-heroes",
+        permanent: true,
+      },
     ];
   },
 };

@@ -60,7 +60,7 @@ const guideFAQs = [
   {
     question: "What are the income limits for first-time buyer programs in Idaho?",
     answer:
-      "Most Idaho first-time buyer programs use 80% of Area Median Income (AMI) as the limit. For 2026, this ranges from approximately $70,000-$100,000 for a family of 4 depending on the county. IHFA programs allow up to 120% AMI ($120,000+).",
+      "Most Idaho first-time buyer programs use 80% of Area Median Income (AMI) as the limit. For 2026, this ranges from approximately $70,000-$100,000 for a family of 4 depending on the county. IHFA standard programs allow household income up to $170,000.",
   },
   {
     question: "Do I need perfect credit to qualify for Idaho first-time buyer programs?",
@@ -150,11 +150,11 @@ const topPrograms = [
     highlight: "$500 Min Out-of-Pocket",
   },
   {
-    name: "IHFA Good Credit Rewards",
-    amount: "$8,000",
-    type: "Second Mortgage",
+    name: "Idaho Heroes DPA",
+    amount: "Up to 8%",
+    type: "15-Year Second Mortgage",
     location: "Statewide",
-    highlight: "680+ Credit Score",
+    highlight: "$500 Contribution Waived",
   },
   {
     name: "IHFA First Loan + DPA",

@@ -68,12 +68,12 @@ const homepageFAQs = [
   {
     question: "How much down payment assistance can I get in Idaho?",
     answer:
-      "IHFA provides up to 8% of the sales price — on a $450,000 home, that's up to $36,000. Boise city buyers may also qualify for HOP assistance up to $45,000–$65,000. Good Credit Rewards offers up to $8,000 for creditworthy buyers.",
+      "IHFA provides up to 8% of the sales price or appraised value — on a $450,000 home, that's up to $36,000. Boise HOP adds up to $45,000–$65,000 in city limits. Idaho Heroes offers the same 8% DPA for nurses, teachers, and first responders with the $500 contribution waived.",
   },
   {
     question: "Do I have to pay back Idaho down payment assistance?",
     answer:
-      "IHFA's primary DPA is a repayable second mortgage with monthly payments alongside your first mortgage. Boise HOP uses a deferred loan repaid when you sell or refinance. IHFA no longer offers forgivable grants as of 2026.",
+      "IHFA's primary DPA is a 15-year repayable second mortgage (first mortgage rate + 2.00%) with monthly payments. Boise HOP uses a deferred loan repaid when you sell or refinance. IHFA no longer offers forgivable grants as of 2026.",
   },
   {
     question: "How do I apply for Idaho down payment assistance?",

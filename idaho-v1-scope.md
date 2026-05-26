@@ -43,7 +43,7 @@ Verify against [Idaho Housing](https://www.idahohousing.com/homebuyers/down-paym
 |------|---------|----------|-------|
 | `ihfa-dpa` | IHFA Down Payment & Closing Cost Assistance | Up to 8% of sales price | $500 min borrower contribution; repeat buyers OK |
 | `ihfa-first-loan` | IHFA First Loan + DPA combo | Paired with DPA | Primary 1st mortgage product |
-| `ihfa-good-credit` | IHFA Good Credit Rewards | Varies | If still active — verify |
+| `idaho-heroes` | Idaho Heroes 15 Year Second Mortgage | Up to 8% | Nurses, teachers, first responders |
 | `ihfa-forgiving` | IHFA Forgiving Second (if applicable) | Varies | Verify current product name |
 
 ### Tier 2 — Local / adjacent (P1)

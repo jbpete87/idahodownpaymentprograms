@@ -94,13 +94,10 @@ export default function IncomeLimitsPage() {
                       • <strong>80% AMI</strong> — Boise HOP and many local programs
                     </li>
                     <li>
-                      • <strong>100% AMI</strong> — IHFA Good Credit Rewards and some products
+                      • <strong>$170,000</strong> — IHFA standard household income cap (all counties)
                     </li>
                     <li>
-                      • <strong>120% AMI</strong> — IHFA primary DPA programs
-                    </li>
-                    <li>
-                      • <strong>$170,000</strong> — IHFA statewide household income cap
+                      • <strong>Tax Exempt First Loan</strong> — lower AMI limits apply (see IHFA rate sheet)
                     </li>
                     <li>
                       • Count <strong>all household members</strong> living in

@@ -101,7 +101,7 @@ export const LOCATIONS: Location[] = [
       {
         question: "What credit score do I need for IHFA in Meridian?",
         answer:
-          "Typically 620+ for FHA financing, 640+ for IHFA First Loan products, and 680+ for conventional Advantage loans. Good Credit Rewards requires 640–680+ depending on loan type.",
+          "Typically 620+ for FHA financing, 640+ for IHFA First Loan products, and 680+ for conventional Advantage loans. Idaho Heroes uses the same IHFA credit guidelines as standard DPA.",
       },
     ],
   },

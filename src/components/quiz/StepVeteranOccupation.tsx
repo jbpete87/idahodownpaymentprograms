@@ -115,9 +115,10 @@ export function StepVeteranOccupation() {
           ) && (
             <div className="mt-4 p-4 rounded-xl bg-green-50 border border-green-100">
               <p className="text-sm text-green-800">
-                Great news! IHFA programs are available statewide regardless of occupation.{" "}
-                <strong>Boise HOP</strong> and other local programs may offer additional help
-                for income-eligible buyers — your quiz results will show what you may qualify for.
+                Great news! IHFA programs are available statewide. Eligible{" "}
+                <strong>nurses, teachers, and first responders</strong> may qualify for the{" "}
+                <strong>Idaho Heroes</strong> second mortgage — same up-to-8% DPA with the $500
+                contribution waived.
               </p>
             </div>
           )}

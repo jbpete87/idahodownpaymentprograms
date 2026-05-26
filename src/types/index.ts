@@ -32,6 +32,8 @@ export interface Program {
   buyerTypes: BuyerType[];
   occupations: Occupation[];
   amiPercent: number; // e.g., 80 for 80% AMI
+  /** Flat household income cap (IHFA standard programs use $170,000) */
+  maxHouseholdIncome?: number;
   propertyRules: PropertyRules;
   assistanceType: AssistanceType;
   maxAmount: number;

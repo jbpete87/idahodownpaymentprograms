@@ -122,11 +122,11 @@ const topPrograms = [
     type: "Boise city limits",
     note: "Deferred loan — repaid on sale or refinance",
   },
-  {
-    name: "IHFA Good Credit Rewards",
-    amount: "Up to $8,000",
+    {
+    name: "Idaho Heroes DPA",
+    amount: "Up to 8%",
     type: "Statewide",
-    note: "For buyers with 640–680+ credit depending on loan type",
+    note: "For nurses, teachers, and first responders — $500 contribution waived",
   },
   {
     name: "IHFA First Loan + DPA",
