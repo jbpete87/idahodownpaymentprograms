@@ -323,7 +323,7 @@ export default function HomePage() {
               <p className="text-lg text-gray-600 mb-8">
                 We track all available down payment assistance programs across
                 Idaho so you don&apos;t miss out on money you&apos;re eligible for.
-                <strong> Updated April 2026</strong> with the latest funding status for every program.
+                <strong> Updated May 2026</strong> with the latest funding status for every program.
               </p>
 
               <div className="grid sm:grid-cols-2 gap-4">
@@ -344,10 +344,10 @@ export default function HomePage() {
               <div className="p-8 rounded-3xl bg-white border border-gray-200 shadow-lg">
                 <div className="space-y-4">
                   {[
-                    { city: "Provo", amount: "$60,000", type: "Deferred Loan" },
-                    { city: "Ogden", amount: "$50,000", type: "Carry-Back Mortgage" },
-                    { city: "Murray", amount: "$30,000", type: "Forgivable Loan" },
-                    { city: "Midvale", amount: "$30,000", type: "Forgivable Loan" },
+                    { city: "Boise", amount: "$65,000", type: "Deferred Loan (HOP)" },
+                    { city: "IHFA Statewide", amount: "Up to 8%", type: "Second Mortgage" },
+                    { city: "Meridian", amount: "Up to 8%", type: "IHFA Assistance" },
+                    { city: "Idaho Falls", amount: "Up to 8%", type: "IHFA Assistance" },
                   ].map((program) => (
                     <div
                       key={program.city}
