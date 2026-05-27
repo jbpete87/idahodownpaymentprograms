@@ -28,9 +28,9 @@ export const LOCATIONS: Location[] = [
     population: "240,000+",
     medianHomePrice: "$485,000",
     description:
-      "Boise down payment assistance programs help homebuyers in Idaho's capital and largest city. IHFA statewide DPA (up to 8% of sales price) is available everywhere in Boise, plus the City of Boise Homeownership Opportunity Program (HOP) offers up to $45,000–$65,000 for income-eligible buyers within city limits.",
+      "Boise down payment assistance programs help homebuyers in Idaho's capital and largest city. IHFA statewide DPA (up to 8% of sales price) is available everywhere in Boise, plus the City of Boise Homeownership Opportunity Program (HOP) offers up to $45,000 for buyers at 50–80% AMI within city limits through NeighborWorks Boise or LEAP Housing.",
     metaDescription:
-      "Boise down payment assistance 2026. IHFA up to 8% + Boise HOP up to $65,000. First time and repeat buyers. Free eligibility quiz — updated May 2026.",
+      "Boise down payment assistance 2026. IHFA up to 8% + City of Boise HOP up to $45,000. NeighborWorks Boise or LEAP Housing. Free eligibility quiz — updated May 2026.",
     heroTitle: "Boise Down Payment Assistance 2026",
     heroSubtitle:
       "IHFA statewide programs + Boise Homeownership Opportunity Program for Ada County buyers",
@@ -38,7 +38,7 @@ export const LOCATIONS: Location[] = [
     nearbyAreas: ["meridian", "nampa", "treasure-valley"],
     localFacts: [
       "IHFA DPA: Up to 8% of sales price statewide — $500 minimum out-of-pocket",
-      "Boise HOP: Up to $45,000 (fee simple) or $65,000 (deed-restricted) in city limits",
+      "City of Boise HOP: Up to $45,000 in city limits (NeighborWorks Boise or LEAP Housing)",
       "Household income limit up to $170,000 for IHFA programs",
       "Finally Home! homebuyer education required for IHFA assistance",
     ],
@@ -46,7 +46,7 @@ export const LOCATIONS: Location[] = [
       {
         question: "What down payment assistance is available in Boise in 2026?",
         answer:
-          "Boise buyers can access IHFA down payment assistance (up to 8% of sales price, $500 minimum contribution) statewide, plus the City of Boise Homeownership Opportunity Program (HOP) offering up to $45,000–$65,000 for income-eligible buyers within city limits. Programs can often be combined — take our quiz to see your options.",
+          "Boise buyers can access IHFA down payment assistance (up to 8% of sales price, $500 minimum contribution) statewide, plus City of Boise HOP up to $45,000 for buyers at 50–80% AMI within city limits. Apply through NeighborWorks Boise or LEAP Housing. Programs can often be stacked — take our quiz to see your options.",
       },
       {
         question: "Does IHFA work for repeat buyers in Boise?",
@@ -56,12 +56,12 @@ export const LOCATIONS: Location[] = [
       {
         question: "What are the income limits for Boise down payment assistance?",
         answer:
-          "IHFA programs use a statewide household income limit of $170,000. Boise HOP requires income between 50–80% of Ada County AMI (approximately $43,000–$86,000 for a family of four). Take our free quiz to see which programs fit your income.",
+          "IHFA programs use a statewide household income limit of $170,000. City of Boise HOP requires income between 50–80% of Ada County AMI (approximately $43,000–$86,000 for a family of four in 2026). Take our free quiz to see which programs fit your income.",
       },
       {
         question: "Can I combine IHFA and Boise city programs?",
         answer:
-          "In many cases, yes — IHFA DPA and Boise HOP can be stacked when lender guidelines allow. An IHFA-approved lender can confirm stacking rules for your specific scenario.",
+          "In many cases, yes — IHFA DPA and City of Boise HOP can be stacked when lender guidelines allow. NeighborWorks Boise, LEAP Housing, or your IHFA-approved lender can confirm stacking rules for your scenario.",
       },
     ],
   },

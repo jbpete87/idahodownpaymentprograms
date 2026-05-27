@@ -73,7 +73,7 @@ export default function IncomeLimitsPage() {
               <p className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
                 Most Idaho down payment assistance programs use income limits based on
                 Area Median Income (AMI). IHFA programs allow household income up to
-                $170,000 statewide. Local programs like Boise HOP use 50–80% AMI.
+                $170,000 statewide. City of Boise HOP uses 50–80% AMI.
               </p>
             </div>
           </div>
@@ -91,7 +91,10 @@ export default function IncomeLimitsPage() {
                   </h3>
                   <ul className="text-blue-800 text-sm space-y-1">
                     <li>
-                      • <strong>80% AMI</strong> — Boise HOP and many local programs
+                      • <strong>50–80% AMI</strong> — City of Boise HOP
+                    </li>
+                    <li>
+                      • <strong>80% AMI</strong> — NeighborWorks Boise DPA intake and many local programs
                     </li>
                     <li>
                       • <strong>$170,000</strong> — IHFA standard household income cap (all counties)

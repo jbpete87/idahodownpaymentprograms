@@ -11,6 +11,11 @@ export const IHFA_LOAN_PRODUCTS_URL =
   "https://www.idahohousing.com/partners/lenders-realtors/loan-product/";
 export const IHFA_FIND_LENDER_URL =
   "https://www.idahohousing.com/homebuyers/find-a-lender/";
+export const CITY_OF_BOISE_HOP_URL =
+  "https://www.cityofboise.org/departments/planning-and-development-services/housing-and-community-development/homeownership-opportunity-program/";
+export const NWB_DPA_URL = "https://nwboise.org/down-payment-assistance/";
+export const LEAP_HOUSING_URL = "https://www.leaphousing.org/homes";
+export const LEAP_HOUSING_TRUST_URL = "https://www.leaphousing.org/housing-trust";
 
 /** Shared IHFA 15-year DPA second mortgage terms (2026 rate sheet) */
 export const IHFA_DPA_SECOND_MORTGAGE_SUMMARY =
@@ -170,32 +175,33 @@ export const PROGRAMS: Program[] = [
     name: "Boise Homeownership Opportunity Program (HOP)",
     slug: "boise-city",
     agency: "City of Boise Housing & Community Development",
-    websiteUrl: "https://www.cityofboise.org/departments/planning-and-development-services/housing-and-community-development/",
-    contactInfo: "Apply through NeighborWorks Boise or LEAP Housing",
+    websiteUrl: CITY_OF_BOISE_HOP_URL,
+    contactInfo:
+      "Apply through NeighborWorks Boise — (208) 258-6226 · nwboise.org/down-payment-assistance — or LEAP Housing — (208) 391-2823 · leaphousing.org",
     geographyType: "city",
     geographyValues: ["Boise"],
-    buyerTypes: ["first_time", "repeat"],
+    buyerTypes: ["first_time", "repeat", "any"],
     occupations: ["any"],
+    minAmiPercent: 50,
     amiPercent: 80,
     propertyRules: {
       primaryResidenceRequired: true,
       propertyTypesAllowed: ["single_family", "condo", "townhome"],
-      minBuyerContribution: 500,
-      maxLiquidAssets: 35000,
     },
     assistanceType: "deferred_loan",
-    maxAmount: 65000,
+    maxAmount: 45000,
     termsSummary:
-      "City of Boise deferred mortgage assistance: up to $45,000 for fee-simple properties or up to $65,000 for deed-restricted/land trust properties. Income must be 50–80% AMI. Can pay down payment, closing costs, or buy down the first mortgage. Deferred subordinate loan repaid on sale or refinance. Can stack with IHFA programs in many cases.",
-    fundingStatus: "limited",
+      "City of Boise HUD-funded Homeownership Opportunity Program (HOP): mortgage assistance for down payment, closing costs, or reducing the first mortgage within Boise city limits. Household income must be 50–80% of Ada County AMI. The City accepts referrals only through NeighborWorks Boise or LEAP Housing — both partners provide prerequisite housing counseling and help secure primary financing. Through NeighborWorks, City of Boise assistance is up to $45,000 with a 0.5% borrower contribution, structured as a silent second (no monthly payments; repaid at sale, transfer, or refinance as original assistance × appreciation percentage). Stackable with IHFA DPA. LEAP also operates the Housing Trust for forever-affordable land-trust homeownership at select Boise communities.",
+    fundingStatus: "open",
     lastVerified: "2026-05-26",
     applicationSteps:
-      "1. Verify income is 50–80% of Ada County AMI.\n2. Contact NeighborWorks Boise or LEAP Housing to start application.\n3. Complete homebuyer education if required.\n4. Get pre-approved with a mortgage lender.\n5. Find a home within Boise city limits.\n6. Receive HOP funds as deferred mortgage at closing.",
+      "1. Confirm household income is 50–80% of Ada County AMI.\n2. Choose a City-designated partner: NeighborWorks Boise (nwboise.org/down-payment-assistance/) or LEAP Housing (leaphousing.org).\n3. Complete housing counseling and homebuyer education through your partner.\n4. Get pre-approved for primary financing.\n5. Purchase a home within Boise city limits.\n6. Receive City of Boise HOP funds at closing per partner and City loan terms.",
+    applicationUrl: NWB_DPA_URL,
     requiredDocs: [
-      "Income verification (50–80% AMI)",
-      "Proof of employment and liquid assets",
-      "Pre-approval letter",
-      "Purchase contract for Boise property",
+      "Income verification (50–80% Ada County AMI)",
+      "Housing counseling certificate from NeighborWorks Boise or LEAP Housing",
+      "Pre-approval letter for primary financing",
+      "Purchase contract for Boise city property",
     ],
     requiresEducationCourse: true,
     createdAt: "2026-05-26",
@@ -207,7 +213,7 @@ export const PROGRAMS: Program[] = [
     slug: "treasure-valley",
     agency: "Multiple (IHFA + local partners)",
     websiteUrl: IHFA_LOAN_PRODUCTS_URL,
-    contactInfo: "IHFA-approved lenders + City of Boise HOP partners",
+    contactInfo: "IHFA-approved lenders + NeighborWorks Boise or LEAP Housing (City of Boise HOP)",
     geographyType: "county",
     geographyValues: ["Ada", "Canyon"],
     buyerTypes: ["first_time", "repeat", "any"],
@@ -220,13 +226,13 @@ export const PROGRAMS: Program[] = [
       minBuyerContribution: 500,
     },
     assistanceType: "second_mortgage",
-    maxAmount: 65000,
+    maxAmount: 45000,
     termsSummary:
-      "Treasure Valley (Ada + Canyon counties) buyers can combine IHFA 15-year DPCC assistance (up to 8% of sales price or appraised value) with local programs like Boise HOP ($45,000–$65,000 in Boise city limits). Most Treasure Valley buyers start with IHFA — the primary path for Boise, Meridian, Nampa, and Caldwell.",
+      "Treasure Valley (Ada + Canyon counties) buyers can combine IHFA 15-year DPCC assistance (up to 8% of sales price or appraised value) with City of Boise HOP (up to $45,000 in Boise city limits via NeighborWorks Boise or LEAP Housing). Most Treasure Valley buyers start with IHFA — the primary path for Boise, Meridian, Nampa, and Caldwell.",
     fundingStatus: "open",
     lastVerified: "2026-05-26",
     applicationSteps:
-      "1. Take our quiz to see IHFA + local program matches.\n2. Start with an IHFA-approved lender for statewide DPA.\n3. If buying in Boise city limits, also contact NeighborWorks Boise or LEAP Housing for HOP.\n4. Stack programs where lender guidelines allow.",
+      "1. Take our quiz to see IHFA + local program matches.\n2. Start with an IHFA-approved lender for statewide DPA.\n3. If buying in Boise city limits, work with NeighborWorks Boise or LEAP Housing for City of Boise HOP.\n4. Stack programs where lender guidelines allow.",
     applicationUrl: IHFA_DPA_URL,
     requiredDocs: [
       "Finally Home! education certificate",

@@ -31,7 +31,7 @@ Down payment assistance (DPA) programs help homebuyers cover their down payment 
 
 - **Idaho Housing and Finance Association (IHFA)** - Statewide programs
 - **Counties** - Ada, Canyon, Bonneville, Kootenai
-- **Cities** - Boise HOP
+- **Cities** - City of Boise HOP (NeighborWorks Boise or LEAP Housing)
 
 
 ### Key Statistics (2026)
@@ -53,12 +53,12 @@ Down payment assistance (DPA) programs help homebuyers cover their down payment 
 ### 2. Forgivable Loans
 - **Forgiven after a set occupancy period** in some local programs
 - Less common in Idaho since IHFA shifted to repayable second mortgages
-- Examples: Boise HOP (deferred — repaid on sale or refinance)
+- NeighborWorks Boise may offer forgivable grants depending on availability — inquire for current options
 
 ### 3. Deferred Loans
 - **No monthly payments**
 - Repaid when you sell, refinance, or pay off mortgage
-- Examples: Boise HOP ($45,000–$65,000 in city limits)
+- Example: City of Boise HOP (up to $45,000 silent second via NeighborWorks Boise or LEAP Housing)
 
 ### 4. Second Mortgages
 - **Monthly payments** alongside your first mortgage
@@ -179,7 +179,7 @@ Eligibility varies by program but typically includes:
 
 ### How much down payment assistance can I get in Idaho?
 
-Idaho homebuyers can access up to 8% of the sales price through IHFA statewide, plus Boise HOP up to $65,000 in city limits. The exact amount depends on your location, income, and which programs you qualify for.
+Idaho homebuyers can access up to 8% of the sales price through IHFA statewide, plus City of Boise HOP up to $45,000 in city limits. The exact amount depends on your location, income, and which programs you qualify for.
 
 ### Do I have to pay back down payment assistance?
 
@@ -191,7 +191,7 @@ It depends on the program type:
 
 ### Can I combine multiple DPA programs?
 
-Yes! IHFA DPA can often stack with Boise HOP when lender guidelines allow. Some Treasure Valley buyers combine statewide and city programs for $50,000+ in assistance.
+Yes! IHFA DPA can often stack with City of Boise HOP when lender guidelines allow. Some Treasure Valley buyers combine statewide and city programs for $50,000+ in assistance.
 
 ### What credit score do I need?
 

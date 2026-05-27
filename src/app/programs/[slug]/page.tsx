@@ -208,6 +208,13 @@ export default async function ProgramDetailPage({ params }: Props) {
                     <div className="text-gray-600">
                       <span className="text-[#10B981] font-semibold">No income limit</span> — This program is available to all income levels.
                     </div>
+                  ) : program.minAmiPercent ? (
+                    <div className="text-gray-600">
+                      Household income must be between {program.minAmiPercent}% and{" "}
+                      {program.amiPercent}% AMI for{" "}
+                      {getProgramCounty(program.geographyType, program.geographyValues)}{" "}
+                      County:
+                    </div>
                   ) : (
                     <div className="text-gray-600">
                       Household income must not exceed {program.amiPercent}% AMI for{" "}

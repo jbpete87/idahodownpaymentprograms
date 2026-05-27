@@ -229,7 +229,25 @@ export default async function LocationPage({
                     >
                       Boise Homeownership Opportunity Program (HOP)
                     </Link>{" "}
-                    — up to $45,000–$65,000 for eligible Boise city buyers.
+                    — up to $45,000 for eligible Boise city buyers. Apply through{" "}
+                    <a
+                      href="https://nwboise.org/down-payment-assistance/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-brand-600 hover:underline"
+                    >
+                      NeighborWorks Boise
+                    </a>{" "}
+                    or{" "}
+                    <a
+                      href="https://www.leaphousing.org/homes"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-brand-600 hover:underline"
+                    >
+                      LEAP Housing
+                    </a>
+                    .
                   </p>
                 )}
 

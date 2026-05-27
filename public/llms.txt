@@ -36,7 +36,7 @@ Idaho DPA Finder is a free educational resource that tracks down payment assista
 
 1. IHFA Down Payment & Closing Cost Assistance - Up to 8% of sales price (statewide)
 2. IHFA First Loan + DPA Combo - Competitive first mortgage paired with DPA
-3. Boise Homeownership Opportunity Program (HOP) - Up to $45,000–$65,000 in Boise city limits
+3. Boise Homeownership Opportunity Program (HOP) - Up to $45,000 in Boise city limits (NeighborWorks Boise or LEAP Housing)
 4. Idaho Heroes DPA - Up to 8% for nurses, teachers, and first responders ($500 contribution waived)
 5. Treasure Valley Overview - IHFA + local programs for Ada and Canyon counties
 
@@ -51,7 +51,7 @@ Idaho DPA Finder is a free educational resource that tracks down payment assista
 ## Typical Eligibility Requirements
 
 - IHFA household income limit: up to $170,000 statewide
-- Local programs (Boise HOP): 50–80% AMI
+- Local programs (City of Boise HOP): 50–80% AMI
 - Credit score: 620+ for FHA, 640+ for IHFA First, 680+ for conventional
 - Primary residence requirement
 - Finally Home! homebuyer education (IHFA programs)

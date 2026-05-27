@@ -24,7 +24,7 @@ export const LOCATION_SEO: Record<
   boise: {
     title: "Boise Down Payment Assistance 2026 | IHFA + City Programs",
     description:
-      "Boise down payment assistance 2026: IHFA up to 8% of sales price + Boise HOP up to $65,000. First time and repeat buyers. Free eligibility quiz — updated May 2026.",
+      "Boise down payment assistance 2026: IHFA up to 8% of sales price + City of Boise HOP up to $45,000. NeighborWorks Boise or LEAP Housing. Free eligibility quiz — updated May 2026.",
   },
   meridian: {
     title: "Meridian Idaho Down Payment Assistance 2026",
@@ -70,7 +70,7 @@ export const PROGRAM_SEO: Record<
   "boise-city": {
     title: "Boise Homeownership Opportunity Program (HOP) 2026",
     description:
-      "Boise HOP down payment assistance 2026: up to $45,000–$65,000 deferred loan. 50–80% AMI. Apply through NeighborWorks Boise or LEAP Housing — updated May 2026.",
+      "City of Boise HOP 2026: up to $45,000 for buyers at 50–80% AMI. Apply through NeighborWorks Boise or LEAP Housing — updated May 2026.",
   },
   "treasure-valley": {
     title: "Treasure Valley Down Payment Assistance 2026",

@@ -31,7 +31,9 @@ export interface Program {
   excludedCities?: string[]; // cities excluded from a county-wide program
   buyerTypes: BuyerType[];
   occupations: Occupation[];
-  amiPercent: number; // e.g., 80 for 80% AMI
+  amiPercent: number; // e.g., 80 for 80% AMI max
+  /** Minimum AMI floor (e.g., City of Boise HOP requires 50–80% AMI) */
+  minAmiPercent?: number;
   /** Flat household income cap (IHFA standard programs use $170,000) */
   maxHouseholdIncome?: number;
   propertyRules: PropertyRules;

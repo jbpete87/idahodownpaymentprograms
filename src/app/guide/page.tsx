@@ -54,17 +54,17 @@ const guideFAQs = [
   {
     question: "What is down payment assistance (DPA)?",
     answer:
-      "Down payment assistance programs help homebuyers cover down payment and closing costs. In Idaho, IHFA offers up to 8% of the sales price as a repayable second mortgage. Boise city programs add deferred loans up to $45,000–$65,000 for eligible buyers.",
+      "Down payment assistance programs help homebuyers cover down payment and closing costs. In Idaho, IHFA offers up to 8% of the sales price as a repayable second mortgage. City of Boise HOP adds up to $45,000 through NeighborWorks Boise or LEAP Housing.",
   },
   {
     question: "How much down payment assistance can I get in Idaho in 2026?",
     answer:
-      "IHFA provides up to 8% of the sales price or appraised value statewide — on a $450,000 home, that's up to $36,000. Boise HOP adds up to $45,000–$65,000 in city limits. Idaho Heroes offers the same 8% for nurses, teachers, and first responders with no $500 minimum.",
+      "IHFA provides up to 8% of the sales price or appraised value statewide — on a $450,000 home, that's up to $36,000. City of Boise HOP adds up to $45,000 in city limits. Idaho Heroes offers the same 8% for nurses, teachers, and first responders with no $500 minimum.",
   },
   {
     question: "What are the income limits for Idaho DPA programs?",
     answer:
-      "IHFA uses a statewide household income limit of $170,000. Boise HOP requires 50–80% of Ada County AMI. Local AMI tables for Ada, Canyon, Bonneville, and Kootenai counties are on our income limits page.",
+      "IHFA uses a statewide household income limit of $170,000. City of Boise HOP requires income between 50–80% of Ada County AMI. Local AMI tables for Ada, Canyon, Bonneville, and Kootenai counties are on our income limits page.",
   },
   {
     question: "Do I have to be a first-time homebuyer?",
@@ -74,7 +74,7 @@ const guideFAQs = [
   {
     question: "Can I combine multiple DPA programs?",
     answer:
-      "Often yes — IHFA DPA can stack with Boise HOP when lender guidelines allow. An IHFA-approved lender can confirm stacking rules for your scenario.",
+      "Often yes — IHFA DPA can stack with City of Boise HOP when lender guidelines allow. NeighborWorks Boise, LEAP Housing, or your IHFA-approved lender can confirm stacking rules.",
   },
   {
     question: "How do I apply for Idaho down payment assistance?",
@@ -237,7 +237,7 @@ export default function GuidePage() {
                   title: "Forgivable Loans",
                   subtitle: "Forgiven after 5 years of occupancy",
                   description: "These are loans that become grants if you stay in your home for a set period (usually 5 years). If you sell or refinance early, you repay a prorated amount. Less common in Idaho since IHFA shifted to repayable second mortgages in 2026.",
-                  examples: "Boise HOP (deferred — repaid on sale or refinance)",
+                  examples: "City of Boise HOP (silent second via NeighborWorks Boise or LEAP Housing)",
                   color: "blue",
                 },
                 {
@@ -245,7 +245,7 @@ export default function GuidePage() {
                   title: "Deferred Loans",
                   subtitle: "Repaid when you sell, refinance, or pay off mortgage",
                   description: "These loans have no monthly payments but must be repaid when you sell the home, refinance, or pay off your first mortgage. Interest rates are typically 0-3%. Good option if you plan to stay long-term.",
-                  examples: "Boise HOP ($45,000–$65,000 deferred loan in city limits)",
+                  examples: "City of Boise HOP (up to $45,000 in city limits)",
                   color: "purple",
                 },
                 {
@@ -407,7 +407,7 @@ export default function GuidePage() {
             <div className="space-y-4">
               {[
                 { name: "IHFA Down Payment & Closing Cost Assistance", amount: 50000, type: "Second Mortgage", location: "Statewide", link: "/programs/ihfa-dpa" },
-                { name: "Boise Homeownership Opportunity Program (HOP)", amount: 65000, type: "Deferred Loan", location: "Boise", link: "/programs/boise-city" },
+                { name: "Boise Homeownership Opportunity Program (HOP)", amount: 45000, type: "Silent Second", location: "Boise", link: "/programs/boise-city" },
                 { name: "IHFA First Loan + DPA Combo", amount: 50000, type: "First Mortgage + DPA", location: "Statewide", link: "/programs/ihfa-first-loan" },
                 { name: "Treasure Valley DPA Overview", amount: 65000, type: "Combined", location: "Ada + Canyon", link: "/programs/treasure-valley" },
                 { name: "Idaho Heroes DPA", amount: 56000, type: "15-Year Second Mortgage", location: "Statewide", link: "/programs/idaho-heroes" },

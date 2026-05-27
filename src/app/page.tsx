@@ -58,22 +58,22 @@ const homepageFAQs = [
   {
     question: "What is down payment assistance in Idaho?",
     answer:
-      "Down payment assistance (DPA) programs in Idaho help homebuyers cover down payment and closing costs. IHFA (Idaho Housing) offers up to 8% of the sales price as a repayable second mortgage with as little as $500 out-of-pocket. Boise city programs add up to $45,000–$65,000 for eligible buyers.",
+      "Down payment assistance (DPA) programs in Idaho help homebuyers cover down payment and closing costs. IHFA (Idaho Housing) offers up to 8% of the sales price as a repayable second mortgage with as little as $500 out-of-pocket. City of Boise HOP adds up to $45,000 for eligible buyers through NeighborWorks Boise or LEAP Housing.",
   },
   {
     question: "Who qualifies for Idaho down payment assistance?",
     answer:
-      "IHFA programs are open to first-time and repeat buyers with household income up to $170,000. You must work with an IHFA-approved lender and complete Finally Home! homebuyer education. Local programs like Boise HOP have additional income limits (50–80% AMI).",
+      "IHFA programs are open to first-time and repeat buyers with household income up to $170,000. You must work with an IHFA-approved lender and complete Finally Home! homebuyer education. City of Boise HOP requires income between 50–80% AMI and applications go through NeighborWorks Boise or LEAP Housing.",
   },
   {
     question: "How much down payment assistance can I get in Idaho?",
     answer:
-      "IHFA provides up to 8% of the sales price or appraised value — on a $450,000 home, that's up to $36,000. Boise HOP adds up to $45,000–$65,000 in city limits. Idaho Heroes offers the same 8% DPA for nurses, teachers, and first responders with the $500 contribution waived.",
+      "IHFA provides up to 8% of the sales price or appraised value — on a $450,000 home, that's up to $36,000. City of Boise HOP adds up to $45,000 in city limits. Idaho Heroes offers the same 8% DPA for nurses, teachers, and first responders with the $500 contribution waived.",
   },
   {
     question: "Do I have to pay back Idaho down payment assistance?",
     answer:
-      "IHFA's primary DPA is a 15-year repayable second mortgage (first mortgage rate + 2.00%) with monthly payments. Boise HOP uses a deferred loan repaid when you sell or refinance. IHFA no longer offers forgivable grants as of 2026.",
+      "IHFA's primary DPA is a 15-year repayable second mortgage (first mortgage rate + 2.00%) with monthly payments. City of Boise HOP is a silent second with no monthly payments, repaid at sale or refinance. IHFA no longer offers forgivable grants as of 2026.",
   },
   {
     question: "How do I apply for Idaho down payment assistance?",
@@ -344,7 +344,7 @@ export default function HomePage() {
               <div className="p-8 rounded-3xl bg-white border border-gray-200 shadow-lg">
                 <div className="space-y-4">
                   {[
-                    { city: "Boise", amount: "$65,000", type: "Deferred Loan (HOP)" },
+                    { city: "Boise", amount: "$45,000", type: "HOP Silent Second" },
                     { city: "IHFA Statewide", amount: "Up to 8%", type: "Second Mortgage" },
                     { city: "Meridian", amount: "Up to 8%", type: "IHFA Assistance" },
                     { city: "Idaho Falls", amount: "Up to 8%", type: "IHFA Assistance" },

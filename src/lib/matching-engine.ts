@@ -172,9 +172,23 @@ function checkIncome(
 
   if (answers.annualIncome <= incomeLimit) {
     result.matches = true;
-    result.reasons.push(
-      `Income within ${program.amiPercent}% AMI limit`
-    );
+    if (program.minAmiPercent) {
+      const minIncomeLimit = amiLimit.ami100 * (program.minAmiPercent / 100);
+      if (answers.annualIncome >= minIncomeLimit) {
+        result.reasons.push(
+          `Income within ${program.minAmiPercent}–${program.amiPercent}% AMI range`
+        );
+      } else {
+        result.warnings.push(
+          `Income may be below ${program.minAmiPercent}% AMI minimum`
+        );
+        result.confidence = "needs_review";
+      }
+    } else {
+      result.reasons.push(
+        `Income within ${program.amiPercent}% AMI limit`
+      );
+    }
   } else {
     result.warnings.push(
       `Income may exceed ${program.amiPercent}% AMI limit`
