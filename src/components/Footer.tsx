@@ -101,6 +101,14 @@ export function Footer() {
               </li>
               <li>
                 <Link
+                  href="/first-time-homebuyer-class"
+                  className="text-gray-500 hover:text-[#10B981] transition-colors"
+                >
+                  Homebuyer Class Guide
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/about"
                   className="text-gray-500 hover:text-[#10B981] transition-colors"
                 >
@@ -178,6 +186,16 @@ export function Footer() {
                   Buying in Utah?
                 </a>
               </li>
+              <li>
+                <a
+                  href="https://www.coloradodownpaymentprograms.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-500 hover:text-[#10B981] transition-colors"
+                >
+                  Buying in Colorado?
+                </a>
+              </li>
             </ul>
             
             <h4 className="font-[family-name:var(--font-display)] font-bold text-gray-900 mb-4 mt-6">
@@ -209,6 +227,8 @@ export function Footer() {
                   href="https://www.thetimhawkesteam.com/contact"
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-track="pre_approve"
+                  data-track-detail="footer"
                   className="text-gray-500 hover:text-[#10B981] transition-colors"
                 >
                   Get Pre-Approved
@@ -219,6 +239,8 @@ export function Footer() {
                   href="https://www.houseloan.com/timhawkesteam/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-track="pre_approve"
+                  data-track-detail="cornerstone"
                   className="text-gray-500 hover:text-[#10B981] transition-colors"
                 >
                   Cornerstone Home Lending
