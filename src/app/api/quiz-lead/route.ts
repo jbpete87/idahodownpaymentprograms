@@ -60,8 +60,8 @@ export async function POST(request: Request) {
     );
   }
 
-  const fromEmail = process.env.RESEND_FROM_EMAIL || "Idaho DPA <onboarding@resend.dev>";
-  const toEmail = process.env.RESEND_TO_EMAIL || "jake@thetimhawkesteam.com";
+  const fromEmail = process.env.RESEND_FROM_EMAIL || "Idaho DPA <noreply@yourloanmatch.app>";
+  const toEmail = process.env.RESEND_TO_EMAIL || "jake@yourloanmatch.app";
 
   const matchesHtml =
     matches && matches.length > 0

@@ -34,8 +34,8 @@ Copy `.env.example` to `.env.local`:
 | Variable | Purpose |
 |----------|---------|
 | `RESEND_API_KEY` | Quiz lead emails |
-| `RESEND_TO_EMAIL` | Lead destination (default: jake@thetimhawkesteam.com) |
-| `RESEND_FROM_EMAIL` | From address (`Idaho DPA <noreply@idahodownpaymentprograms.com>`) |
+| `RESEND_TO_EMAIL` | Lead destination (default: `jake@yourloanmatch.app`) |
+| `RESEND_FROM_EMAIL` | From address (`Idaho DPA <noreply@yourloanmatch.app>`) |
 | `NEXT_PUBLIC_GA_ID` | GA4 property (new for Idaho domain) |
 | `GOOGLE_SITE_VERIFICATION` | GSC verification token |
 
