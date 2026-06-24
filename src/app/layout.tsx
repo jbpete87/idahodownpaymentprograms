@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, DM_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
+import { AnalyticsEvents } from "@/components/AnalyticsEvents";
 import "./globals.css";
 import {
   getOrganizationSchema,
@@ -54,14 +55,6 @@ export const metadata: Metadata = {
   ],
   creator: "The Tim Hawkes Team",
   publisher: "Idaho DPA Finder",
-  icons: {
-    icon: [
-      { url: "/icon.svg", type: "image/svg+xml" },
-    ],
-    apple: [
-      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
-    ],
-  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -125,6 +118,7 @@ export default function RootLayout({
         style={{ fontFamily: "var(--font-body)" }}
       >
         <GoogleAnalytics />
+        <AnalyticsEvents />
         {children}
         <Analytics />
       </body>

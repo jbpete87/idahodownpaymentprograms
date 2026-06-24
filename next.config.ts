@@ -8,6 +8,14 @@ const nextConfig: NextConfig = {
   },
   // Resend SDK needs to run unbundled for its HTTP client to reach api.resend.com
   serverExternalPackages: ["resend"],
+  async rewrites() {
+    return [
+      {
+        source: "/favicon.ico",
+        destination: "/icon",
+      },
+    ];
+  },
   // Redirect non-www to www for canonical URL consistency
   async redirects() {
     return [
