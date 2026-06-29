@@ -15,7 +15,7 @@ export const GSC_MONITORING_QUERIES = [
 ] as const;
 
 export const SITE_URL = "https://www.idahodownpaymentprograms.com";
-export const CONTENT_UPDATED = "May 2026";
+export const CONTENT_UPDATED = "June 2026";
 
 export const LOCATION_SEO: Record<
   string,
@@ -24,27 +24,27 @@ export const LOCATION_SEO: Record<
   boise: {
     title: "Boise Down Payment Assistance 2026 | IHFA + City Programs",
     description:
-      "Boise down payment assistance 2026: IHFA up to 8% of sales price + City of Boise HOP up to $45,000–$65,000. NeighborWorks Boise or LEAP Housing. Free eligibility quiz — updated May 2026.",
+      "Boise down payment assistance 2026 for first time home buyers: IHFA up to 8% + City of Boise HOP up to $65,000. Idaho Housing DPA through NeighborWorks Boise or LEAP Housing. Free quiz — updated June 2026.",
   },
   meridian: {
     title: "Meridian Idaho Down Payment Assistance 2026",
     description:
-      "Meridian Idaho down payment assistance 2026. IHFA up to 8% of sales price in Ada County. $500 minimum out-of-pocket. Free eligibility quiz — updated May 2026.",
+      "Meridian Idaho down payment assistance 2026. IHFA Idaho Housing programs up to 8% in Ada County. First time and repeat buyers. $500 minimum out-of-pocket. Free eligibility quiz.",
   },
   nampa: {
     title: "Nampa Idaho Down Payment Assistance 2026",
     description:
-      "Nampa down payment assistance 2026. IHFA programs up to 8% in Canyon County. First time and repeat buyers welcome. Free quiz — updated May 2026.",
+      "Nampa down payment assistance 2026 in Canyon County. IHFA up to 8% for first time home buyers and repeat buyers. Idaho housing down payment assistance — free quiz.",
   },
   "idaho-falls": {
     title: "Idaho Falls Down Payment Assistance 2026",
     description:
-      "Idaho Falls down payment assistance 2026. IHFA up to 8% in Bonneville County. East Idaho first time buyer programs. Free eligibility quiz — updated May 2026.",
+      "Idaho Falls down payment assistance 2026. IHFA up to 8% in Bonneville County for first time home buyers. East Idaho programs — free eligibility quiz.",
   },
   "coeur-d-alene": {
     title: "Coeur d'Alene Down Payment Assistance 2026",
     description:
-      "Coeur d'Alene down payment assistance 2026. IHFA up to 8% in Kootenai County. North Idaho homebuyer programs. Free quiz — updated May 2026.",
+      "Coeur d'Alene down payment assistance 2026. IHFA up to 8% in Kootenai County. North Idaho first time home buyer programs. Free eligibility quiz.",
   },
 };
 
@@ -82,12 +82,37 @@ export const PROGRAM_SEO: Record<
     description:
       "AutumnGold 2026: down payment and closing cost help on select renovated/new homes in the Treasure Valley. 50–80% AMI. Finally Home! required — updated May 2026.",
   },
+  "canyon-county": {
+    title: "Canyon County Down Payment Assistance 2026 | Nampa & Caldwell",
+    description:
+      "Canyon County down payment assistance 2026. IHFA up to 8% for Nampa, Caldwell, and Middleton buyers. Household income up to $170,000. Free eligibility quiz.",
+  },
+  "idaho-falls-local": {
+    title: "Idaho Falls Area Down Payment Assistance 2026 | Bonneville County",
+    description:
+      "Idaho Falls down payment assistance 2026 through IHFA. Up to 8% in Bonneville County for first time and repeat buyers. East Idaho DPA guide — free quiz.",
+  },
+  "coeur-d-alene-local": {
+    title: "Coeur d'Alene Area Down Payment Assistance 2026 | Kootenai County",
+    description:
+      "North Idaho down payment assistance 2026. IHFA up to 8% for Coeur d'Alene, Post Falls, and Hayden buyers in Kootenai County. Free eligibility quiz.",
+  },
+  "ihfa-conventional": {
+    title: "IHFA Conventional Advantage Loan 2026 | Idaho Housing",
+    description:
+      "IHFA Conventional Advantage 2026: competitive conventional first mortgage paired with up to 8% DPA. Income up to $170,000. Find an IHFA-approved lender.",
+  },
+  "ihfa-forgiving": {
+    title: "IHFA Forgivable DPA (Historical) | Idaho Housing Programs",
+    description:
+      "IHFA no longer offers forgivable down payment grants as of 2026. See IHFA 15-year repayable DPA (up to 8%) and Idaho Heroes for current programs.",
+  },
 };
 
 export const PROGRAMS_HUB_SEO = {
   title: "Idaho Down Payment Assistance Programs 2026 | IHFA + Local DPA",
   description:
-    "Idaho down payment assistance programs 2026: IHFA up to 8% statewide, Boise HOP up to $65,000, Idaho Heroes for nurses and teachers. Browse 10+ programs by city. Free eligibility quiz — updated May 2026.",
+    "Idaho down payment assistance programs 2026: IHFA up to 8% statewide, Boise HOP up to $65,000, Idaho Heroes for nurses and teachers. Browse 10+ programs by city. Free eligibility quiz — updated June 2026.",
   openGraphDescription:
     "10+ Idaho DPA programs for 2026. IHFA up to 8%, Boise HOP, Idaho Heroes — filter by county and buyer type.",
 };

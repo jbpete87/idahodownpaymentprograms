@@ -30,10 +30,10 @@ export const LOCATIONS: Location[] = [
     description:
       "Boise down payment assistance programs help homebuyers in Idaho's capital and largest city. IHFA statewide DPA (up to 8% of sales price) is available everywhere in Boise, plus City of Boise HOP offers up to $45,000 (fee-simple) or $65,000 (deed-restricted/land trust) for buyers at 50–80% AMI through NeighborWorks Boise or LEAP Housing.",
     metaDescription:
-      "Boise down payment assistance 2026. IHFA up to 8% + City of Boise HOP up to $45,000–$65,000. NeighborWorks Boise or LEAP Housing. Free eligibility quiz — updated May 2026.",
+      "Boise down payment assistance 2026 for first time home buyers. IHFA up to 8% + City of Boise HOP up to $65,000. Idaho Housing DPA via NeighborWorks Boise or LEAP Housing. Free quiz.",
     heroTitle: "Boise Down Payment Assistance 2026",
     heroSubtitle:
-      "IHFA statewide programs + Boise Homeownership Opportunity Program for Ada County buyers",
+      "First time home buyer programs in Boise — IHFA statewide DPA + City HOP up to $65,000 (funds available now)",
     localPrograms: ["1", "2", "5", "6", "10"],
     nearbyAreas: ["meridian", "nampa", "treasure-valley"],
     localFacts: [
@@ -63,6 +63,11 @@ export const LOCATIONS: Location[] = [
         answer:
           "In many cases, yes — IHFA DPA and City of Boise HOP can be stacked when lender guidelines allow. NeighborWorks Boise, LEAP Housing, or your IHFA-approved lender can confirm stacking rules for your scenario.",
       },
+      {
+        question: "Does Idaho Housing (IHFA) offer down payment assistance in Boise?",
+        answer:
+          "Yes. Idaho Housing and Finance Association (IHFA) offers statewide down payment assistance up to 8% of the sales price with as little as $500 out-of-pocket. Boise buyers also qualify for City of Boise HOP through NeighborWorks Boise or LEAP Housing if income is 50–80% AMI.",
+      },
     ],
   },
   {
@@ -75,10 +80,10 @@ export const LOCATIONS: Location[] = [
     description:
       "Meridian is one of Idaho's fastest-growing cities in Ada County. Homebuyers here primarily use IHFA statewide down payment assistance — up to 8% of the sales price with as little as $500 out of pocket. No separate Meridian city DPA program; IHFA carries most of the value.",
     metaDescription:
-      "Meridian Idaho down payment assistance 2026. IHFA up to 8% of sales price. First time and repeat buyers in Ada County. Free eligibility quiz.",
+      "Meridian Idaho down payment assistance 2026. IHFA Idaho Housing programs up to 8% for first time home buyers in Ada County. Repeat buyers welcome. Free eligibility quiz.",
     heroTitle: "Meridian Down Payment Assistance 2026",
     heroSubtitle:
-      "IHFA programs for Ada County's fastest-growing city — up to 8% assistance with $500 minimum out-of-pocket",
+      "Idaho down payment assistance for Meridian buyers — IHFA up to 8% with $500 minimum out-of-pocket (available now)",
     localPrograms: ["1", "2", "6", "10"],
     nearbyAreas: ["boise", "nampa", "treasure-valley"],
     localFacts: [
@@ -103,6 +108,11 @@ export const LOCATIONS: Location[] = [
         answer:
           "Typically 620+ for FHA financing, 640+ for IHFA First Loan products, and 680+ for conventional Advantage loans. Idaho Heroes uses the same IHFA credit guidelines as standard DPA.",
       },
+      {
+        question: "Is down payment assistance available for first time home buyers in Meridian?",
+        answer:
+          "Yes. First time home buyers in Meridian use IHFA down payment assistance — up to 8% of the sales price toward down payment and closing costs. Repeat buyers also qualify with household income up to $170,000.",
+      },
     ],
   },
   {
@@ -115,10 +125,10 @@ export const LOCATIONS: Location[] = [
     description:
       "Nampa homebuyers in Canyon County access IHFA statewide down payment assistance — the primary DPA resource for Treasure Valley's west side. Up to 8% of sales price with $500 minimum contribution. More affordable entry point than Ada County with the same IHFA programs.",
     metaDescription:
-      "Nampa Idaho down payment assistance 2026. IHFA up to 8% in Canyon County. First time and repeat buyers welcome. Free eligibility quiz.",
+      "Nampa down payment assistance 2026 in Canyon County. IHFA up to 8% for first time home buyers. Idaho housing down payment assistance — free eligibility quiz.",
     heroTitle: "Nampa Down Payment Assistance 2026",
     heroSubtitle:
-      "Canyon County IHFA programs — up to 8% of sales price for Nampa and Treasure Valley west-side buyers",
+      "Down payment assistance Idaho programs for Nampa and Canyon County — IHFA up to 8% (funds available now)",
     localPrograms: ["1", "2", "6", "7", "10", "11"],
     nearbyAreas: ["boise", "meridian", "treasure-valley"],
     localFacts: [
@@ -144,6 +154,11 @@ export const LOCATIONS: Location[] = [
         answer:
           "Yes. IHFA down payment assistance is open to repeat buyers, not just first-time purchasers. Complete Finally Home! education and work with an IHFA-approved lender.",
       },
+      {
+        question: "What first time home buyer programs are available in Nampa?",
+        answer:
+          "Nampa first time home buyers primarily use IHFA down payment assistance (up to 8% of sales price) and may also qualify for AutumnGold Affordable Housing on select Treasure Valley homes. Take our free quiz to see all Canyon County options.",
+      },
     ],
   },
   {
@@ -156,10 +171,10 @@ export const LOCATIONS: Location[] = [
     description:
       "Idaho Falls and East Idaho homebuyers rely on IHFA statewide down payment assistance — up to 8% of the sales price with $500 minimum out-of-pocket. Bonneville County has lower AMI limits than Treasure Valley, making IHFA's $170,000 household income cap especially valuable here.",
     metaDescription:
-      "Idaho Falls down payment assistance 2026. IHFA up to 8% in Bonneville County. East Idaho first time and repeat buyers. Free quiz.",
+      "Idaho Falls down payment assistance 2026. IHFA up to 8% in Bonneville County for first time home buyers. East Idaho down payment assistance — free quiz.",
     heroTitle: "Idaho Falls Down Payment Assistance 2026",
     heroSubtitle:
-      "East Idaho IHFA programs — up to 8% of sales price for Bonneville County homebuyers",
+      "East Idaho first time home buyer programs — IHFA up to 8% for Bonneville County (available now)",
     localPrograms: ["1", "2", "8", "10"],
     nearbyAreas: ["boise", "coeur-d-alene"],
     localFacts: [
@@ -184,6 +199,11 @@ export const LOCATIONS: Location[] = [
         answer:
           "No. IHFA down payment assistance is available to repeat buyers as well as first-time purchasers in Idaho Falls and throughout Bonneville County.",
       },
+      {
+        question: "What down payment assistance is available in Idaho?",
+        answer:
+          "Statewide, Idaho Housing (IHFA) offers up to 8% of the sales price as a 15-year second mortgage with $500 minimum out-of-pocket. Idaho Falls buyers use this as the primary East Idaho program — local city grants are limited in Bonneville County.",
+      },
     ],
   },
   {
@@ -196,10 +216,10 @@ export const LOCATIONS: Location[] = [
     description:
       "Coeur d'Alene and North Idaho homebuyers use IHFA statewide down payment assistance — up to 8% of the sales price. Kootenai County's competitive market makes pre-approval essential. IHFA programs work for first-time and repeat buyers with household income up to $170,000.",
     metaDescription:
-      "Coeur d'Alene down payment assistance 2026. IHFA up to 8% in Kootenai County. North Idaho first time buyers. Free eligibility quiz.",
+      "Coeur d'Alene down payment assistance 2026. IHFA up to 8% in Kootenai County for first time home buyers. North Idaho down payment assistance — free quiz.",
     heroTitle: "Coeur d'Alene Down Payment Assistance 2026",
     heroSubtitle:
-      "North Idaho IHFA programs — up to 8% of sales price for Kootenai County buyers",
+      "North Idaho down payment assistance — IHFA up to 8% for Kootenai County buyers (available now)",
     localPrograms: ["1", "2", "9", "10"],
     nearbyAreas: ["boise", "idaho-falls"],
     localFacts: [
@@ -223,6 +243,11 @@ export const LOCATIONS: Location[] = [
         question: "Can I use IHFA DPA as a repeat buyer in Coeur d'Alene?",
         answer:
           "Yes. IHFA programs are open to repeat buyers with household income up to $170,000. Complete Finally Home! education and work with an IHFA-approved lender serving Kootenai County.",
+      },
+      {
+        question: "Are there first time home buyer grants in Coeur d'Alene?",
+        answer:
+          "IHFA does not offer forgivable grants as of 2026. Coeur d'Alene buyers use IHFA's repayable second mortgage DPA (up to 8% of sales price) or Idaho Heroes for nurses, teachers, and first responders — with the $500 contribution waived for Heroes.",
       },
     ],
   },

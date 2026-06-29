@@ -87,6 +87,21 @@ const guideFAQs = [
     answer:
       "Yes! Many programs can be stacked for maximum assistance. For example, you could combine IHFA statewide DPA (up to 8% of sales price) with City of Boise HOP ($45,000–$65,000 in city limits via NeighborWorks Boise or LEAP Housing). Some buyers access $50,000+ by combining 2–3 programs.",
   },
+  {
+    question: "What Idaho down payment assistance programs are available in 2026?",
+    answer:
+      "Idaho's main statewide program is IHFA down payment assistance — up to 8% of the sales price with $500 minimum out-of-pocket. Boise adds City HOP up to $65,000. Idaho Heroes offers the same 8% for nurses, teachers, and first responders. Browse all programs or take our free quiz to see what you qualify for.",
+  },
+  {
+    question: "Does Idaho Housing offer down payment assistance for first time home buyers?",
+    answer:
+      "Yes. Idaho Housing and Finance Association (IHFA) offers up to 8% of the sales price as a 15-year second mortgage. It is available to first time home buyers and repeat buyers with household income up to $170,000. Finally Home! homebuyer education is required before closing.",
+  },
+  {
+    question: "Are there first time home buyer grants in Idaho?",
+    answer:
+      "IHFA no longer offers forgivable grants as of 2026. Most Idaho buyers use IHFA's repayable second mortgage DPA (up to 8%), City of Boise HOP (deferred loan up to $65,000), or Idaho Heroes. These are assistance programs, not free grants — but they can cover most of your down payment.",
+  },
 ];
 
 const steps = [
@@ -217,7 +232,7 @@ export default function FirstTimeHomeBuyerGuidePage() {
               <div className="flex flex-wrap items-center gap-3 mb-6">
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-sm font-semibold text-amber-800 shadow-sm">
                   <Clock className="w-4 h-4" />
-                  <span>Updated April 2026</span>
+                  <span>Updated June 2026</span>
                   <span className="relative flex h-2 w-2">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
@@ -235,18 +250,27 @@ export default function FirstTimeHomeBuyerGuidePage() {
 
               <p className="text-lg text-gray-600 mb-8">
                 Your complete guide to down payment assistance for first-time home buyers in Idaho.
-                Learn about grants up to <strong className="text-gray-900">8% of sales price</strong>, income
-                limits, requirements, and how to qualify for programs in your area.
+                Learn about IHFA programs up to{" "}
+                <strong className="text-gray-900">8% of sales price</strong>, income limits,
+                requirements, and how to qualify. Read the full{" "}
+                <Link href="/guide" className="text-[#10B981] font-medium hover:underline">
+                  2026 Idaho DPA guide
+                </Link>{" "}
+                or browse{" "}
+                <Link href="/programs/ihfa-dpa" className="text-[#10B981] font-medium hover:underline">
+                  IHFA down payment assistance
+                </Link>
+                .
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/quiz">
+                <Link href="/quiz" data-track="quiz_cta" data-track-detail="ftb_hero">
                   <Button size="lg">
                     Check My Eligibility
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Button>
                 </Link>
-                <Link href="/programs">
+                <Link href="/programs" data-track="program_link" data-track-detail="ftb_hero">
                   <Button variant="secondary" size="lg">
                     View All Programs
                   </Button>
@@ -501,7 +525,7 @@ export default function FirstTimeHomeBuyerGuidePage() {
                 { name: "Treasure Valley", slug: "boise", programs: "5+" },
                 { name: "Ada County", slug: "boise", programs: "5+" },
               ].map((loc) => (
-                <Link key={loc.slug} href={`/locations/${loc.slug}`}>
+                <Link key={`${loc.name}-${loc.slug}`} href={`/locations/${loc.slug}`}>
                   <Card padding="md" hover className="border border-gray-200 text-center h-full">
                     <MapPin className="w-5 h-5 text-[#10B981] mx-auto mb-2" />
                     <div className="font-semibold text-gray-900">{loc.name}</div>

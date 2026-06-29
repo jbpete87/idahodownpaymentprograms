@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, DM_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
+import { AnalyticsClickTracker } from "@/components/AnalyticsClickTracker";
 import "./globals.css";
 import {
   getOrganizationSchema,
@@ -117,6 +118,7 @@ export default function RootLayout({
         style={{ fontFamily: "var(--font-body)" }}
       >
         <GoogleAnalytics />
+        <AnalyticsClickTracker />
         {children}
         <Analytics />
       </body>
