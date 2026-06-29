@@ -229,7 +229,7 @@ export default async function LocationPage({
                     >
                       Boise Homeownership Opportunity Program (HOP)
                     </Link>{" "}
-                    — up to $45,000 for eligible Boise city buyers. Apply through{" "}
+                    — up to $45,000 (fee-simple) or $65,000 (deed-restricted) for eligible Boise city buyers. Apply through{" "}
                     <a
                       href="https://nwboise.org/down-payment-assistance/"
                       target="_blank"

@@ -28,9 +28,10 @@ import {
   ChevronUp,
   Star,
 } from "lucide-react";
+import { AnalyticsEvents } from "@/lib/analytics";
 
 export function StepResults() {
-  const { matches, reset } = useQuizStore();
+  const { matches, answers, submissionId, reset } = useQuizStore();
   const [showLeadForm, setShowLeadForm] = useState(false);
   const [expandedProgram, setExpandedProgram] = useState<string | null>(null);
   const [leadForm, setLeadForm] = useState({
@@ -61,6 +62,8 @@ export function StepResults() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           ...leadForm,
+          submissionId,
+          answers,
           matches: matches.map((m) => ({
             programName: m.program.name,
             agency: m.program.agency,
@@ -76,6 +79,12 @@ export function StepResults() {
         throw new Error(data.error || "Something went wrong. Please try again.");
       }
 
+      AnalyticsEvents.generateLead({
+        leadSource: "quiz",
+        matchCount: matches.length,
+        county: answers.propertyCounty,
+        isFirstTimeBuyer: answers.ownedHomeInLast3Years === false,
+      });
       setLeadSubmitted(true);
     } catch (err) {
       setLeadError(err instanceof Error ? err.message : "Failed to submit. Please try again.");
@@ -319,7 +328,13 @@ export function StepResults() {
               </div>
             </div>
             <div className="flex flex-col gap-2 w-full md:w-auto">
-              <Button variant="primary" onClick={() => setShowLeadForm(true)}>
+              <Button
+                variant="primary"
+                onClick={() => {
+                  AnalyticsEvents.quizLeadFormOpen();
+                  setShowLeadForm(true);
+                }}
+              >
                 Yes, Help Me Apply
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>

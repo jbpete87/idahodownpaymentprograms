@@ -58,7 +58,7 @@ const homepageFAQs = [
   {
     question: "What is down payment assistance in Idaho?",
     answer:
-      "Down payment assistance (DPA) programs in Idaho help homebuyers cover down payment and closing costs. IHFA (Idaho Housing) offers up to 8% of the sales price as a repayable second mortgage with as little as $500 out-of-pocket. City of Boise HOP adds up to $45,000 for eligible buyers through NeighborWorks Boise or LEAP Housing.",
+      "Down payment assistance (DPA) programs in Idaho help homebuyers cover down payment and closing costs. IHFA (Idaho Housing) offers up to 8% of the sales price as a repayable second mortgage with as little as $500 out-of-pocket. City of Boise HOP adds up to $45,000–$65,000 for eligible buyers through NeighborWorks Boise or LEAP Housing.",
   },
   {
     question: "Who qualifies for Idaho down payment assistance?",
@@ -68,7 +68,7 @@ const homepageFAQs = [
   {
     question: "How much down payment assistance can I get in Idaho?",
     answer:
-      "IHFA provides up to 8% of the sales price or appraised value — on a $450,000 home, that's up to $36,000. City of Boise HOP adds up to $45,000 in city limits. Idaho Heroes offers the same 8% DPA for nurses, teachers, and first responders with the $500 contribution waived.",
+      "IHFA provides up to 8% of the sales price or appraised value — on a $450,000 home, that's up to $36,000. City of Boise HOP adds up to $45,000–$65,000 in city limits. Idaho Heroes offers the same 8% DPA for nurses, teachers, and first responders with the $500 contribution waived.",
   },
   {
     question: "Do I have to pay back Idaho down payment assistance?",
@@ -139,13 +139,13 @@ export default function HomePage() {
               </p>
 
               <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Link href="/quiz">
+                <Link href="/quiz" data-track="quiz_cta" data-track-detail="hero">
                   <Button size="lg" className="w-full sm:w-auto">
                     Check My Eligibility
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Button>
                 </Link>
-                <Link href="/guide">
+                <Link href="/guide" data-track="guide_cta" data-track-detail="hero">
                   <Button variant="secondary" size="lg" className="w-full sm:w-auto">
                     Read 2026 Guide
                   </Button>
@@ -301,9 +301,131 @@ export default function HomePage() {
           </div>
 
           <div className="text-center mt-12">
-            <Link href="/quiz">
+            <Link href="/quiz" data-track="quiz_cta" data-track-detail="how_it_works">
               <Button size="lg">
                 Start Your Free Quiz
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Explore by City */}
+      <section className="py-16 md:py-24 bg-white border-y border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Down Payment Assistance by City
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              IHFA programs are statewide, but Boise, Meridian, Nampa, and other
+              cities add local options. Start with your area.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { name: "Boise", slug: "boise", highlight: "Up to $65,000 HOP" },
+              { name: "Meridian", slug: "meridian", highlight: "IHFA + Treasure Valley" },
+              { name: "Nampa", slug: "nampa", highlight: "Canyon County programs" },
+              { name: "Idaho Falls", slug: "idaho-falls", highlight: "East Idaho IHFA" },
+              { name: "Coeur d'Alene", slug: "coeur-d-alene", highlight: "North Idaho IHFA" },
+            ].map((location) => (
+              <Link
+                key={location.slug}
+                href={`/locations/${location.slug}`}
+                data-track="location_link"
+                data-track-detail={location.slug}
+              >
+                <Card padding="md" hover className="h-full">
+                  <div className="flex items-start gap-3">
+                    <MapPin className="w-5 h-5 text-[#10B981] flex-shrink-0 mt-0.5" />
+                    <div>
+                      <h3 className="font-bold text-gray-900">
+                        {location.name} Down Payment Assistance
+                      </h3>
+                      <p className="text-sm text-gray-500 mt-1">{location.highlight}</p>
+                    </div>
+                  </div>
+                </Card>
+              </Link>
+            ))}
+            <Link href="/locations" data-track="location_link" data-track-detail="all">
+              <Card padding="md" hover className="h-full border-dashed">
+                <div className="flex items-center justify-between h-full">
+                  <div>
+                    <h3 className="font-bold text-gray-900">All Idaho Locations</h3>
+                    <p className="text-sm text-gray-500 mt-1">Browse every city guide</p>
+                  </div>
+                  <ArrowRight className="w-5 h-5 text-[#10B981]" />
+                </div>
+              </Card>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Top Programs */}
+      <section className="py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Top Idaho DPA Programs for 2026
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              These are the highest-value programs Idaho buyers ask about most.
+              Each page covers eligibility, amounts, and how to apply.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-4">
+            {[
+              {
+                name: "IHFA Down Payment & Closing Cost Assistance",
+                description: "Up to 8% statewide with $500 out-of-pocket",
+                href: "/programs/ihfa-dpa",
+              },
+              {
+                name: "Boise Homeownership Opportunity Program (HOP)",
+                description: "Up to $45,000–$65,000 in Boise city limits",
+                href: "/programs/boise-city",
+              },
+              {
+                name: "Idaho Heroes DPA",
+                description: "8% for nurses, teachers, and first responders",
+                href: "/programs/idaho-heroes",
+              },
+              {
+                name: "IHFA First Loan + DPA Combo",
+                description: "Competitive first mortgage paired with DPA",
+                href: "/programs/ihfa-first-loan",
+              },
+            ].map((program) => (
+              <Link
+                key={program.href}
+                href={program.href}
+                data-track="program_link"
+                data-track-detail={program.href}
+              >
+                <Card padding="md" hover className="h-full">
+                  <h3 className="font-bold text-gray-900">{program.name}</h3>
+                  <p className="text-sm text-gray-500 mt-1">{program.description}</p>
+                </Card>
+              </Link>
+            ))}
+          </div>
+
+          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/programs" data-track="program_link" data-track-detail="directory">
+              <Button variant="secondary" size="lg">
+                View All Programs
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </Link>
+            <Link href="/first-time-home-buyer" data-track="guide_cta" data-track-detail="first_time_buyer">
+              <Button variant="secondary" size="lg">
+                First-Time Home Buyer Guide
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </Link>
@@ -323,7 +445,19 @@ export default function HomePage() {
               <p className="text-lg text-gray-600 mb-8">
                 We track all available down payment assistance programs across
                 Idaho so you don&apos;t miss out on money you&apos;re eligible for.
-                <strong> Updated May 2026</strong> with the latest funding status for every program.
+                Read the full{" "}
+                <Link href="/guide" className="text-[#10B981] font-medium hover:underline">
+                  2026 Idaho DPA guide
+                </Link>
+                , check{" "}
+                <Link href="/income-limits" className="text-[#10B981] font-medium hover:underline">
+                  FY 2026 income limits
+                </Link>
+                , or browse{" "}
+                <Link href="/programs" className="text-[#10B981] font-medium hover:underline">
+                  all programs
+                </Link>
+                . <strong>Updated May 2026</strong> with the latest funding status.
               </p>
 
               <div className="grid sm:grid-cols-2 gap-4">
@@ -344,14 +478,17 @@ export default function HomePage() {
               <div className="p-8 rounded-3xl bg-white border border-gray-200 shadow-lg">
                 <div className="space-y-4">
                   {[
-                    { city: "Boise", amount: "$45,000", type: "HOP Silent Second" },
-                    { city: "IHFA Statewide", amount: "Up to 8%", type: "Second Mortgage" },
-                    { city: "Meridian", amount: "Up to 8%", type: "IHFA Assistance" },
-                    { city: "Idaho Falls", amount: "Up to 8%", type: "IHFA Assistance" },
+                    { city: "Boise", amount: "$65,000", type: "HOP Deferred Loan", href: "/locations/boise" },
+                    { city: "IHFA Statewide", amount: "Up to 8%", type: "Second Mortgage", href: "/programs/ihfa-dpa" },
+                    { city: "Meridian", amount: "Up to 8%", type: "IHFA Assistance", href: "/locations/meridian" },
+                    { city: "Idaho Falls", amount: "Up to 8%", type: "IHFA Assistance", href: "/locations/idaho-falls" },
                   ].map((program) => (
-                    <div
+                    <Link
                       key={program.city}
-                      className="flex items-center justify-between p-4 rounded-xl bg-gray-50 border border-gray-100"
+                      href={program.href}
+                      data-track="location_link"
+                      data-track-detail={program.city.toLowerCase()}
+                      className="flex items-center justify-between p-4 rounded-xl bg-gray-50 border border-gray-100 hover:border-[#10B981]/30 hover:bg-green-50/50 transition-colors"
                     >
                       <div>
                         <div className="font-bold text-gray-900">
@@ -364,7 +501,7 @@ export default function HomePage() {
                       <div className="font-[family-name:var(--font-display)] text-xl font-bold text-[#10B981]">
                         {program.amount}
                       </div>
-                    </div>
+                    </Link>
                   ))}
                 </div>
                 <div className="mt-6 text-center text-sm text-gray-500 font-medium">
@@ -394,7 +531,7 @@ export default function HomePage() {
                 Take the first step today. Our free eligibility quiz takes just 5
                 minutes and could save you tens of thousands of dollars.
               </p>
-              <Link href="/quiz">
+              <Link href="/quiz" data-track="quiz_cta" data-track-detail="bottom_cta">
                 <Button size="lg" className="bg-white text-[#10B981] hover:bg-gray-100 ring-offset-transparent ring-white">
                   Check My Eligibility Now
                   <ArrowRight className="w-5 h-5 ml-2" />

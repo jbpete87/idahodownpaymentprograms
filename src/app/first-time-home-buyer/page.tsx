@@ -55,7 +55,7 @@ const guideFAQs = [
   {
     question: "How much down payment assistance can first-time buyers get in Idaho?",
     answer:
-      "Idaho first-time home buyers can access up to 8% of sales price in combined down payment assistance by stacking multiple programs. Individual programs range from IHFA DPA (up to 8%) to $45,000 City of Boise assistance. The average buyer uses $30,000-$50,000 in assistance.",
+      "Idaho first-time home buyers can access up to 8% of sales price in combined down payment assistance by stacking multiple programs. Individual programs range from IHFA DPA (up to 8%) to $45,000–$65,000 City of Boise HOP. The average buyer uses $30,000-$50,000 in assistance.",
   },
   {
     question: "What are the income limits for first-time buyer programs in Idaho?",
@@ -85,7 +85,7 @@ const guideFAQs = [
   {
     question: "Can I combine multiple first-time buyer programs in Idaho?",
     answer:
-      "Yes! Many programs can be stacked for maximum assistance. For example, you could combine IHFA statewide DPA (up to 8% of sales price) with City of Boise HOP (up to $45,000 in city limits via NeighborWorks Boise or LEAP Housing). Some buyers access $50,000+ by combining 2–3 programs.",
+      "Yes! Many programs can be stacked for maximum assistance. For example, you could combine IHFA statewide DPA (up to 8% of sales price) with City of Boise HOP ($45,000–$65,000 in city limits via NeighborWorks Boise or LEAP Housing). Some buyers access $50,000+ by combining 2–3 programs.",
   },
 ];
 
@@ -137,7 +137,7 @@ const steps = [
 const topPrograms = [
   {
     name: "Boise HOP",
-    amount: "$45,000",
+    amount: "$65,000",
     type: "Deferred Loan",
     location: "Boise city limits",
     highlight: "NeighborWorks or LEAP",

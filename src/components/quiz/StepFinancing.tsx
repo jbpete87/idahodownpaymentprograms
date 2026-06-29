@@ -5,6 +5,7 @@ import { Button, Card, RadioGroup } from "@/components/ui";
 import { ArrowRight, CreditCard, PiggyBank, Home, Calculator } from "lucide-react";
 import { matchPrograms } from "@/lib/matching-engine";
 import { PROGRAMS, AMI_LIMITS } from "@/lib/programs-data";
+import { AnalyticsEvents } from "@/lib/analytics";
 
 export function StepFinancing() {
   const { answers, updateAnswers, nextStep, setMatches, setIsSubmitting } =
@@ -53,6 +54,7 @@ export function StepFinancing() {
     const submissionId = `quiz_${Date.now()}`;
 
     setMatches(matches, submissionId);
+    AnalyticsEvents.quizComplete(matches.length, matches[0]?.estimatedAmount ?? 0);
     setIsSubmitting(false);
     nextStep();
   };

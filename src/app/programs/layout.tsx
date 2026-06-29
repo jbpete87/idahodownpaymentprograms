@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
-import { CONTENT_UPDATED } from "@/lib/seo-metadata";
-import { PROGRAMS } from "@/lib/programs-data";
+import { PROGRAMS_HUB_SEO } from "@/lib/seo-metadata";
 
 export const metadata: Metadata = {
-  title: "Idaho Down Payment Assistance Programs 2026 | All DPA Grants & Loans",
-  description:
-    `Browse ${PROGRAMS.length}+ Idaho down payment assistance programs for 2026. IHFA up to 8% of sales price for Boise, Meridian, Nampa, and statewide. Free quiz — updated ${CONTENT_UPDATED}.`,
+  title: PROGRAMS_HUB_SEO.title,
+  description: PROGRAMS_HUB_SEO.description,
   alternates: {
     canonical: "/programs",
   },
@@ -18,9 +16,8 @@ export const metadata: Metadata = {
     "idaho first time home buyer programs 2026",
   ],
   openGraph: {
-    title: "Idaho Down Payment Assistance Programs 2026",
-    description:
-      "10+ Idaho DPA programs for 2026. Filter by county, city, and buyer type. IHFA up to 8% of sales price.",
+    title: PROGRAMS_HUB_SEO.title,
+    description: PROGRAMS_HUB_SEO.openGraphDescription,
     type: "website",
   },
 };
@@ -32,4 +29,3 @@ export default function ProgramsLayout({
 }) {
   return <>{children}</>;
 }
-

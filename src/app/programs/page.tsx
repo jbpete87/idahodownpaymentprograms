@@ -5,7 +5,8 @@ import { UpdatedBadge, Button } from "@/components/ui";
 import { ProgramsPageClient } from "@/components/programs/ProgramsPageClient";
 import { PROGRAMS } from "@/lib/programs-data";
 import { CONTENT_UPDATED } from "@/lib/seo-metadata";
-import { MapPin, Home, ArrowRight } from "lucide-react";
+import { formatCurrency } from "@/lib/utils";
+import { MapPin, Home, ArrowRight, Star } from "lucide-react";
 
 const locationLinks = [
   { href: "/locations/boise", label: "Boise Down Payment Assistance" },
@@ -14,6 +15,18 @@ const locationLinks = [
   { href: "/locations/idaho-falls", label: "Idaho Falls DPA" },
   { href: "/locations/coeur-d-alene", label: "Coeur d'Alene DPA" },
 ];
+
+const featuredProgramSlugs = [
+  "ihfa-dpa",
+  "boise-city",
+  "idaho-heroes",
+  "ihfa-first-loan",
+  "treasure-valley",
+] as const;
+
+const featuredPrograms = featuredProgramSlugs
+  .map((slug) => PROGRAMS.find((p) => p.slug === slug))
+  .filter((p): p is NonNullable<typeof p> => p != null);
 
 export default function ProgramsPage() {
   return (
@@ -28,9 +41,9 @@ export default function ProgramsPage() {
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-4">
             Browse all {PROGRAMS.length} active Idaho down payment assistance programs for
-            2026 — grants, forgivable loans, and deferred loans for first time home buyers.
-            Up to 8% of sales price in combined assistance. Use filters below or jump to your city or
-            county guide.
+            2026 — IHFA up to 8% statewide, Boise HOP up to $65,000, and Idaho Heroes for
+            nurses, teachers, and first responders. Grants, forgivable loans, and deferred
+            loans for first time and repeat buyers.
           </p>
           <p className="text-base text-gray-500 max-w-3xl mx-auto mb-6">
             Looking for a specific area? Local guides cover program details, income limits,
@@ -86,6 +99,35 @@ export default function ProgramsPage() {
             </Button>
           </Link>
         </div>
+
+        <section className="mb-10" aria-labelledby="featured-programs-heading">
+          <h2
+            id="featured-programs-heading"
+            className="font-[family-name:var(--font-display)] text-xl font-bold text-gray-900 mb-4 flex items-center gap-2"
+          >
+            <Star className="w-5 h-5 text-[#10B981]" />
+            Most Popular Idaho DPA Programs 2026
+          </h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {featuredPrograms.map((program) => (
+              <Link
+                key={program.slug}
+                href={`/programs/${program.slug}`}
+                className="group block p-4 bg-white rounded-xl border border-gray-200 shadow-sm hover:border-[#10B981] hover:shadow-md transition-all"
+              >
+                <p className="font-semibold text-gray-900 group-hover:text-[#10B981] transition-colors">
+                  {program.name}
+                </p>
+                <p className="text-sm text-[#10B981] font-medium mt-1">
+                  Up to {formatCurrency(program.maxAmount)}
+                </p>
+                <p className="text-sm text-gray-600 mt-2 line-clamp-2">
+                  {program.termsSummary}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </section>
 
         <ProgramsPageClient />
       </main>

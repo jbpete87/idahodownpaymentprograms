@@ -58,7 +58,7 @@ Down payment assistance (DPA) programs help homebuyers cover their down payment 
 ### 3. Deferred Loans
 - **No monthly payments**
 - Repaid when you sell, refinance, or pay off mortgage
-- Example: City of Boise HOP (up to $45,000 silent second via NeighborWorks Boise or LEAP Housing)
+- Example: City of Boise HOP (up to $45,000 fee-simple or $65,000 deed-restricted via NeighborWorks Boise or LEAP Housing)
 
 ### 4. Second Mortgages
 - **Monthly payments** alongside your first mortgage
@@ -179,7 +179,7 @@ Eligibility varies by program but typically includes:
 
 ### How much down payment assistance can I get in Idaho?
 
-Idaho homebuyers can access up to 8% of the sales price through IHFA statewide, plus City of Boise HOP up to $45,000 in city limits. The exact amount depends on your location, income, and which programs you qualify for.
+Idaho homebuyers can access up to 8% of the sales price through IHFA statewide, plus City of Boise HOP up to $45,000–$65,000 in city limits. The exact amount depends on your location, income, and which programs you qualify for.
 
 ### Do I have to pay back down payment assistance?
 

@@ -118,9 +118,9 @@ const topPrograms = [
   },
   {
     name: "Boise HOP",
-    amount: "Up to $45,000",
+    amount: "Up to $65,000",
     type: "Boise city limits",
-    note: "Apply through NeighborWorks Boise or LEAP Housing — silent second repaid at sale or refinance",
+    note: "Up to $45,000 fee-simple or $65,000 deed-restricted — apply through NeighborWorks Boise or LEAP Housing",
   },
     {
     name: "Idaho Heroes DPA",

@@ -16,6 +16,7 @@ export const CITY_OF_BOISE_HOP_URL =
 export const NWB_DPA_URL = "https://nwboise.org/down-payment-assistance/";
 export const LEAP_HOUSING_URL = "https://www.leaphousing.org/homes";
 export const LEAP_HOUSING_TRUST_URL = "https://www.leaphousing.org/housing-trust";
+export const AUTUMN_GOLD_URL = "https://autumngold.org/program-information/";
 
 /** Shared IHFA 15-year DPA second mortgage terms (2026 rate sheet) */
 export const IHFA_DPA_SECOND_MORTGAGE_SUMMARY =
@@ -186,22 +187,33 @@ export const PROGRAMS: Program[] = [
     amiPercent: 80,
     propertyRules: {
       primaryResidenceRequired: true,
-      propertyTypesAllowed: ["single_family", "condo", "townhome"],
+      propertyTypesAllowed: [
+        "single_family",
+        "condo",
+        "townhome",
+        "manufactured",
+        "modular",
+      ],
+      maxLiquidAssets: 35000,
     },
     assistanceType: "deferred_loan",
-    maxAmount: 45000,
+    maxAmount: 65000,
     termsSummary:
-      "City of Boise HUD-funded Homeownership Opportunity Program (HOP): mortgage assistance for down payment, closing costs, or reducing the first mortgage within Boise city limits. Household income must be 50–80% of Ada County AMI. The City accepts referrals only through NeighborWorks Boise or LEAP Housing — both partners provide prerequisite housing counseling and help secure primary financing. Through NeighborWorks, City of Boise assistance is up to $45,000 with a 0.5% borrower contribution, structured as a silent second (no monthly payments; repaid at sale, transfer, or refinance as original assistance × appreciation percentage). Stackable with IHFA DPA. LEAP also operates the Housing Trust for forever-affordable land-trust homeownership at select Boise communities.",
+      "City of Boise Homeownership Opportunity Program (HOP, policy revised 2/2025): deferred mortgage assistance for down payment, closing costs, or reducing the first mortgage within Boise city limits. Funded primarily through HUD CDBG; PRICE funds may apply for eligible manufactured homes. Income 50–80% AMI; all borrowers must occupy — no non-occupant co-borrowers. Fee-simple purchases: up to $45,000. Community land trust, leasehold, or other deed-restricted homes: up to $65,000 with City resale restrictions. Minimum 0.5% borrower contribution; liquid assets over $35,000 must be applied to the purchase; post-closing reserves of 2× monthly housing payment expected. Max 39% front-end / 45% back-end DTI. Fee-simple repayment at sale or transfer: original assistance × (future sales price ÷ original purchase price), capped at net proceeds. IHFA first mortgages qualify. Referrals only through NeighborWorks Boise or LEAP Housing (RFQ-selected partners). Finally Home!® or HUD-approved education required. Manufactured/modular homes eligible with additional site and inspection requirements.",
     fundingStatus: "open",
     lastVerified: "2026-05-26",
     applicationSteps:
-      "1. Confirm household income is 50–80% of Ada County AMI.\n2. Choose a City-designated partner: NeighborWorks Boise (nwboise.org/down-payment-assistance/) or LEAP Housing (leaphousing.org).\n3. Complete housing counseling and homebuyer education through your partner.\n4. Get pre-approved for primary financing.\n5. Purchase a home within Boise city limits.\n6. Receive City of Boise HOP funds at closing per partner and City loan terms.",
+      "1. Confirm household income is 50–80% of Ada County AMI and all loan borrowers will occupy the home.\n2. Apply through a City partner: NeighborWorks Boise or LEAP Housing (open, competitive intake).\n3. Phase 1 — Partner submits income verification (employment, pay stubs, bank/asset statements) for City eligibility review.\n4. Phase 2 — Partner submits first mortgage approval, purchase contract, AUS findings, credit report, earnest money, and Finally Home!® or HUD homebuyer education certificate for City underwriting.\n5. Phase 3 — After conditional approval, partner submits appraisal, closing disclosures, insurance, title, and closing docs.\n6. City wires approved assistance to escrow at closing; Deed of Trust and Homebuyer Agreement recorded.",
     applicationUrl: NWB_DPA_URL,
     requiredDocs: [
-      "Income verification (50–80% Ada County AMI)",
-      "Housing counseling certificate from NeighborWorks Boise or LEAP Housing",
-      "Pre-approval letter for primary financing",
-      "Purchase contract for Boise city property",
+      "Income verification per City Income Calculation Guide (50–80% AMI)",
+      "Verification of employment and 2 months pay stubs",
+      "2 months bank and asset statements",
+      "First mortgage approval (URLA/1003) and AUS findings",
+      "Purchase and sales agreement",
+      "Credit report (within 6 months)",
+      "Finally Home!® or HUD-approved homebuyer education certificate",
+      "Property appraisal (within 6 months of commitment)",
     ],
     requiresEducationCourse: true,
     createdAt: "2026-05-26",
@@ -226,9 +238,9 @@ export const PROGRAMS: Program[] = [
       minBuyerContribution: 500,
     },
     assistanceType: "second_mortgage",
-    maxAmount: 45000,
+    maxAmount: 65000,
     termsSummary:
-      "Treasure Valley (Ada + Canyon counties) buyers can combine IHFA 15-year DPCC assistance (up to 8% of sales price or appraised value) with City of Boise HOP (up to $45,000 in Boise city limits via NeighborWorks Boise or LEAP Housing). Most Treasure Valley buyers start with IHFA — the primary path for Boise, Meridian, Nampa, and Caldwell.",
+      "Treasure Valley (Ada + Canyon counties) buyers can combine IHFA 15-year DPCC assistance (up to 8% of sales price or appraised value) with City of Boise HOP (up to $45,000 fee-simple or $65,000 deed-restricted in Boise city limits via NeighborWorks Boise or LEAP Housing). AutumnGold offers assistance on select Caldwell-area homes. Most Treasure Valley buyers start with IHFA.",
     fundingStatus: "open",
     lastVerified: "2026-05-26",
     applicationSteps:
@@ -264,7 +276,7 @@ export const PROGRAMS: Program[] = [
     assistanceType: "second_mortgage",
     maxAmount: 56000,
     termsSummary:
-      "Canyon County buyers (Nampa, Caldwell, Middleton) primarily use IHFA 15-year DPCC assistance — up to 8% of the lesser of sales price or appraised value with $500 minimum contribution. No active county-wide DPA program; IHFA is the main resource for Canyon County homebuyers.",
+      "Canyon County buyers (Nampa, Caldwell, Middleton) primarily use IHFA 15-year DPCC assistance — up to 8% of the lesser of sales price or appraised value with $500 minimum contribution. AutumnGold Affordable Housing also offers assistance on select renovated/new homes in the Treasure Valley (waitlist). No active county government DPA program.",
     fundingStatus: "open",
     lastVerified: "2026-05-26",
     applicationSteps:
@@ -382,6 +394,44 @@ export const PROGRAMS: Program[] = [
       "Credit report (680+ recommended)",
       "Income verification",
       "Finally Home! certificate",
+    ],
+    requiresEducationCourse: true,
+    createdAt: "2026-05-26",
+    updatedAt: "2026-05-26",
+  },
+  {
+    id: "11",
+    name: "AutumnGold Affordable Housing",
+    slug: "autumn-gold",
+    agency: "AutumnGold Affordable Housing",
+    websiteUrl: AUTUMN_GOLD_URL,
+    applicationUrl: AUTUMN_GOLD_URL,
+    contactInfo: "AutumnGold — (208) 455-9661 · homeinfo@autumngold.org · Caldwell, ID",
+    geographyType: "county",
+    geographyValues: ["Ada", "Canyon"],
+    buyerTypes: ["first_time", "repeat"],
+    occupations: ["any"],
+    minAmiPercent: 50,
+    amiPercent: 80,
+    propertyRules: {
+      primaryResidenceRequired: true,
+      propertyTypesAllowed: ["single_family"],
+      newConstructionOnly: true,
+    },
+    assistanceType: "forgivable_loan",
+    maxAmount: 50000,
+    forgivenessYears: 5,
+    termsSummary:
+      "AutumnGold offers down payment, closing cost, and mortgage-reduction assistance for qualified buyers purchasing a renovated or newly constructed AutumnGold home in the Boise-Nampa metro (Ada and Canyon counties). Income limits vary by listing — up to 50% AMI (NSP) or 80% AMI (HOME) per HUD Boise-Nampa MSA limits. Must qualify for a first mortgage, cannot own other property at purchase, and must occupy as primary residence for 5–20 years depending on assistance amount. Finally Home!® homebuyer education (8 hours) required. Up to 0.5% of purchase price contribution collected as earnest money. Assistance amount is based on participant need and granting agency discretion. Join the waitlist — inventory is limited to AutumnGold homes.",
+    fundingStatus: "waitlist",
+    lastVerified: "2026-05-26",
+    applicationSteps:
+      "1. Review available AutumnGold homes and income limits for each listing at autumngold.org.\n2. Join the AutumnGold waitlist or contact homeinfo@autumngold.org.\n3. Complete Finally Home!® homebuyer education (8 hours, online or in person).\n4. Get pre-approved for a mortgage — good credit required.\n5. Provide earnest money up to 0.5% of purchase price when signing a purchase agreement.\n6. Receive assistance toward down payment, closing costs, or mortgage reduction at closing.",
+    requiredDocs: [
+      "Income verification (≤ 50% or 80% AMI per home listing)",
+      "Finally Home! homebuyer education certificate",
+      "Mortgage pre-approval",
+      "Proof of no other property ownership",
     ],
     requiresEducationCourse: true,
     createdAt: "2026-05-26",

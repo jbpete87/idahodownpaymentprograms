@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Card, Button, Input } from "@/components/ui";
+import { AnalyticsEvents } from "@/lib/analytics";
 import {
   Phone,
   Mail,
@@ -14,7 +15,6 @@ import {
   Star,
   Users,
 } from "lucide-react";
-import type { Metadata } from "next";
 
 const teamMembers = [
   {
@@ -50,12 +50,36 @@ export default function ContactPage() {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In production, this would submit to an API
-    console.log("Contact form submitted:", formState);
-    setSubmitted(true);
+    setError(null);
+    setIsSubmitting(true);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formState),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.error || "Something went wrong. Please try again.");
+      }
+
+      AnalyticsEvents.generateLead({ leadSource: "contact" });
+      setSubmitted(true);
+    } catch (err) {
+      setError(
+        err instanceof Error ? err.message : "Failed to send message. Please try again."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -314,10 +338,16 @@ export default function ContactPage() {
                       />
                     </div>
 
-                    <Button type="submit" fullWidth size="lg">
+                    <Button type="submit" fullWidth size="lg" disabled={isSubmitting}>
                       <Send className="w-4 h-4 mr-2" />
-                      Send Message
+                      {isSubmitting ? "Sending..." : "Send Message"}
                     </Button>
+
+                    {error && (
+                      <p className="text-sm text-red-600 font-medium text-center">
+                        {error}
+                      </p>
+                    )}
 
                     <p className="text-xs text-gray-500 text-center">
                       We typically respond within 1 business day.

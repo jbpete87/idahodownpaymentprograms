@@ -54,12 +54,12 @@ const guideFAQs = [
   {
     question: "What is down payment assistance (DPA)?",
     answer:
-      "Down payment assistance programs help homebuyers cover down payment and closing costs. In Idaho, IHFA offers up to 8% of the sales price as a repayable second mortgage. City of Boise HOP adds up to $45,000 through NeighborWorks Boise or LEAP Housing.",
+      "Down payment assistance programs help homebuyers cover down payment and closing costs. In Idaho, IHFA offers up to 8% of the sales price as a repayable second mortgage. City of Boise HOP adds up to $45,000–$65,000 through NeighborWorks Boise or LEAP Housing.",
   },
   {
     question: "How much down payment assistance can I get in Idaho in 2026?",
     answer:
-      "IHFA provides up to 8% of the sales price or appraised value statewide — on a $450,000 home, that's up to $36,000. City of Boise HOP adds up to $45,000 in city limits. Idaho Heroes offers the same 8% for nurses, teachers, and first responders with no $500 minimum.",
+      "IHFA provides up to 8% of the sales price or appraised value statewide — on a $450,000 home, that's up to $36,000. City of Boise HOP adds up to $45,000–$65,000 in city limits. Idaho Heroes offers the same 8% for nurses, teachers, and first responders with no $500 minimum.",
   },
   {
     question: "What are the income limits for Idaho DPA programs?",
@@ -138,7 +138,7 @@ export default function GuidePage() {
               </p>
 
               <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/quiz">
+                <Link href="/quiz" data-track="quiz_cta" data-track-detail="guide_hero">
                   <Button size="lg" className="w-full sm:w-auto">
                     Check My Eligibility
                     <ArrowRight className="w-5 h-5 ml-2" />
@@ -245,7 +245,7 @@ export default function GuidePage() {
                   title: "Deferred Loans",
                   subtitle: "Repaid when you sell, refinance, or pay off mortgage",
                   description: "These loans have no monthly payments but must be repaid when you sell the home, refinance, or pay off your first mortgage. Interest rates are typically 0-3%. Good option if you plan to stay long-term.",
-                  examples: "City of Boise HOP (up to $45,000 in city limits)",
+                  examples: "City of Boise HOP ($45,000 fee-simple or $65,000 deed-restricted in city limits)",
                   color: "purple",
                 },
                 {
@@ -311,7 +311,7 @@ export default function GuidePage() {
                     </ul>
                   </div>
                   <p className="text-sm">
-                    <Link href="/quiz" className="text-[#10B981] hover:underline">Take our quiz</Link> to check income limits for your specific situation.
+                    <Link href="/quiz" data-track="quiz_cta" data-track-detail="guide_income" className="text-[#10B981] hover:underline">Take our quiz</Link> to check income limits for your specific situation.
                   </p>
                 </div>
               </div>
@@ -407,7 +407,7 @@ export default function GuidePage() {
             <div className="space-y-4">
               {[
                 { name: "IHFA Down Payment & Closing Cost Assistance", amount: 50000, type: "Second Mortgage", location: "Statewide", link: "/programs/ihfa-dpa" },
-                { name: "Boise Homeownership Opportunity Program (HOP)", amount: 45000, type: "Silent Second", location: "Boise", link: "/programs/boise-city" },
+                { name: "Boise Homeownership Opportunity Program (HOP)", amount: 65000, type: "Deferred Loan", location: "Boise", link: "/programs/boise-city" },
                 { name: "IHFA First Loan + DPA Combo", amount: 50000, type: "First Mortgage + DPA", location: "Statewide", link: "/programs/ihfa-first-loan" },
                 { name: "Treasure Valley DPA Overview", amount: 65000, type: "Combined", location: "Ada + Canyon", link: "/programs/treasure-valley" },
                 { name: "Idaho Heroes DPA", amount: 56000, type: "15-Year Second Mortgage", location: "Statewide", link: "/programs/idaho-heroes" },
@@ -576,13 +576,13 @@ export default function GuidePage() {
               Take our free 5-minute quiz and discover which Idaho programs you may qualify for.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/quiz">
+              <Link href="/quiz" data-track="quiz_cta" data-track-detail="guide_bottom">
                 <Button size="lg" className="bg-white text-[#10B981] hover:bg-gray-100">
                   Check My Eligibility Now
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
-              <Link href="/contact">
+              <Link href="/contact" data-track="contact_cta" data-track-detail="guide_bottom">
                 <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
                   Talk to an IHFA Lender
                 </Button>

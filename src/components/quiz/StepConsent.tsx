@@ -4,12 +4,14 @@ import { useQuizStore } from "@/stores/quiz-store";
 import { Button, Card } from "@/components/ui";
 import { Shield, ArrowRight, CheckCircle2, Clock, Lock } from "lucide-react";
 import Link from "next/link";
+import { AnalyticsEvents } from "@/lib/analytics";
 
 export function StepConsent() {
   const { hasConsented, setConsent, nextStep } = useQuizStore();
 
   const handleStart = () => {
     if (hasConsented) {
+      AnalyticsEvents.quizStart();
       nextStep();
     }
   };

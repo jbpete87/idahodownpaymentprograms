@@ -24,7 +24,7 @@ export const LOCATION_SEO: Record<
   boise: {
     title: "Boise Down Payment Assistance 2026 | IHFA + City Programs",
     description:
-      "Boise down payment assistance 2026: IHFA up to 8% of sales price + City of Boise HOP up to $45,000. NeighborWorks Boise or LEAP Housing. Free eligibility quiz — updated May 2026.",
+      "Boise down payment assistance 2026: IHFA up to 8% of sales price + City of Boise HOP up to $45,000–$65,000. NeighborWorks Boise or LEAP Housing. Free eligibility quiz — updated May 2026.",
   },
   meridian: {
     title: "Meridian Idaho Down Payment Assistance 2026",
@@ -70,13 +70,26 @@ export const PROGRAM_SEO: Record<
   "boise-city": {
     title: "Boise Homeownership Opportunity Program (HOP) 2026",
     description:
-      "City of Boise HOP 2026: up to $45,000 for buyers at 50–80% AMI. Apply through NeighborWorks Boise or LEAP Housing — updated May 2026.",
+      "City of Boise HOP 2026: up to $45,000 (fee-simple) or $65,000 (land trust/deed-restricted) for buyers at 50–80% AMI. Apply through NeighborWorks Boise or LEAP Housing — updated May 2026.",
   },
   "treasure-valley": {
     title: "Treasure Valley Down Payment Assistance 2026",
     description:
       "Treasure Valley DPA 2026: IHFA + Boise programs for Ada and Canyon County. Boise, Meridian, Nampa, Caldwell. Free eligibility quiz — updated May 2026.",
   },
+  "autumn-gold": {
+    title: "AutumnGold Affordable Housing 2026 | Caldwell DPA",
+    description:
+      "AutumnGold 2026: down payment and closing cost help on select renovated/new homes in the Treasure Valley. 50–80% AMI. Finally Home! required — updated May 2026.",
+  },
+};
+
+export const PROGRAMS_HUB_SEO = {
+  title: "Idaho Down Payment Assistance Programs 2026 | IHFA + Local DPA",
+  description:
+    "Idaho down payment assistance programs 2026: IHFA up to 8% statewide, Boise HOP up to $65,000, Idaho Heroes for nurses and teachers. Browse 10+ programs by city. Free eligibility quiz — updated May 2026.",
+  openGraphDescription:
+    "10+ Idaho DPA programs for 2026. IHFA up to 8%, Boise HOP, Idaho Heroes — filter by county and buyer type.",
 };
 
 export function getLocationMetadata(

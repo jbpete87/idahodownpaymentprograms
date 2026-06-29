@@ -28,9 +28,9 @@ export const LOCATIONS: Location[] = [
     population: "240,000+",
     medianHomePrice: "$485,000",
     description:
-      "Boise down payment assistance programs help homebuyers in Idaho's capital and largest city. IHFA statewide DPA (up to 8% of sales price) is available everywhere in Boise, plus the City of Boise Homeownership Opportunity Program (HOP) offers up to $45,000 for buyers at 50–80% AMI within city limits through NeighborWorks Boise or LEAP Housing.",
+      "Boise down payment assistance programs help homebuyers in Idaho's capital and largest city. IHFA statewide DPA (up to 8% of sales price) is available everywhere in Boise, plus City of Boise HOP offers up to $45,000 (fee-simple) or $65,000 (deed-restricted/land trust) for buyers at 50–80% AMI through NeighborWorks Boise or LEAP Housing.",
     metaDescription:
-      "Boise down payment assistance 2026. IHFA up to 8% + City of Boise HOP up to $45,000. NeighborWorks Boise or LEAP Housing. Free eligibility quiz — updated May 2026.",
+      "Boise down payment assistance 2026. IHFA up to 8% + City of Boise HOP up to $45,000–$65,000. NeighborWorks Boise or LEAP Housing. Free eligibility quiz — updated May 2026.",
     heroTitle: "Boise Down Payment Assistance 2026",
     heroSubtitle:
       "IHFA statewide programs + Boise Homeownership Opportunity Program for Ada County buyers",
@@ -38,7 +38,7 @@ export const LOCATIONS: Location[] = [
     nearbyAreas: ["meridian", "nampa", "treasure-valley"],
     localFacts: [
       "IHFA DPA: Up to 8% of sales price statewide — $500 minimum out-of-pocket",
-      "City of Boise HOP: Up to $45,000 in city limits (NeighborWorks Boise or LEAP Housing)",
+      "City of Boise HOP: Up to $45,000 (fee-simple) or $65,000 (deed-restricted) in city limits",
       "Household income limit up to $170,000 for IHFA programs",
       "Finally Home! homebuyer education required for IHFA assistance",
     ],
@@ -46,7 +46,7 @@ export const LOCATIONS: Location[] = [
       {
         question: "What down payment assistance is available in Boise in 2026?",
         answer:
-          "Boise buyers can access IHFA down payment assistance (up to 8% of sales price, $500 minimum contribution) statewide, plus City of Boise HOP up to $45,000 for buyers at 50–80% AMI within city limits. Apply through NeighborWorks Boise or LEAP Housing. Programs can often be stacked — take our quiz to see your options.",
+          "Boise buyers can access IHFA down payment assistance (up to 8% of sales price, $500 minimum contribution) statewide, plus City of Boise HOP up to $45,000–$65,000 for buyers at 50–80% AMI within city limits. Apply through NeighborWorks Boise or LEAP Housing. Programs can often be stacked — take our quiz to see your options.",
       },
       {
         question: "Does IHFA work for repeat buyers in Boise?",
@@ -119,11 +119,12 @@ export const LOCATIONS: Location[] = [
     heroTitle: "Nampa Down Payment Assistance 2026",
     heroSubtitle:
       "Canyon County IHFA programs — up to 8% of sales price for Nampa and Treasure Valley west-side buyers",
-    localPrograms: ["1", "2", "6", "7", "10"],
+    localPrograms: ["1", "2", "6", "7", "10", "11"],
     nearbyAreas: ["boise", "meridian", "treasure-valley"],
     localFacts: [
       "Canyon County shares Boise metro AMI limits with Ada County",
       "IHFA DPA: up to 8% of sales price — primary program for Nampa",
+      "AutumnGold Affordable Housing — DPA on select renovated/new homes (Caldwell-based, Treasure Valley)",
       "Lower median prices than Boise/Meridian — same IHFA benefits",
       "No active Canyon County government DPA — IHFA is the main resource",
     ],
@@ -131,7 +132,7 @@ export const LOCATIONS: Location[] = [
       {
         question: "What down payment assistance is available in Nampa?",
         answer:
-          "Nampa buyers use IHFA statewide down payment assistance — up to 8% of the sales price with a $500 minimum contribution. Canyon County does not operate a separate county DPA program; IHFA is the primary resource.",
+          "Nampa and Canyon County buyers use IHFA statewide down payment assistance — up to 8% of the sales price with a $500 minimum contribution. AutumnGold Affordable Housing (Caldwell) also offers down payment and closing cost help on select renovated or new homes for income-qualified buyers — join their waitlist at autumngold.org.",
       },
       {
         question: "Are Nampa income limits different from Boise?",

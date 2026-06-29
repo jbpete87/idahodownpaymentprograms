@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, DM_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
-import { AnalyticsEvents } from "@/components/AnalyticsEvents";
 import "./globals.css";
 import {
   getOrganizationSchema,
@@ -118,7 +117,6 @@ export default function RootLayout({
         style={{ fontFamily: "var(--font-body)" }}
       >
         <GoogleAnalytics />
-        <AnalyticsEvents />
         {children}
         <Analytics />
       </body>
