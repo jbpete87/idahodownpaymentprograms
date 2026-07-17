@@ -5,7 +5,7 @@ import { Card } from "@/components/ui";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Use | Idaho Down Payment Assistance Finder",
+  title: "Terms of Use",
   description:
     "Terms of use for Idaho Down Payment Programs website and eligibility quiz tool.",
   alternates: {

@@ -6,8 +6,7 @@ import { CalculatorResults } from "@/components/calculator/CalculatorResults";
 import { Calculator, Info } from "lucide-react";
 
 export const metadata: Metadata = {
-  title:
-    "Idaho Mortgage Affordability Calculator | How Much Home Can I Afford?",
+  title: "Idaho Mortgage Affordability Calculator",
   description:
     "Free mortgage affordability calculator for Idaho homebuyers. See max purchase price and monthly payments for Conventional, FHA, and VA loans with Idaho-specific tax and insurance rates.",
   alternates: {

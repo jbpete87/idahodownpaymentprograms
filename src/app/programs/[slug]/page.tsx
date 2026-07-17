@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     ...getProgramMetadata(slug, {
-      title: `${program.name} | Idaho Down Payment Assistance`,
+      title: program.name,
       description: `${program.termsSummary} Up to ${formatCurrency(program.maxAmount)} available.`,
     }),
   };

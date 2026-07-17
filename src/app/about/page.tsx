@@ -19,7 +19,7 @@ import type { Metadata } from "next";
 import { getArticleSchema, getBreadcrumbSchema, combineSchemas } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "About Us | Idaho Down Payment Assistance Finder",
+  title: "About Idaho DPA Finder",
   description:
     "Learn about The Tim Hawkes Team and our mission to help Idaho homebuyers find and access down payment assistance programs.",
   alternates: {

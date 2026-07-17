@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 import { LOCATIONS, getLocationsByType } from "@/lib/locations-data";
 
 export const metadata: Metadata = {
-  title: "Idaho DPA by Location | Down Payment Assistance Finder",
+  title: "Idaho Down Payment Assistance by City",
   description:
     "Find down payment assistance programs by city in Idaho. Local guides for Boise, Meridian, Nampa, Idaho Falls, Coeur d'Alene, and more.",
   alternates: {

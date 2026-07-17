@@ -22,7 +22,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "First-Time Homebuyer Class Resource Guide | Idaho 2026",
+  title: "Idaho First-Time Homebuyer Class Guide",
   description:
     "Everything you need to know about buying your first home in Idaho. Covers the homebuying process, credit requirements, down payment assistance, loan types, and affordability.",
   alternates: {

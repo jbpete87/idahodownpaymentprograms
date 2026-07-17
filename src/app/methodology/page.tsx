@@ -17,7 +17,7 @@ import type { Metadata } from "next";
 import { getArticleSchema, getBreadcrumbSchema, combineSchemas } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "How We Track Programs | Idaho Down Payment Assistance Finder",
+  title: "How We Track Idaho DPA Programs",
   description:
     "Learn how Idaho DPA Finder tracks, verifies, and updates down payment assistance program information across Idaho.",
   alternates: {

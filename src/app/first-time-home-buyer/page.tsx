@@ -22,7 +22,7 @@ import type { Metadata } from "next";
 import { getFAQSchema, getArticleSchema, getBreadcrumbSchema, combineSchemas } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Idaho First Time Home Buyer Programs 2026 | Down Payment Assistance",
+  title: "Idaho First Time Home Buyer Programs 2026",
   description:
     "Idaho first time home buyer programs down payment assistance 2026. Grants up to 8% of sales price, income limits, requirements, and how to qualify. Free eligibility quiz — updated May 2026.",
   alternates: {
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     "first time home buyer programs idaho 2026",
   ],
   openGraph: {
-    title: "Idaho First Time Home Buyer Programs 2026 | Down Payment Assistance",
+    title: "Idaho First Time Home Buyer Programs 2026",
     description:
       "2026 guide to Idaho first time home buyer programs with up to 8% of sales price in grants and forgivable loans.",
     type: "article",

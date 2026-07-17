@@ -9,7 +9,8 @@
     "lint": "eslint",
     "update-ami": "node scripts/update-ami.mjs",
     "update-ami:dry": "node scripts/update-ami.mjs --dry-run",
-    "update-ami:idaho": "node scripts/update-ami.mjs --state ID --counties \"Ada,Canyon,Bonneville,Kootenai\""
+    "update-ami:idaho": "node scripts/update-ami.mjs --state ID --counties \"Ada,Canyon,Bonneville,Kootenai\"",
+    "indexnow": "node scripts/submit-indexnow.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.90.1",

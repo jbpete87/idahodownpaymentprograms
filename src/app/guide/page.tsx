@@ -29,7 +29,7 @@ import {
 } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Idaho Down Payment Assistance Programs 2026 - Complete Guide",
+  title: "Idaho Down Payment Assistance Guide 2026",
   description:
     "The complete 2026 guide to Idaho down payment assistance. Learn about income limits, eligibility requirements, application steps, and compare 20+ programs offering up to 8% of sales price in grants and forgivable loans.",
   alternates: {
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     "idaho homebuyer programs",
   ],
   openGraph: {
-    title: "Idaho Down Payment Assistance Programs 2026 - Complete Guide",
+    title: "Idaho Down Payment Assistance Guide 2026",
     description:
       "The complete 2026 guide to Idaho down payment assistance. Compare 20+ programs offering up to 8% of sales price.",
   },
@@ -89,11 +89,11 @@ const maxAssistance = Math.max(...PROGRAMS.map(p => p.maxAmount));
 
 const pageSchemas = combineSchemas(
   getArticleSchema({
-    title: "Idaho Down Payment Assistance Programs 2026 - Complete Guide",
+    title: "Idaho Down Payment Assistance Guide 2026",
     description: "The complete 2026 guide to Idaho down payment assistance programs. Compare 20+ programs offering up to 8% of sales price.",
     url: "https://www.idahodownpaymentprograms.com/guide",
     datePublished: "2026-01-01",
-    dateModified: "2026-01-15",
+    dateModified: "2026-06-29",
   }),
   getFAQSchema(guideFAQs),
   getBreadcrumbSchema([

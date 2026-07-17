@@ -7,7 +7,7 @@ import { Card } from "@/components/ui/Card";
 import { ExternalLink, Info, Users, DollarSign } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "2026 Idaho Income Limits by County | AMI Calculator",
+  title: "2026 Idaho Income Limits by County",
   description:
     "2026 HUD income limits for Idaho down payment assistance programs. Find 80%, 100%, and 120% AMI limits for Ada, Canyon, Bonneville, and Kootenai counties.",
   alternates: {

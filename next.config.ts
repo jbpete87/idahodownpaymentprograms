@@ -35,6 +35,11 @@ const nextConfig: NextConfig = {
         destination: "/programs/idaho-heroes",
         permanent: true,
       },
+      {
+        source: "/ihfa-dpa",
+        destination: "/programs/ihfa-dpa",
+        permanent: true,
+      },
     ];
   },
 };

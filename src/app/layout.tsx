@@ -30,11 +30,11 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   title: {
-    default: "Idaho Down Payment Assistance Programs 2026 | First Time Home Buyer Guide",
-    template: "%s | Idaho DPA Finder 2026",
+    default: "Idaho Down Payment Assistance Programs 2026",
+    template: "%s | Idaho DPA",
   },
   description:
-    "2026 Idaho down payment assistance programs guide. IHFA offers up to 8% of sales price with $500 out-of-pocket. Free eligibility quiz covering IHFA and local programs. Updated May 2026.",
+    "2026 Idaho down payment assistance guide. IHFA up to 8% of sales price with $500 out-of-pocket. Free eligibility quiz for IHFA and local programs. Updated June 2026.",
   keywords: [
     "idaho down payment assistance 2026",
     "idaho first time home buyer 2026",
@@ -60,13 +60,13 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.idahodownpaymentprograms.com",
     siteName: "Idaho DPA Finder",
-    title: "Idaho Down Payment Assistance Programs 2026 Guide",
+    title: "Idaho Down Payment Assistance Programs 2026",
     description:
       "2026 Idaho down payment assistance guide. IHFA up to 8% of sales price. Free quiz for Boise, Meridian, Nampa, and statewide programs.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Idaho Down Payment Assistance Programs 2026 Guide",
+    title: "Idaho Down Payment Assistance Programs 2026",
     description:
       "2026 Idaho down payment assistance guide. IHFA up to 8% of sales price. Free quiz for Boise, Meridian, Nampa, and statewide programs.",
   },

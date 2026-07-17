@@ -5,7 +5,7 @@ import { Card } from "@/components/ui";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Idaho Down Payment Assistance Finder",
+  title: "Privacy Policy",
   description:
     "Privacy policy for Idaho Down Payment Programs - how we collect, use, and protect your information.",
   alternates: {

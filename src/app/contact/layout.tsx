@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Idaho Down Payment Assistance Finder",
+  title: "Contact Us",
   description:
     "Contact The Tim Hawkes Team for help with Idaho down payment assistance programs. Free consultation, no obligation.",
   alternates: {
