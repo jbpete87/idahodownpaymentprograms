@@ -108,20 +108,112 @@ export function StepResults() {
             No Exact Matches Found
           </h2>
           <p className="text-gray-600 max-w-md mx-auto mb-6">
-            Based on your answers, we didn&apos;t find programs that match your current 
-            situation. But don&apos;t give up! Your situation may change or we may have 
-            missed something.
+            Based on your answers, we didn&apos;t find an automatic match — but eligibility
+            rules are nuanced. A specialist can often spot options the quiz can&apos;t.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="primary" onClick={reset}>
-              <RefreshCw className="w-5 h-5 mr-2" />
-              Retake Quiz
-            </Button>
+          {!showLeadForm && !leadSubmitted && (
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-4">
+              <Button
+                variant="primary"
+                onClick={() => {
+                  AnalyticsEvents.quizLeadFormOpen();
+                  setShowLeadForm(true);
+                }}
+              >
+                Get a Free Eligibility Review
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+              <Button variant="secondary" onClick={reset}>
+                <RefreshCw className="w-5 h-5 mr-2" />
+                Retake Quiz
+              </Button>
+            </div>
+          )}
+          {!showLeadForm && !leadSubmitted && (
+            <Link
+              href="/programs"
+              className="text-sm text-gray-500 hover:text-gray-800 transition-colors"
+            >
+              Or browse all programs
+            </Link>
+          )}
+        </Card>
+
+        {showLeadForm && !leadSubmitted && (
+          <Card
+            id="quiz-lead-form"
+            padding="lg"
+            className="border border-gray-200 shadow-lg scroll-mt-24"
+          >
+            <CardHeader>
+              <CardTitle>Get a free eligibility review</CardTitle>
+              <p className="text-sm text-gray-500 mt-1">
+                The Tim Hawkes Team · Cornerstone Home Lending · NMLS #2258
+              </p>
+            </CardHeader>
+            <CardContent>
+              <form onSubmit={handleLeadSubmit} className="space-y-4">
+                <Input
+                  label="Your Name"
+                  required
+                  value={leadForm.name}
+                  onChange={(e) =>
+                    setLeadForm({ ...leadForm, name: e.target.value })
+                  }
+                  placeholder="John Smith"
+                />
+                <Input
+                  label="Email"
+                  type="email"
+                  required
+                  value={leadForm.email}
+                  onChange={(e) =>
+                    setLeadForm({ ...leadForm, email: e.target.value })
+                  }
+                  placeholder="john@example.com"
+                />
+                <Input
+                  label="Phone"
+                  type="tel"
+                  required
+                  value={leadForm.phone}
+                  onChange={(e) =>
+                    setLeadForm({ ...leadForm, phone: e.target.value })
+                  }
+                  placeholder="(801) 555-0123"
+                />
+                {leadError && (
+                  <p className="text-sm text-red-600 font-medium">{leadError}</p>
+                )}
+                <Button
+                  type="submit"
+                  variant="primary"
+                  size="lg"
+                  className="w-full"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Sending..." : "Request Free Review"}
+                  {!isSubmitting && <ArrowRight className="w-5 h-5 ml-2" />}
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
+        )}
+
+        {leadSubmitted && (
+          <Card padding="lg" className="text-center border border-gray-200 shadow-md">
+            <CheckCircle2 className="w-10 h-10 text-[#10B981] mx-auto mb-3" />
+            <h3 className="font-[family-name:var(--font-display)] text-xl font-bold text-gray-900 mb-2">
+              You&apos;re All Set!
+            </h3>
+            <p className="text-gray-600 mb-4">
+              We&apos;ll review your answers and follow up within 1 business day.
+            </p>
             <Link href="/programs">
               <Button variant="secondary">Browse All Programs</Button>
             </Link>
-          </div>
-        </Card>
+          </Card>
+        )}
       </div>
     );
   }
@@ -158,8 +250,200 @@ export function StepResults() {
               <div className="text-sm text-gray-500 font-medium">Likely Eligible</div>
             </div>
           </div>
+
+          {!showLeadForm && !leadSubmitted && (
+            <div className="mt-8 max-w-lg mx-auto">
+              <Button
+                variant="primary"
+                size="lg"
+                className="w-full"
+                onClick={() => {
+                  AnalyticsEvents.quizLeadFormOpen();
+                  setShowLeadForm(true);
+                  requestAnimationFrame(() => {
+                    document
+                      .getElementById("quiz-lead-form")
+                      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+                  });
+                }}
+              >
+                Get Free Help Applying for up to {formatCurrency(topAmount)}
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+              <p className="mt-3 text-xs text-gray-500">
+                No obligation · Licensed Idaho lenders · Response within 1 business day
+              </p>
+            </div>
+          )}
         </div>
       </Card>
+
+      {/* Lead form — shown early so users don't miss it below the match list */}
+      {showLeadForm && !leadSubmitted && (
+        <Card
+          id="quiz-lead-form"
+          padding="lg"
+          className="border border-gray-200 shadow-lg scroll-mt-24"
+        >
+          <CardHeader>
+            <div className="flex items-center gap-4 mb-2">
+              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center flex-shrink-0">
+                <span className="text-xl">👨‍💼</span>
+              </div>
+              <div>
+                <CardTitle>Get free help applying</CardTitle>
+                <p className="text-sm text-gray-500">
+                  The Tim Hawkes Team · Cornerstone Home Lending · NMLS #2258
+                </p>
+              </div>
+            </div>
+            <p className="text-sm text-gray-600">
+              We&apos;ll review your matches (up to {formatCurrency(topAmount)}) and walk you
+              through next steps. No obligation.
+            </p>
+          </CardHeader>
+          <CardContent>
+            <form onSubmit={handleLeadSubmit} className="space-y-4">
+              <Input
+                label="Your Name"
+                required
+                value={leadForm.name}
+                onChange={(e) =>
+                  setLeadForm({ ...leadForm, name: e.target.value })
+                }
+                placeholder="John Smith"
+              />
+              <Input
+                label="Email"
+                type="email"
+                required
+                value={leadForm.email}
+                onChange={(e) =>
+                  setLeadForm({ ...leadForm, email: e.target.value })
+                }
+                placeholder="john@example.com"
+              />
+              <Input
+                label="Phone"
+                type="tel"
+                required
+                value={leadForm.phone}
+                onChange={(e) =>
+                  setLeadForm({ ...leadForm, phone: e.target.value })
+                }
+                placeholder="(801) 555-0123"
+              />
+
+              <div className="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label className="block mb-2 text-sm font-semibold text-gray-700">
+                    Preferred Contact
+                  </label>
+                  <div className="flex gap-2">
+                    {(["email", "call", "text"] as const).map((method) => (
+                      <button
+                        key={method}
+                        type="button"
+                        onClick={() =>
+                          setLeadForm({ ...leadForm, contactPreference: method })
+                        }
+                        className={`flex-1 py-2 px-3 rounded-lg text-sm font-medium transition-all duration-200 border ${
+                          leadForm.contactPreference === method
+                            ? "bg-green-50 border-green-200 text-green-700 ring-1 ring-green-200"
+                            : "bg-white border-gray-200 text-gray-600 hover:bg-gray-50"
+                        }`}
+                      >
+                        {method === "email" ? (
+                          <Mail className="w-4 h-4 mx-auto" />
+                        ) : method === "call" ? (
+                          <Phone className="w-4 h-4 mx-auto" />
+                        ) : (
+                          "💬"
+                        )}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <label className="block mb-2 text-sm font-semibold text-gray-700">
+                    Best Time
+                  </label>
+                  <div className="flex gap-2">
+                    {(["morning", "afternoon", "evening"] as const).map(
+                      (time) => (
+                        <button
+                          key={time}
+                          type="button"
+                          onClick={() =>
+                            setLeadForm({ ...leadForm, bestTime: time })
+                          }
+                          className={`flex-1 py-2 px-3 rounded-lg text-sm font-medium capitalize transition-all duration-200 border ${
+                            leadForm.bestTime === time
+                              ? "bg-green-50 border-green-200 text-green-700 ring-1 ring-green-200"
+                              : "bg-white border-gray-200 text-gray-600 hover:bg-gray-50"
+                          }`}
+                        >
+                          {time}
+                        </button>
+                      )
+                    )}
+                  </div>
+                </div>
+              </div>
+
+              <Textarea
+                label="Anything else we should know? (optional)"
+                value={leadForm.notes}
+                onChange={(e) =>
+                  setLeadForm({ ...leadForm, notes: e.target.value })
+                }
+                placeholder="Questions, timeline, specific concerns..."
+              />
+
+              <label className="flex items-start gap-3 cursor-pointer group">
+                <input
+                  type="checkbox"
+                  checked={leadForm.marketingConsent}
+                  onChange={(e) =>
+                    setLeadForm({
+                      ...leadForm,
+                      marketingConsent: e.target.checked,
+                    })
+                  }
+                  className="mt-1"
+                />
+                <span className="text-sm text-gray-500">
+                  Optional: send me updates about Idaho DPA programs. Unsubscribe anytime.
+                </span>
+              </label>
+
+              {leadError && (
+                <p className="text-sm text-red-600 font-medium">{leadError}</p>
+              )}
+
+              <CardFooter className="px-0 pt-2 flex flex-col gap-3">
+                <Button
+                  type="submit"
+                  variant="primary"
+                  size="lg"
+                  className="w-full"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Sending..." : "Request Free Help"}
+                  {!isSubmitting && <ArrowRight className="w-5 h-5 ml-2" />}
+                </Button>
+                <button
+                  type="button"
+                  onClick={() => setShowLeadForm(false)}
+                  className="text-sm text-gray-500 hover:text-gray-800 transition-colors"
+                >
+                  Not now — keep browsing matches
+                </button>
+              </CardFooter>
+            </form>
+          </CardContent>
+        </Card>
+      )}
 
       {/* Program matches */}
       <div className="space-y-4">
@@ -295,20 +579,20 @@ export function StepResults() {
         })}
       </div>
 
-      {/* CTA Section */}
+      {/* Secondary CTA after browsing matches */}
       {!showLeadForm && !leadSubmitted && (
         <Card padding="lg" className="border border-gray-200 bg-gradient-to-br from-white to-green-50">
           <div className="flex flex-col md:flex-row items-center gap-6">
-            {/* Team Photo Placeholder */}
             <div className="w-20 h-20 rounded-xl bg-gray-800 flex items-center justify-center flex-shrink-0 text-white text-2xl font-bold">
               TH
             </div>
             <div className="flex-1 text-center md:text-left">
               <h3 className="font-[family-name:var(--font-display)] text-xl font-bold text-gray-900 mb-1">
-                Want Help Applying?
+                Ready to move forward?
               </h3>
               <p className="text-gray-600 mb-2">
-                Tim Hawkes &amp; Jake Peterson specialize in maximizing DPA benefits for Idaho homebuyers.
+                Tim Hawkes &amp; Jake Peterson help Idaho buyers stack IHFA and local DPA —
+                free eligibility review, no obligation.
               </p>
               <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 text-sm">
                 <div className="flex items-center gap-1">
@@ -333,169 +617,23 @@ export function StepResults() {
                 onClick={() => {
                   AnalyticsEvents.quizLeadFormOpen();
                   setShowLeadForm(true);
+                  requestAnimationFrame(() => {
+                    document
+                      .getElementById("quiz-lead-form")
+                      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+                  });
                 }}
               >
-                Yes, Help Me Apply
+                Request Free Help
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
               <Link href="/programs">
-                <Button variant="ghost" className="w-full">
-                  I&apos;ll Explore on My Own
+                <Button variant="ghost" className="w-full text-gray-500">
+                  Browse programs directory
                 </Button>
               </Link>
             </div>
           </div>
-        </Card>
-      )}
-
-      {/* Lead capture form */}
-      {showLeadForm && !leadSubmitted && (
-        <Card padding="lg" className="border border-gray-200 shadow-lg">
-          <CardHeader>
-            <div className="flex items-center gap-4 mb-2">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center flex-shrink-0">
-                <span className="text-xl">👨‍💼</span>
-              </div>
-              <div>
-                <CardTitle>Connect with The Tim Hawkes Team</CardTitle>
-                <p className="text-sm text-gray-500">Cornerstone Home Lending | NMLS #2258</p>
-              </div>
-            </div>
-          </CardHeader>
-          <CardContent>
-            <form onSubmit={handleLeadSubmit} className="space-y-4">
-              <Input
-                label="Your Name"
-                required
-                value={leadForm.name}
-                onChange={(e) =>
-                  setLeadForm({ ...leadForm, name: e.target.value })
-                }
-                placeholder="John Smith"
-              />
-              <Input
-                label="Email"
-                type="email"
-                required
-                value={leadForm.email}
-                onChange={(e) =>
-                  setLeadForm({ ...leadForm, email: e.target.value })
-                }
-                placeholder="john@example.com"
-              />
-              <Input
-                label="Phone"
-                type="tel"
-                required
-                value={leadForm.phone}
-                onChange={(e) =>
-                  setLeadForm({ ...leadForm, phone: e.target.value })
-                }
-                placeholder="(801) 555-0123"
-              />
-
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="block mb-2 text-sm font-semibold text-gray-700">
-                    Preferred Contact
-                  </label>
-                  <div className="flex gap-2">
-                    {(["email", "call", "text"] as const).map((method) => (
-                      <button
-                        key={method}
-                        type="button"
-                        onClick={() =>
-                          setLeadForm({ ...leadForm, contactPreference: method })
-                        }
-                        className={`flex-1 py-2 px-3 rounded-lg text-sm font-medium transition-all duration-200 border ${
-                          leadForm.contactPreference === method
-                            ? "bg-green-50 border-green-200 text-green-700 ring-1 ring-green-200"
-                            : "bg-white border-gray-200 text-gray-600 hover:bg-gray-50"
-                        }`}
-                      >
-                        {method === "email" ? (
-                          <Mail className="w-4 h-4 mx-auto" />
-                        ) : method === "call" ? (
-                          <Phone className="w-4 h-4 mx-auto" />
-                        ) : (
-                          "💬"
-                        )}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-                <div>
-                  <label className="block mb-2 text-sm font-semibold text-gray-700">
-                    Best Time
-                  </label>
-                  <div className="flex gap-2">
-                    {(["morning", "afternoon", "evening"] as const).map(
-                      (time) => (
-                        <button
-                          key={time}
-                          type="button"
-                          onClick={() =>
-                            setLeadForm({ ...leadForm, bestTime: time })
-                          }
-                          className={`flex-1 py-2 px-3 rounded-lg text-sm font-medium capitalize transition-all duration-200 border ${
-                            leadForm.bestTime === time
-                              ? "bg-green-50 border-green-200 text-green-700 ring-1 ring-green-200"
-                              : "bg-white border-gray-200 text-gray-600 hover:bg-gray-50"
-                          }`}
-                        >
-                          {time}
-                        </button>
-                      )
-                    )}
-                  </div>
-                </div>
-              </div>
-
-              <Textarea
-                label="Anything else we should know? (optional)"
-                value={leadForm.notes}
-                onChange={(e) =>
-                  setLeadForm({ ...leadForm, notes: e.target.value })
-                }
-                placeholder="Questions, timeline, specific concerns..."
-              />
-
-              <label className="flex items-start gap-3 cursor-pointer group">
-                <input
-                  type="checkbox"
-                  checked={leadForm.marketingConsent}
-                  onChange={(e) =>
-                    setLeadForm({
-                      ...leadForm,
-                      marketingConsent: e.target.checked,
-                    })
-                  }
-                  className="mt-1"
-                />
-                <span className="text-sm text-gray-500">
-                  I agree to receive communications about my home buying journey. 
-                  I can unsubscribe at any time.
-                </span>
-              </label>
-
-              {leadError && (
-                <p className="text-sm text-red-600 font-medium">{leadError}</p>
-              )}
-
-              <CardFooter className="px-0 pt-2">
-                <Button
-                  type="submit"
-                  variant="primary"
-                  size="lg"
-                  className="w-full"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? "Sending..." : "Submit Request"}
-                  {!isSubmitting && <ArrowRight className="w-5 h-5 ml-2" />}
-                </Button>
-              </CardFooter>
-            </form>
-          </CardContent>
         </Card>
       )}
 
@@ -512,16 +650,37 @@ export function StepResults() {
             The Tim Hawkes Team has received your request.
           </p>
           <p className="text-sm text-gray-500 mb-6">
-            Expect a call or email within 1 business day to discuss your options 
+            Expect a call or email within 1 business day to discuss your options
             and next steps toward homeownership.
           </p>
           <Link href="/programs">
-            <Button variant="secondary">
-              Browse All Programs
-            </Button>
+            <Button variant="secondary">Browse All Programs</Button>
           </Link>
         </Card>
       )}
+
+      {/* Mobile sticky CTA */}
+      {!showLeadForm && !leadSubmitted && (
+        <div className="fixed bottom-0 inset-x-0 z-40 p-3 bg-white/95 backdrop-blur border-t border-gray-200 sm:hidden">
+          <Button
+            variant="primary"
+            size="lg"
+            className="w-full"
+            onClick={() => {
+              AnalyticsEvents.quizLeadFormOpen();
+              setShowLeadForm(true);
+              requestAnimationFrame(() => {
+                document
+                  .getElementById("quiz-lead-form")
+                  ?.scrollIntoView({ behavior: "smooth", block: "start" });
+              });
+            }}
+          >
+            Get Free Help · up to {formatCurrency(topAmount)}
+          </Button>
+        </div>
+      )}
+      {!showLeadForm && !leadSubmitted && <div className="h-20 sm:hidden" />}
 
       {/* Restart option */}
       <div className="text-center">

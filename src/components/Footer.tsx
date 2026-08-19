@@ -178,6 +178,22 @@ export function Footer() {
               </li>
               <li>
                 <a
+                  href="/llms.txt"
+                  className="text-gray-500 hover:text-[#10B981] transition-colors"
+                >
+                  AI / LLM site summary
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/llms-full.txt"
+                  className="text-gray-500 hover:text-[#10B981] transition-colors"
+                >
+                  AI / LLM full program data
+                </a>
+              </li>
+              <li>
+                <a
                   href="https://www.utahdownpaymentprograms.com"
                   target="_blank"
                   rel="noopener noreferrer"
