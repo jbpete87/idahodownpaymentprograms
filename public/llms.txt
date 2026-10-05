@@ -30,6 +30,7 @@ Idaho DPA Finder is a free educational resource that tracks down payment assista
 - /locations/[slug] - City-specific guides (Boise, Meridian, Nampa, Idaho Falls, Coeur d'Alene)
 - /first-time-home-buyer - First-time buyer guide
 - /income-limits - FY 2026 HUD income limits by county
+- /doctor-mortgage - Doctor and professional mortgages with up to 100% financing (specialty first mortgages, not DPA grants)
 - /quiz - Free eligibility quiz
 
 ## Top Programs (2026)
@@ -83,3 +84,13 @@ Licensed mortgage professionals Tim Hawkes (NMLS #8785) and Jake Peterson (NMLS 
 
 Last updated: May 2026
 Website: https://www.idahodownpaymentprograms.com
+
+## 100% Financing for Licensed Professionals
+
+Doctor and professional loans are specialty first mortgages, not down payment grants, and they cannot be stacked with a DPA lien. See /doctor-mortgage. Three programs, each with its own rules, offered through The Tim Hawkes Team (Cornerstone Home Lending):
+
+- Professionals Plus: Cornerstone Capital Bank portfolio 5/6 ARM, primary-home purchase in any state including Idaho. 100% financing from $250,000 up to the county conforming limit with a 720 score and 38% debt ratio. 95% up to $1.5 million with 5% of the borrower's own funds. No monthly mortgage insurance. Physicians, dentists, residents, fellows, registered nurses, nurse practitioners, practicing attorneys, and CPAs.
+- Medical Professionals: fixed or ARM, purchase or rate-and-term refinance, for financing above 90%. 100% up to $1.5 million at 680, or $2 million at 720. No monthly mortgage insurance. Physicians, dentists, pharmacists, veterinarians, podiatrists, CRNAs, and nurse practitioners.
+- Med Pro Program (new October 5, 2026): up to 100% financing, loan amounts up to $2 million, no monthly mortgage insurance. 30-year fixed, or 5/6, 7/6, and 10/6 ARM. Physicians, physician assistants, dentists, pharmacists, veterinarians, podiatrists, optometrists, CRNAs, nurse practitioners, and residents, fellows, and interns. Confirm Idaho availability and scenario rules with the team.
+
+Physician assistants and optometrists qualify only for the Med Pro Program. Full source: https://www.thetimhawkesteam.com/loans/doctor-mortgage

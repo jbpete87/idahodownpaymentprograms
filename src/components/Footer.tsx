@@ -150,6 +150,14 @@ export function Footer() {
               </li>
               <li>
                 <Link
+                  href="/doctor-mortgage"
+                  className="text-gray-500 hover:text-[#10B981] transition-colors"
+                >
+                  Doctor &amp; Professional Loans
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/methodology"
                   className="text-gray-500 hover:text-[#10B981] transition-colors"
                 >

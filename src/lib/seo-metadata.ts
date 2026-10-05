@@ -146,3 +146,12 @@ export function getProgramMetadata(
     openGraph: { title, description, url: `${SITE_URL}/programs/${slug}` },
   };
 }
+
+/** Specialty mortgages — not a DPA grant. Facts from thetimhawkesteam.com/loans/doctor-mortgage. */
+export const DOCTOR_MORTGAGE_SEO = {
+  title: "Idaho Doctor Mortgage | 100% Financing",
+  description:
+    "Idaho doctor mortgage loans with up to 100% financing and no monthly MI. Physicians, PAs, dentists, nurses, attorneys, and CPAs. Specialty loans, not a DPA grant.",
+  openGraphDescription:
+    "Three professional mortgage programs, including the new Med Pro Program, with up to 100% financing and no monthly mortgage insurance. Separate rules for doctors, PAs, nurses, attorneys, CPAs, and other licensed professionals.",
+};
