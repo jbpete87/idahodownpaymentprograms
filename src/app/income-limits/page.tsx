@@ -113,6 +113,29 @@ export default function IncomeLimitsPage() {
           </Card>
         </section>
 
+        {/* Early CTA: most visitors come here to check one number */}
+        <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
+          <Card className="p-6 border border-gray-200">
+            <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
+              <div className="flex-1">
+                <h2 className="text-lg font-semibold text-gray-900">
+                  Under the limit? See what you could get.
+                </h2>
+                <p className="text-sm text-gray-600 mt-1">
+                  Answer a few questions and we&apos;ll match you with the Idaho programs
+                  you may qualify for, and how much each one offers. Free, no SSN required.
+                </p>
+              </div>
+              <Link
+                href="/quiz"
+                className="inline-flex items-center justify-center px-6 py-3 bg-[#10B981] text-white font-semibold rounded-xl hover:bg-emerald-600 transition-colors shadow-lg shadow-emerald-500/25 whitespace-nowrap"
+              >
+                Find My Programs →
+              </Link>
+            </div>
+          </Card>
+        </section>
+
         {/* Priority Counties */}
         <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
           <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
@@ -237,10 +260,10 @@ export default function IncomeLimitsPage() {
               </p>
               <div className="p-3 bg-amber-50 border border-amber-200 rounded-lg mb-4">
                 <p className="text-sm text-amber-800">
-                  <strong>📅 When do income limits update?</strong> HUD updates income limits 
-                  each fiscal year, typically around <strong>April-July</strong>. The FY 2026 
-                  income limits are expected to be released around <strong>July 2026</strong>. 
-                  We&apos;ll update this page as soon as new limits are published.
+                  <strong>📅 When do income limits update?</strong> HUD publishes new
+                  income limits once a year, usually in the spring. This page shows the{" "}
+                  <strong>FY 2026</strong> limits, which apply until the FY 2027 limits are
+                  released. We&apos;ll update this page as soon as they are.
                 </p>
               </div>
               <a
