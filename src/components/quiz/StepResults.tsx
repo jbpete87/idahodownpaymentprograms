@@ -28,7 +28,11 @@ import {
   ChevronUp,
   Star,
 } from "lucide-react";
+import { PlanRequestCard } from "./PlanRequestCard";
 import { AnalyticsEvents } from "@/lib/analytics";
+
+const BOOK_URL =
+  "https://www.thetimhawkesteam.com/book?topic=dpa-quiz&loanType=Purchase&utm_source=idaho-dpa&utm_medium=referral&utm_campaign=quiz-results";
 
 export function StepResults() {
   const { matches, answers, submissionId, reset } = useQuizStore();
@@ -277,6 +281,15 @@ export function StepResults() {
           )}
         </div>
       </Card>
+
+      <PlanRequestCard
+        stateName="Idaho"
+        accent="#10B981"
+        bookUrl={BOOK_URL}
+        matches={matches}
+        answers={answers}
+        submissionId={submissionId}
+      />
 
       {/* Lead form — shown early so users don't miss it below the match list */}
       {showLeadForm && !leadSubmitted && (
@@ -552,6 +565,14 @@ export function StepResults() {
                       ))}
                     </div>
                   )}
+
+                  <p className="text-sm text-gray-600">
+                    Most programs are applied for through a participating lender, not on your own.{" "}
+                    <a href="#plan" className="font-semibold text-[#10B981] underline">
+                      Ask us before you apply
+                    </a>
+                    .
+                  </p>
 
                   <div className="flex flex-wrap gap-3 pt-2">
                     <Link href={`/programs/${match.program.slug}`}>

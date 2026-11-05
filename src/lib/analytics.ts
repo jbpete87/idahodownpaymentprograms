@@ -27,8 +27,11 @@ export const AnalyticsEvents = {
       top_program_amount: topAmount,
     }),
   quizLeadFormOpen: () => trackEvent("quiz_lead_form_open"),
+  quizPlanRequest: (method: "text" | "email", matchCount: number) =>
+    trackEvent("quiz_plan_request", { method, match_count: matchCount }),
+  quizBookClick: (placement: string) => trackEvent("quiz_book_click", { placement }),
   generateLead: (params: {
-    leadSource: "quiz" | "contact";
+    leadSource: "quiz" | "quiz-plan" | "contact";
     matchCount?: number;
     county?: string;
     isFirstTimeBuyer?: boolean;
