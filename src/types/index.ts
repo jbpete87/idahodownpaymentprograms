@@ -82,7 +82,7 @@ export interface QuizAnswers {
   occupation: Occupation;
   
   // Step 6: Financing (optional)
-  creditScoreRange?: "<600" | "600-619" | "620-639" | "640-679" | "680+";
+  creditScoreRange?: "<600" | "600-619" | "620-639" | "640-659" | "660-679" | "680-699" | "700-719" | "720-739" | "740-759" | "760-779" | "780+" | "not_sure" | "640-679" | "680+"; // 640-679 and 680+ are legacy buckets kept for saved answers
   availableFunds?: "$0-2k" | "$2-5k" | "$5-10k" | "$10k+";
   targetPriceRange?: "<300k" | "300-450k" | "450-600k" | "600k+";
   loanTypeInterest?: "FHA" | "VA" | "Conventional" | "USDA" | "not_sure";

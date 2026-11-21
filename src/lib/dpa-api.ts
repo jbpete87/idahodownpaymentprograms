@@ -441,7 +441,7 @@ export function validateScreenBody(
     occupation: optionalEnum(body.occupation, OCCUPATIONS, "occupation"),
     creditScoreRange: optionalEnum(
       body.creditScoreRange,
-      ["<600", "600-619", "620-639", "640-679", "680+"] as const,
+      ["<600", "600-619", "620-639", "640-659", "660-679", "680-699", "700-719", "720-739", "740-759", "760-779", "780+", "not_sure", "640-679", "680+"] as const,
       "creditScoreRange"
     ),
     availableFunds: optionalEnum(

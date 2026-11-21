@@ -15,8 +15,15 @@ export function StepFinancing() {
     { value: "<600", label: "Below 600" },
     { value: "600-619", label: "600-619" },
     { value: "620-639", label: "620-639" },
-    { value: "640-679", label: "640-679" },
-    { value: "680+", label: "680 or higher" },
+    { value: "640-659", label: "640-659" },
+    { value: "660-679", label: "660-679" },
+    { value: "680-699", label: "680-699" },
+    { value: "700-719", label: "700-719" },
+    { value: "720-739", label: "720-739" },
+    { value: "740-759", label: "740-759" },
+    { value: "760-779", label: "760-779" },
+    { value: "780+", label: "780 or higher" },
+    { value: "not_sure", label: "Not sure" },
   ];
 
   const fundsOptions = [
@@ -92,15 +99,10 @@ export function StepFinancing() {
           value={answers.creditScoreRange || ""}
           onChange={(value) =>
             updateAnswers({
-              creditScoreRange: value as
-                | "<600"
-                | "600-619"
-                | "620-639"
-                | "640-679"
-                | "680+",
+              creditScoreRange: value as typeof answers.creditScoreRange,
             })
           }
-          layout="horizontal"
+          layout="grid"
         />
         <p className="mt-3 text-sm text-gray-500">
           An estimate is fine. Most programs require 620-650 minimum.
